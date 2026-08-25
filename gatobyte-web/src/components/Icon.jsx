@@ -1,0 +1,56 @@
+import {
+  Microscope,
+  Cpu,
+  Lightbulb,
+  Link2,
+  Globe2,
+  TrendingUp,
+  Landmark,
+  Rocket,
+  PawPrint,
+  Target,
+  Puzzle,
+  Compass,
+  Server,
+  FolderKanban,
+  Database,
+  Users,
+  RefreshCw,
+  Wrench,
+  BadgeCheck,
+  Cat,
+  Telescope,
+  Sparkles,
+  ShieldCheck,
+} from "lucide-react";
+
+const ICONS = {
+  microscope: Microscope,
+  cpu: Cpu,
+  lightbulb: Lightbulb,
+  link: Link2,
+  globe: Globe2,
+  trending: TrendingUp,
+  landmark: Landmark,
+  rocket: Rocket,
+  paw: PawPrint,
+  target: Target,
+  puzzle: Puzzle,
+  compass: Compass,
+  server: Server,
+  folder: FolderKanban,
+  database: Database,
+  users: Users,
+  refresh: RefreshCw,
+  wrench: Wrench,
+  check: BadgeCheck,
+  cat: Cat,
+  telescope: Telescope,
+  sparkles: Sparkles,
+  shield: ShieldCheck,
+};
+
+export default function Icon({ name, size = 22, strokeWidth = 2, className }) {
+  const Cmp = ICONS[name] || PawPrint;
+  return <Cmp size={size} strokeWidth={strokeWidth} className={className} aria-hidden="true" />;
+}
