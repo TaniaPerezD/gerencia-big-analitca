@@ -1,4 +1,4 @@
-export default function Sparkle({ top, left, right, bottom, size = 22, delay = 0, color = "#c9723f" }) {
+export default function Sparkle({ top, left, right, bottom, size = 22, delay = 0, color = "#0d9488" }) {
   return (
     <svg
       viewBox="0 0 24 24"

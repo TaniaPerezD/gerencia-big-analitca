@@ -362,6 +362,19 @@ export const gestionTecnologia = {
         },
       ],
     },
+    {
+      icon: "paw",
+      title: "11. Conclusión",
+      blocks: [
+        {
+          list: [
+            "Función estratégica: la gestión de tecnología deja de ser un área de soporte y pasa a decidir el rumbo del negocio.",
+            "Equilibrio constante: entre innovar rápido y mantener la estabilidad, seguridad y control de costos.",
+            "Personas primero: la mejor infraestructura no rinde sin talento capacitado y una cultura que lo respalde.",
+          ],
+        },
+      ],
+    },
   ],
   gallery: [
     {
@@ -399,4 +412,252 @@ export const gestionTecnologia = {
     title: "Cómo los grandes líderes inspiran la acción (Simon Sinek, TED)",
     youtubeId: "qp0HIF3SfI4",
   },
+};
+
+export const misionVision = {
+  hero: {
+    tag: "Estrategia del área",
+    title: "Misión y Visión",
+    subtitle:
+      "El propósito que guía nuestro trabajo hoy, y el futuro que buscamos construir a partir de los datos de salud.",
+    image:
+      "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=1600&q=80",
+  },
+  sections: [
+    {
+      icon: "target",
+      title: "¿Qué es la Misión?",
+      blocks: [
+        {
+          text: "La misión describe el propósito presente de una organización o área de trabajo: qué hace, para quién y con qué fin. Es la razón de ser que orienta las actividades del día a día.",
+        },
+      ],
+    },
+    {
+      icon: "telescope",
+      title: "¿Qué es la Visión?",
+      blocks: [
+        {
+          text: "La visión proyecta el futuro deseado a largo plazo: hacia dónde quiere llegar la organización. Funciona como una brújula que inspira y da dirección a las decisiones estratégicas.",
+        },
+      ],
+    },
+    {
+      icon: "link",
+      title: "Diferencias clave",
+      blocks: [
+        {
+          list: [
+            "Tiempo: la misión vive en el presente; la visión se proyecta a futuro.",
+            "Función: la misión guía la acción diaria; la visión inspira el rumbo a largo plazo.",
+            "Alcance: la misión suele ser concreta y operativa; la visión es aspiracional.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "compass",
+      title: "Importancia Estratégica",
+      blocks: [
+        {
+          text: "Juntas, misión y visión alinean la cultura, las prioridades y las decisiones de inversión en tecnología e innovación. Sin ellas, un área de datos corre el riesgo de acumular herramientas sin un propósito claro que las conecte.",
+        },
+      ],
+    },
+  ],
+  mision:
+    "Transformar datos masivos de salud en conocimiento estratégico y predictivo, empleando procesos de alta calidad y un compromiso ético con la seguridad de la información, para coadyuvar en la toma de decisiones médicas.",
+  vision:
+    "Ser el motor de innovación analítica que lidere la transición hacia una medicina proactiva y personalizada, donde cada decisión médica esté respaldada por modelos predictivos, confiables y adaptables que definan el estándar global para habilitar una salud digital humana, eficiente y basada en resultados.",
+  gallery: [
+    {
+      src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&q=80",
+      alt: "Médicos analizando imágenes clínicas en pantallas",
+      caption: "Análisis predictivo de datos clínicos",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80",
+      alt: "Médico revisando información en un teléfono",
+      caption: "Salud digital y acceso a la información",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=900&q=80",
+      alt: "Equipo médico durante un procedimiento",
+      caption: "Decisiones médicas informadas",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=900&q=80",
+      alt: "Habitación hospitalaria con monitor de signos vitales",
+      caption: "Infraestructura hospitalaria inteligente",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=80",
+      alt: "Estetoscopio sobre una superficie blanca",
+      caption: "Cuidado centrado en el paciente",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=900&q=80",
+      alt: "Medicamentos en blísteres",
+      caption: "Gestión de tratamientos y medicamentos",
+    },
+  ],
+  video: {
+    title: "Embracing big data: el futuro de la salud (TEDx)",
+    youtubeId: "_OV9DzPz2fs",
+  },
+};
+
+export const homeStats = [
+  { icon: "microscope", value: "2", label: "presentaciones de investigación desarrolladas" },
+  { icon: "puzzle", value: "19", label: "temas teóricos cubiertos entre ambas líneas de estudio" },
+  { icon: "users", value: "100%", label: "trabajo colaborativo dentro de la colonia" },
+];
+
+export const processSteps = [
+  {
+    icon: "compass",
+    title: "Observar",
+    text: "Como buen gato, primero exploramos el problema desde varios ángulos antes de movernos.",
+  },
+  {
+    icon: "database",
+    title: "Investigar",
+    text: "Recolectamos teoría, datos y referencias confiables sobre ciencia, tecnología e innovación.",
+  },
+  {
+    icon: "puzzle",
+    title: "Estructurar",
+    text: "Organizamos los hallazgos en fundamentos claros, con ejemplos y cifras que los respaldan.",
+  },
+  {
+    icon: "rocket",
+    title: "Presentar",
+    text: "Comunicamos el conocimiento de forma visual y accesible, lista para compartirse.",
+  },
+];
+
+export const organizacion = {
+  hero: {
+    tag: "Estructura del área",
+    title: "Organización",
+    subtitle:
+      "Cómo se organiza el Área de Big Data y Analítica: jerarquías, roles y líneas de reporte que hacen posible el trabajo con datos de salud.",
+  },
+  theory: [
+    {
+      icon: "network",
+      title: "¿Qué es un organigrama?",
+      blocks: [
+        {
+          text: "Un organigrama es la representación gráfica de la estructura de una organización o área de trabajo. Muestra los puestos que la componen, sus niveles jerárquicos y las líneas de autoridad y reporte entre ellos.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Tipos de estructura organizacional",
+      blocks: [
+        {
+          list: [
+            "Jerárquica: niveles claros de autoridad, de arriba hacia abajo.",
+            "Funcional: agrupa a las personas según su especialidad técnica.",
+            "Matricial: combina reporte funcional y por proyecto.",
+            "Plana: pocos niveles, mayor autonomía en los equipos.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Niveles jerárquicos",
+      blocks: [
+        {
+          text: "Cada nivel del organigrama representa un grado distinto de responsabilidad y toma de decisiones. En el Área de Big Data y Analítica, la Gerencia coordina cuatro posiciones especializadas que reportan directamente a ella y, a su vez, a la Dirección General (CEO).",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Importancia de la estructura",
+      blocks: [
+        {
+          list: [
+            "Claridad: cada persona sabe a quién reporta y de qué es responsable.",
+            "Coordinación: facilita la comunicación entre roles técnicos y de negocio.",
+            "Escalabilidad: permite incorporar nuevas posiciones sin perder orden.",
+          ],
+        },
+      ],
+    },
+  ],
+  positions: [
+    { title: "Analista de Business Intelligence (BI)", color: "#0d9488" },
+    { title: "Ingeniero de Infraestructura de Datos", color: "#2563eb" },
+    { title: "Especialista en Gobernanza de Datos", color: "#4f46e5" },
+    { title: "PM de Ciencia de Datos e Innovación", color: "#14b8a6" },
+  ],
+};
+
+export const descripcionPosiciones = {
+  hero: {
+    tag: "Documentación del área",
+    title: "Descripción de Posiciones",
+    subtitle:
+      "El detalle de responsabilidades, requisitos y competencias de cada rol dentro del Área de Big Data y Analítica.",
+    image:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1600&q=80",
+  },
+  intro: [
+    "Una descripción de puesto es el documento que define, de forma clara y por escrito, qué hace una posición dentro de una organización, de qué es responsable y qué se espera de la persona que la ocupa. Es la base para reclutar, evaluar el desempeño y planear el crecimiento profesional dentro del área.",
+    "Un buen documento de descripción de puestos no solo lista tareas: conecta cada rol con los objetivos estratégicos del área, evitando duplicidad de funciones y vacíos de responsabilidad entre posiciones.",
+  ],
+  components: [
+    "Identificación: nombre del puesto, área y a quién reporta.",
+    "Propósito: la razón de ser del puesto en una o dos frases.",
+    "Responsabilidades: las funciones principales, en orden de importancia.",
+    "Requisitos: formación, experiencia y herramientas necesarias.",
+    "Competencias: habilidades técnicas y humanas esperadas.",
+  ],
+  positions: [
+    {
+      icon: "database",
+      title: "Analista de Business Intelligence (BI)",
+      summary: "Reportes ejecutivos, dashboards, KPIs, analítica descriptiva y autoservicio.",
+      responsibilities: [
+        "Diseñar y mantener dashboards ejecutivos.",
+        "Definir y dar seguimiento a indicadores clave (KPIs).",
+        "Habilitar analítica de autoservicio para otras áreas.",
+      ],
+    },
+    {
+      icon: "server",
+      title: "Ingeniero de Infraestructura de Datos",
+      summary: "Plataformas cloud, lakehouse, pipelines, almacenamiento y confiabilidad.",
+      responsibilities: [
+        "Construir y mantener pipelines de datos.",
+        "Administrar plataformas cloud y de almacenamiento.",
+        "Garantizar la confiabilidad y disponibilidad de los datos.",
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Especialista en Gobernanza de Datos",
+      summary: "Políticas, calidad, catálogo, metadatos, privacidad y roles.",
+      responsibilities: [
+        "Definir políticas de calidad y uso de datos.",
+        "Mantener el catálogo de datos y metadatos.",
+        "Asegurar el cumplimiento de normas de privacidad.",
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "PM de Ciencia de Datos e Innovación",
+      summary: "Modelos predictivos, IA, experimentación, automatización e innovación.",
+      responsibilities: [
+        "Liderar proyectos de modelos predictivos e IA.",
+        "Coordinar la experimentación de nuevas soluciones.",
+        "Impulsar la automatización de procesos analíticos.",
+      ],
+    },
+  ],
 };

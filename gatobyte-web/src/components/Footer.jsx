@@ -10,7 +10,7 @@ export default function Footer() {
           <Icon name="paw" size={20} strokeWidth={0} /> GatoByte
         </div>
         <p className="footer-text">
-          Proyecto académico sobre Ciencia, Tecnología, Innovación y Gestión de Tecnología.
+          Área de Big Data y Analítica — Ciencia, Tecnología, Innovación y Gestión de Tecnología.
         </p>
         <p className="footer-copy">© {new Date().getFullYear()} GatoByte. Todos los derechos reservados.</p>
       </div>

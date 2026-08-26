@@ -1,5 +1,5 @@
 import PageHero from "../components/PageHero";
-import TheorySection from "../components/TheorySection";
+import NumberedList from "../components/NumberedList";
 import Gallery from "../components/Gallery";
 import VideoEmbed from "../components/VideoEmbed";
 import StatStrip from "../components/StatStrip";
@@ -15,18 +15,12 @@ export default function CienciaInnovacion() {
         <StatStrip stats={data.stats} />
       </section>
 
-      <section className="section">
-        <Reveal className="section-heading">
+      <section className="section narrow-section">
+        <Reveal className="section-heading section-heading-left">
           <h2>Teoría</h2>
           <p>Fundamentos de ciencia, tecnología e innovación, y su intersección en la sociedad.</p>
         </Reveal>
-        <div className="theory-grid">
-          {data.sections.map((s, i) => (
-            <Reveal key={s.title} delay={(i % 3) * 80}>
-              <TheorySection {...s} />
-            </Reveal>
-          ))}
-        </div>
+        <NumberedList items={data.sections} />
       </section>
 
       <section className="section section-alt">

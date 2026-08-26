@@ -22,6 +22,17 @@ import {
   Telescope,
   Sparkles,
   ShieldCheck,
+  Menu,
+  X,
+  Home,
+  Network,
+  Layers,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  FileText,
+  Download,
+  Activity,
 } from "lucide-react";
 
 const ICONS = {
@@ -48,6 +59,17 @@ const ICONS = {
   telescope: Telescope,
   sparkles: Sparkles,
   shield: ShieldCheck,
+  menu: Menu,
+  close: X,
+  home: Home,
+  network: Network,
+  layers: Layers,
+  chevron: ChevronDown,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
+  file: FileText,
+  download: Download,
+  activity: Activity,
 };
 
 export default function Icon({ name, size = 22, strokeWidth = 2, className }) {

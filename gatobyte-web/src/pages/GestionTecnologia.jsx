@@ -1,5 +1,5 @@
 import PageHero from "../components/PageHero";
-import TheorySection from "../components/TheorySection";
+import Timeline from "../components/Timeline";
 import Gallery from "../components/Gallery";
 import VideoEmbed from "../components/VideoEmbed";
 import StatStrip from "../components/StatStrip";
@@ -9,7 +9,7 @@ import { gestionTecnologia as data } from "../data/content";
 export default function GestionTecnologia() {
   return (
     <>
-      <PageHero {...data.hero} />
+      <PageHero {...data.hero} variant="split" />
 
       <section className="section stat-section">
         <StatStrip stats={data.stats} />
@@ -20,13 +20,7 @@ export default function GestionTecnologia() {
           <h2>Teoría</h2>
           <p>Componentes, estrategia, procesos y herramientas de la gestión de tecnología.</p>
         </Reveal>
-        <div className="theory-grid">
-          {data.sections.map((s, i) => (
-            <Reveal key={s.title} delay={(i % 3) * 80}>
-              <TheorySection {...s} />
-            </Reveal>
-          ))}
-        </div>
+        <Timeline items={data.sections} />
       </section>
 
       <section className="section section-alt">

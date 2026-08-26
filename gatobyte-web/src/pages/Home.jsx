@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import Icon from "../components/Icon";
 import Reveal from "../components/Reveal";
-import BigPaw from "../components/decor/BigPaw";
-import CatSilhouette from "../components/decor/CatSilhouette";
-import PawTrail from "../components/decor/PawTrail";
+import PhotoBlob from "../components/decor/PhotoBlob";
 import Sparkle from "../components/decor/Sparkle";
+import PhotoMarquee from "../components/PhotoMarquee";
+import StatStrip from "../components/StatStrip";
+import ProcessSteps from "../components/ProcessSteps";
+import { catPhotos, marqueePhotos } from "../data/catPhotos";
+import { homeStats, processSteps } from "../data/content";
 
 const pillars = [
   {
@@ -40,24 +43,11 @@ export default function Home() {
   return (
     <>
       <section className="cat-hero">
-        <div className="cat-hero-meta">
-          <span>GatoByte</span>
-          <span className="cat-hero-meta-center">Ciencia · Tecnología · Innovación</span>
-          <span>2026</span>
-        </div>
-
-        <div className="cat-hero-stage">
-          <CatSilhouette pose="loaf" className="hero-cat-top" />
-          <BigPaw color="dark" className="paw paw-tl" />
-          <BigPaw color="dark" className="paw paw-tr" />
-          <BigPaw color="tan" className="paw paw-bl" />
-          <BigPaw color="tan" className="paw paw-br" />
-
-          <div className="cat-hero-card">
-            <Sparkle top="10%" left="8%" size={18} delay={0} color="#f4ede1" />
-            <Sparkle top="70%" right="10%" size={24} delay={0.8} color="#f4ede1" />
-            <Sparkle top="20%" right="18%" size={14} delay={1.5} color="#f4ede1" />
-            <span className="tag-pill tag-pill-inverse">Bienvenidos a</span>
+        <Sparkle top="14%" left="6%" size={20} delay={0.2} color="#0d9488" />
+        <Sparkle top="70%" right="8%" size={16} delay={1.2} color="#14304f" />
+        <div className="cat-hero-grid">
+          <div className="cat-hero-copy">
+            <span className="tag-pill">Bienvenidos a</span>
             <h1>
               Gato<span className="brand-accent">Byte</span>
             </h1>
@@ -65,19 +55,28 @@ export default function Home() {
               Somos un grupo dedicado al estudio de la Ciencia, la Tecnología, la Innovación y la
               Gestión de Tecnología — con la curiosidad, agilidad y precisión de un gato.
             </p>
-            <div className="hero-actions">
-              <Link to="/ciencia-e-innovacion" className="btn btn-cream">
+            <div className="hero-actions hero-actions-left">
+              <Link to="/ciencia-e-innovacion" className="btn btn-primary">
                 Ciencia e Innovación
               </Link>
-              <Link to="/gestion-de-tecnologia" className="btn btn-outline-cream">
+              <Link to="/gestion-de-tecnologia" className="btn btn-outline">
                 Gestión de Tecnología
               </Link>
             </div>
           </div>
+
+          <div className="cat-hero-art">
+            <PhotoBlob {...catPhotos.peeking} className="blob-main" />
+            <PhotoBlob {...catPhotos.reachingPaw} className="blob-chip blob-chip-a" />
+            <PhotoBlob {...catPhotos.sunglasses} className="blob-chip blob-chip-b" />
+          </div>
         </div>
 
-        <PawTrail count={7} className="hero-paw-trail" />
-        <CatSilhouette pose="stretch" className="hero-cat-bottom" />
+        <PhotoMarquee photos={marqueePhotos} />
+      </section>
+
+      <section className="section stat-section">
+        <StatStrip stats={homeStats} />
       </section>
 
       <section className="section">
@@ -107,28 +106,21 @@ export default function Home() {
       </section>
 
       <section className="section section-alt">
-        <div className="mission-grid">
-          <Reveal className="mission-card">
-            <span className="mission-icon" aria-hidden="true">
-              <Icon name="target" size={30} strokeWidth={1.8} />
-            </span>
-            <h3>Misión</h3>
+        <Reveal className="teaser-card">
+          <div className="teaser-icon">
+            <Icon name="target" size={30} strokeWidth={1.8} />
+          </div>
+          <div className="teaser-body">
+            <h3>Misión y Visión</h3>
             <p>
-              Difundir y aplicar el conocimiento en ciencia, tecnología e innovación para impulsar
-              una gestión tecnológica eficiente, ética y orientada a resultados.
+              Conoce el propósito que guía nuestro trabajo hoy y el futuro que buscamos construir
+              a partir de los datos de salud.
             </p>
-          </Reveal>
-          <Reveal delay={120} className="mission-card">
-            <span className="mission-icon" aria-hidden="true">
-              <Icon name="telescope" size={30} strokeWidth={1.8} />
-            </span>
-            <h3>Visión</h3>
-            <p>
-              Ser un referente en la comprensión y aplicación de la ciencia, la tecnología y la
-              innovación como motores de desarrollo sostenible.
-            </p>
-          </Reveal>
-        </div>
+          </div>
+          <Link to="/mision-y-vision" className="btn btn-primary teaser-btn">
+            Ver página <Icon name="rocket" size={16} strokeWidth={2} />
+          </Link>
+        </Reveal>
       </section>
 
       <section className="section">
@@ -149,16 +141,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section section-alt">
+        <Reveal className="section-heading">
+          <h2>Cómo trabajamos</h2>
+          <p>El proceso que seguimos en cada investigación, paso a paso.</p>
+        </Reveal>
+        <ProcessSteps steps={processSteps} />
+      </section>
+
+      <section className="section">
+        <Reveal className="quote-card">
+          <PhotoBlob {...catPhotos.bandana} className="quote-avatar" />
+          <div className="quote-body">
+            <Icon name="paw" size={26} strokeWidth={0} className="quote-mark" />
+            <p>
+              "La curiosidad no mató al gato: le enseñó el método científico."
+            </p>
+            <span className="quote-author">— Filosofía GatoByte</span>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="section cta-section">
         <Reveal className="cta-box">
           <h2>Explora nuestro contenido</h2>
-          <p>Teoría, fotografías y videos sobre ciencia, innovación y gestión de tecnología.</p>
+          <p>Teoría, fotografías y videos sobre nuestra estrategia, ciencia, innovación y gestión de tecnología.</p>
           <div className="hero-actions">
+            <Link to="/mision-y-vision" className="btn btn-cream">
+              <Icon name="target" size={18} strokeWidth={2} /> Misión y Visión
+            </Link>
             <Link to="/ciencia-e-innovacion" className="btn btn-cream">
               <Icon name="microscope" size={18} strokeWidth={2} /> Ciencia e Innovación
             </Link>
             <Link to="/gestion-de-tecnologia" className="btn btn-cream">
               <Icon name="compass" size={18} strokeWidth={2} /> Gestión de Tecnología
+            </Link>
+            <Link to="/organizacion" className="btn btn-cream">
+              <Icon name="network" size={18} strokeWidth={2} /> Organización
+            </Link>
+            <Link to="/descripcion-de-posiciones" className="btn btn-cream">
+              <Icon name="file" size={18} strokeWidth={2} /> Descripción de Posiciones
             </Link>
           </div>
         </Reveal>
