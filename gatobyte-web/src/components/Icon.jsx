@@ -33,6 +33,11 @@ import {
   FileText,
   Download,
   Activity,
+  ZoomIn,
+  ZoomOut,
+  Maximize2,
+  Minimize2,
+  ExternalLink,
 } from "lucide-react";
 
 const ICONS = {
@@ -70,6 +75,11 @@ const ICONS = {
   file: FileText,
   download: Download,
   activity: Activity,
+  zoomIn: ZoomIn,
+  zoomOut: ZoomOut,
+  maximize: Maximize2,
+  minimize: Minimize2,
+  external: ExternalLink,
 };
 
 export default function Icon({ name, size = 22, strokeWidth = 2, className }) {

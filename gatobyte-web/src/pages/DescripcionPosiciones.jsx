@@ -1,8 +1,21 @@
+import { lazy, Suspense } from "react";
 import PageHero from "../components/PageHero";
 import PositionCarousel from "../components/PositionCarousel";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
 import { descripcionPosiciones as data } from "../data/content";
+
+const PdfViewer = lazy(() => import("../components/PdfViewer"));
+
+function PdfViewerFallback() {
+  return (
+    <div className="pdf-viewer">
+      <div className="pdf-spinner">
+        <Icon name="refresh" size={26} strokeWidth={2} className="pdf-spin" />
+      </div>
+    </div>
+  );
+}
 
 export default function DescripcionPosiciones() {
   return (
@@ -38,18 +51,24 @@ export default function DescripcionPosiciones() {
       </section>
 
       <section className="section">
-        <Reveal className="pdf-panel">
+        <Reveal className="section-heading">
           <span className="pdf-icon">
-            <Icon name="file" size={30} strokeWidth={1.6} />
+            <Icon name="file" size={26} strokeWidth={1.6} />
           </span>
-          <h3>Documento completo de descripciones de puesto</h3>
+          <h2>Documento completo de descripciones de puesto</h2>
           <p>
-            Aquí se podrá consultar y descargar el documento oficial en PDF con el detalle completo
-            de cada posición del área.
+            Consulta y descarga el documento oficial con el detalle completo de cada posición del
+            área: identificación, funciones, relaciones, responsabilidades y requerimientos.
           </p>
-          <span className="pdf-placeholder-badge">
-            <Icon name="download" size={15} strokeWidth={2} /> Próximamente
-          </span>
+        </Reveal>
+        <Reveal delay={100}>
+          <Suspense fallback={<PdfViewerFallback />}>
+            <PdfViewer
+              src="/documents/descripcion-de-puestos-big-data-analitica.pdf"
+              title="Descripción de Puestos — Big Data y Analítica"
+              downloadName="Descripcion-de-Puestos-Big-Data-y-Analitica-GatoByte.pdf"
+            />
+          </Suspense>
         </Reveal>
       </section>
     </>
