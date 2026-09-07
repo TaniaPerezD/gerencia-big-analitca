@@ -844,3 +844,132 @@ export const mbti = {
     ],
   },
 };
+
+export const scrum = {
+  hero: {
+    tag: "Metodologías ágiles",
+    title: "Scrum en GatoByte",
+    subtitle:
+      "Cómo organizamos el trabajo del Área de Big Data y Analítica con Scrum: los roles, las ceremonias, los artefactos y nuestro tablero de trabajo en vivo.",
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+  },
+  intro: [
+    "Scrum es un marco de trabajo ágil para gestionar proyectos complejos y adaptativos. Nació en el desarrollo de software, pero hoy se aplica en cualquier equipo que necesite entregar valor de forma constante. En lugar de planificar todo por adelantado, Scrum trabaja en ciclos cortos llamados sprints: ciclos de duración fija (normalmente de 2 a 4 semanas) al final de los cuales el equipo entrega un incremento potencialmente utilizable y ajusta su rumbo con base en lo aprendido.",
+    "Se apoya en el Manifiesto Ágil (2001), que prioriza a las personas y su interacción sobre los procesos y las herramientas, la colaboración con el cliente sobre la negociación de contratos, la respuesta al cambio sobre seguir un plan rígido y el software funcionando sobre la documentación excesiva. En GatoByte lo usamos para organizar el trabajo del Área de Big Data y Analítica, donde continuamente aparecen nuevos datos, requisitos y prioridades.",
+  ],
+  agileValues: [
+    "Individuos e interacciones por encima de procesos y herramientas.",
+    "Software funcionando por encima de documentación exhaustiva.",
+    "Colaboración con el cliente por encima de negociación contractual.",
+    "Respuesta ante el cambio por encima de seguir un plan fijo.",
+  ],
+  roles: [
+    {
+      icon: "target",
+      title: "Product Owner",
+      blocks: [
+        {
+          text: "El dueño del producto: define qué construir y en qué orden. Prioriza el Product Backlog según el valor para el negocio y es el único autorizado para decidir qué entra y qué sale de cada sprint.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Scrum Master",
+      blocks: [
+        {
+          text: "El facilitador: protege al equipo de distracciones, elimina impedimentos, vela por que se cumplan las reglas, los valores y las ceremonias de Scrum, y fomenta la mejora continua.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Equipo de Desarrollo",
+      blocks: [
+        {
+          text: "Quienes crean el incremento: un grupo multifuncional y auto-organizado que convierte los ítems del backlog en producto terminado dentro del sprint.",
+        },
+      ],
+    },
+  ],
+  ceremonies: [
+    {
+      icon: "compass",
+      title: "Sprint Planning",
+      blocks: [
+        {
+          text: "Da inicio a cada sprint. Product Owner y equipo acuerdan el objetivo del sprint y seleccionan los ítems del Product Backlog que pasarán al Sprint Backlog, con su plan para lograrlos.",
+        },
+      ],
+    },
+    {
+      icon: "activity",
+      title: "Daily Scrum",
+      blocks: [
+        {
+          text: "Reunión diaria de máximo 15 minutos para sincronizar: qué hice ayer, qué haré hoy y qué obstáculos tengo. No es para resolver el problema, sino para detectarlo.",
+        },
+      ],
+    },
+    {
+      icon: "check",
+      title: "Sprint Review",
+      blocks: [
+        {
+          text: "Al final del sprint, el equipo presenta el incremento terminado al Product Owner y a los interesados, se recibe retroalimentación y se ajusta el backlog para el siguiente ciclo.",
+        },
+      ],
+    },
+    {
+      icon: "refresh",
+      title: "Retrospectiva",
+      blocks: [
+        {
+          text: "Antes de cerrar el ciclo, el equipo reflexiona sobre cómo fue el sprint: qué salió bien, qué se puede mejorar y qué compromisos se asumen para el próximo sprint.",
+        },
+      ],
+    },
+  ],
+  artifacts: [
+    {
+      icon: "database",
+      title: "Product Backlog",
+      blocks: [
+        {
+          text: "Lista priorizada de todo lo que el producto necesita. Nunca está cerrada: crece y cambia conforme aparecen nuevas ideas, requisitos y prioridades.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Sprint Backlog",
+      blocks: [
+        {
+          text: "Subconjunto del backlog que el equipo se compromete a completar en el sprint actual, junto con el plan para lograrlo.",
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Definición de Terminado",
+      blocks: [
+        {
+          text: "El conjunto de criterios que un ítem debe cumplir para considerarse terminado. Garantiza que cada incremento sea consistente, probado y de calidad.",
+        },
+      ],
+    },
+  ],
+  board: {
+    heading: "Nuestro tablero Scrum",
+    subtitle:
+      "El tablero vive en ClickUp y refleja el trabajo del sprint en tiempo real. Cada tarjeta es un ítem del backlog que avanza por columnas según su estado, de izquierda a derecha.",
+    columns: [
+      "Por hacer (To Do): los ítems seleccionados para el sprint, listos para comenzar.",
+      "En curso (In Progress): el trabajo que se está ejecutando en este momento.",
+      "En revisión (Review): listo para validarse contra la Definición de Terminado.",
+      "Hecho (Done): completado y aceptado al cierre del sprint.",
+    ],
+    url: "https://sharing.clickup.com/90171470000/b/4-90176923982-2/tablero",
+  },
+};
