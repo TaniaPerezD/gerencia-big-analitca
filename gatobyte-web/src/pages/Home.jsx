@@ -90,6 +90,28 @@ export default function Home() {
           </p>
         </Reveal>
 
+        <Reveal delay={80} className="component-list">
+          <h4>¿Qué queremos hacer?</h4>
+          <ul>
+            <li>
+              Investigar y documentar, con rigor científico, cómo la ciencia, la tecnología, la
+              innovación y la gestión de tecnología se conectan entre sí.
+            </li>
+            <li>
+              Aplicar esos fundamentos a un caso real de trabajo: la organización, los roles y la
+              forma de operar de un Área de Big Data y Analítica.
+            </li>
+            <li>
+              Practicar metodologías ágiles como Scrum para organizar nuestro propio trabajo en
+              equipo, con roles, ceremonias y un tablero de seguimiento en vivo.
+            </li>
+            <li>
+              Comunicar todo el conocimiento generado de forma clara, visual y accesible, lista
+              para compartirse dentro y fuera de la colonia.
+            </li>
+          </ul>
+        </Reveal>
+
         <div className="pillars-grid">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 90} className="pillar-card-wrap">

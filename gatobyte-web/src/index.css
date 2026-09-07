@@ -1652,6 +1652,115 @@ main {
   flex-shrink: 0;
 }
 
+/* ---------- Scrum org chart (Scrum) ---------- */
+.scrum-org {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrum-org-lead {
+  background: var(--olive);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 22px 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 340px;
+}
+
+.scrum-org-lead-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9fd8ce;
+  margin-bottom: 8px;
+}
+
+.scrum-org-lead h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.scrum-org-lead p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(243, 248, 251, 0.78);
+}
+
+.scrum-org-connector {
+  width: 2px;
+  height: 32px;
+  background: var(--border);
+}
+
+.scrum-org-team-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  color: var(--terracotta-dark);
+  margin: 0 0 24px;
+}
+
+.scrum-org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.scrum-org-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--chip-color, var(--terracotta));
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.scrum-org-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--chip-color, var(--terracotta));
+  margin-bottom: 10px;
+}
+
+.scrum-org-card h4 {
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.scrum-org-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--chip-color, var(--terracotta-dark));
+  margin: 0 0 14px;
+}
+
+.scrum-org-mv p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.scrum-org-mv strong {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .scrum-org-lead {
+    max-width: 100%;
+  }
+}
+
 /* ---------- Article layout (Descripción de Posiciones) ---------- */
 .article-section {
   max-width: 720px;
