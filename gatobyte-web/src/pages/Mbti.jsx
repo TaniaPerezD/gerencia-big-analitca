@@ -2,9 +2,48 @@ import PageHero from "../components/PageHero";
 import StatStrip from "../components/StatStrip";
 import DefinitionGrid from "../components/DefinitionGrid";
 import Accordion from "../components/Accordion";
-import Gallery from "../components/Gallery";
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
+import entjCat from "../assets/entj-trans.png";
+import enfjCat from "../assets/enfj-trans.png";
+import infjCat from "../assets/infj-trans.png";
+import infpCat from "../assets/infp-trans.png";
 import { mbti as data } from "../data/content";
+
+const memberCats = {
+  entj: entjCat,
+  enfj: enfjCat,
+  infj: infjCat,
+  infp: infpCat,
+};
+
+function MemberCard({ member, memberCats, featured = false, delay = 0 }) {
+  return (
+    <Reveal delay={delay} className={featured ? "team-featured-wrap" : "team-card-wrap"}>
+      <article
+        className={featured ? "team-featured" : "team-card"}
+        style={{ "--member-color": member.accent }}
+      >
+        <div className={featured ? "team-featured-image" : "team-card-image"}>
+          <img
+            src={memberCats[member.image]}
+            alt={`Gato ${member.type} — ${member.name}`}
+            loading="lazy"
+          />
+        </div>
+        <div className={featured ? "team-featured-body" : "team-card-body"}>
+          <span className={featured ? "team-type team-type-outline" : "team-type"}>
+            {featured && <Icon name="sparkles" size={13} strokeWidth={2} />}
+            {featured ? `Líder · ${member.type}` : member.type}
+          </span>
+          <h3>{member.name}</h3>
+          <p className="team-role">{member.role}</p>
+          <p className="team-desc">{member.description}</p>
+        </div>
+      </article>
+    </Reveal>
+  );
+}
 
 export default function Mbti() {
   return (
@@ -53,10 +92,17 @@ export default function Mbti() {
 
       <section className="section section-alt">
         <Reveal className="section-heading">
-          <h2>Personalidad en el equipo</h2>
-          <p>El MBTI como herramienta de autoconocimiento y colaboración.</p>
+          <h2>La comunidad de los gatos</h2>
+          <p>Cinco gatos, cinco estilos: los MBTI del equipo GatoByte.</p>
         </Reveal>
-        <Gallery items={data.gallery} />
+
+        <MemberCard member={data.team.leader} memberCats={memberCats} featured />
+
+        <div className="team-grid">
+          {data.team.members.map((m, i) => (
+            <MemberCard key={m.name} member={m} memberCats={memberCats} delay={i * 70} />
+          ))}
+        </div>
       </section>
     </>
   );

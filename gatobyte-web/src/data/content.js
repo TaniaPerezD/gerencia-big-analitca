@@ -794,36 +794,53 @@ export const mbti = {
       ],
     },
   ],
-  gallery: [
-    {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
-      alt: "Equipo colaborando en una computadora",
-      caption: "Diversidad de estilos en el equipo",
+  team: {
+    leader: {
+      name: "Tania Peréz",
+      type: "ENTJ",
+      role: "Líder de la colonia",
+      accent: "#0d9488",
+      image: "entj",
+      description:
+        "Comandante nato Capitán Garra: define la visión, organiza la colonia y empuja cada misión hacia sus objetivos sin titubeos.",
     },
-    {
-      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
-      alt: "Equipo en reunión estratégica",
-      caption: "Decidir y planear en equipo",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80",
-      alt: "Equipo celebrando un logro",
-      caption: "Equipos complementarios, no iguales",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
-      alt: "Reunión de negocios",
-      caption: "Comunicación entre diferentes tipos",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
-      alt: "Tecnología e inteligencia artificial",
-      caption: "Talento y herramientas de análisis",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=900&q=80",
-      alt: "Gato curioso, símbolo de exploración",
-      caption: "La curiosidad también tiene personalidad",
-    },
-  ],
+    members: [
+      {
+        name: "Adriana Rocha",
+        type: "ENTJ",
+        role: "Planeación y ejecución",
+        accent: "#9925eb",
+        image: "entj",
+        description:
+          "Estratega Bigotes pragmático: convierte los grandes planes en procesos claros y hace que las cosas pasen.",
+      },
+      {
+        name: "Dilan Mamani",
+        type: "ENFJ",
+        role: "Talento y cultura",
+        accent: "#06d9b6",
+        image: "enfj",
+        description:
+          "El corazón y garras del equipo: inspira, conecta a cada integrante y se asegura de que la colonia avance junta.",
+      },
+      {
+        name: "Ignacio Retamozo",
+        type: "INFJ",
+        role: "Visión y propósito",
+        accent: "#83b85b",
+        image: "infj",
+        description:
+          "La voz tranquila: percibe el propósito detrás de cada idea y guía decisiones con convicción serena.",
+      },
+      {
+        name: "Ivonne Colque",
+        type: "INFP",
+        role: "Imaginación e ideas",
+        accent: "rgb(140, 183, 61)",
+        image: "infp",
+        description:
+          "La imaginación de la colonia: explora posibilidades, propone soluciones originales y defiende los valores del equipo.",
+      },
+    ],
+  },
 };
