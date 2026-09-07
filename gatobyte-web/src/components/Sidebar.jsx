@@ -9,6 +9,7 @@ const links = [
   { to: "/mision-y-vision", label: "Misión y Visión", icon: "target" },
   { to: "/organizacion", label: "Organización", icon: "network" },
   { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
+  { to: "/mbti-del-equipo", label: "MBTI del Equipo", icon: "sparkles" },
 ];
 
 export default function Sidebar() {

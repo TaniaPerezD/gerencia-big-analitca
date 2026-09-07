@@ -661,3 +661,169 @@ export const descripcionPosiciones = {
     },
   ],
 };
+
+export const mbti = {
+  hero: {
+    tag: "Equipo GatoByte",
+    title: "MBTI del Equipo",
+    subtitle:
+      "El Indicador de Tipo de Personalidad Myers-Briggs (MBTI), la herramienta que usamos en la colonia para entender cómo percibimos, decidimos y colaboramos.",
+    image:
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80",
+  },
+  stats: [
+    { icon: "users", value: "4", label: "dicotomías o pares de preferencias" },
+    { icon: "layers", value: "16", label: "tipos de personalidad posibles" },
+    { icon: "puzzle", value: "4", label: "letras que componen cada tipo" },
+  ],
+  intro: [
+    "El Indicador de Tipo de Personalidad Myers-Briggs (MBTI) es una herramienta de clasificación psicológica basada en la teoría de tipos de Carl Jung. A través de un cuestionario de autoevaluación, organiza la forma en que cada persona percibe el mundo y toma decisiones en cuatro pares de preferencias opuestas. La combinación de estas preferencias da lugar a uno de los 16 tipos de personalidad posibles.",
+    "No es una prueba para etiquetar ni limitar a las personas, sino un lenguaje para entender y respetar las diferencias: de dónde sacamos energía, qué información atendemos, qué priorizamos al decidir y cómo organizamos la vida. En GatoByte lo usamos para comunicarnos mejor, repartir tareas y aprovechar la diversidad de la colonia.",
+  ],
+  components: [
+    "Primera letra (E/I): de dónde proviene tu energía.",
+    "Segunda letra (S/N): qué tipo de información prefieres atender.",
+    "Tercera letra (T/F): cómo prefieres tomar decisiones.",
+    "Cuarta letra (J/P): cómo organizas tu rutina y tu entorno.",
+  ],
+  dichotomies: [
+    {
+      icon: "users",
+      title: "E — Extroversión vs. I — Introversión",
+      blocks: [
+        {
+          text: "¿De dónde sacas tu energía? Las personas Extrovertidas (E) se cargan con la interacción social y la acción; las Introvertidas (I), con la reflexión y el tiempo a solas. No se trata de timidez, sino de dónde se enfoca y recarga la atención.",
+        },
+      ],
+    },
+    {
+      icon: "lightbulb",
+      title: "S — Sensación vs. N — Intuición",
+      blocks: [
+        {
+          text: "¿Qué información procesas primero? Quienes prefieren la Sensación (S) confían en los datos concretos, los hechos y la experiencia directa; quienes prefieren la Intuición (N), en patrones, ideas y posibilidades futuras.",
+        },
+      ],
+    },
+    {
+      icon: "cpu",
+      title: "T — Pensamiento vs. F — Sentimiento",
+      blocks: [
+        {
+          text: "¿Qué priorizas al decidir? El Pensamiento (T) valora la lógica, la coherencia y la objetividad; el Sentimiento (F), los valores humanos, la armonía y el impacto de cada decisión en las personas.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "J — Juicio vs. P — Percepción",
+      blocks: [
+        {
+          text: "¿Cómo organizas tu vida? Los tipos de Juicio (J) prefieren planear, estructurar y cerrar pendientes; los de Percepción (P) se mantienen flexibles, abiertos a nuevas opciones y enfocados en el momento.",
+        },
+      ],
+    },
+  ],
+  temperaments: [
+    {
+      icon: "cpu",
+      title: "Analistas (NT)",
+      blocks: [
+        {
+          text: "Lógica, estrategia y pensamiento racional guían su toma de decisiones.",
+        },
+        {
+          list: [
+            "INTJ — Arquitecto: estratégico e independiente, disfruta diseñar sistemas y planes a largo plazo.",
+            "INTP — Lógico: pensador analítico y curioso, experto en teorías y problemas abstractos.",
+            "ENTJ — Comandante: líder nato, decidido y orientado a objetivos, organiza personas y recursos.",
+            "ENTP — Innovador: original y debatidor, encuentra oportunidades y desafía el status quo.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Diplomáticos (NF)",
+      blocks: [
+        {
+          text: "Idealismo, empatía y foco en las personas definen su manera de conectar.",
+        },
+        {
+          list: [
+            "INFJ — Abogado: idealista y empático, busca significado y el bienestar de los demás.",
+            "INFP — Mediador: creativo y sensible, guiado por sus valores y su propósito.",
+            "ENFJ — Protagonista: inspirador y sociable, motiva a otros hacia metas colectivas.",
+            "ENFP — Activista: entusiasta e imaginativo, contagia energía y explora posibilidades.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Centinelas (SJ)",
+      blocks: [
+        {
+          text: "Responsabilidad, orden y compromiso sostienen su forma de trabajar.",
+        },
+        {
+          list: [
+            "ISTJ — Logista: responsable y metódico, fiable en el cumplimiento de deberes prácticos.",
+            "ISFJ — Defensor: dedicado y atento a las necesidades de otros, constante y leal.",
+            "ESTJ — Ejecutivo: organizador nato, valora el orden, los procesos y las normas.",
+            "ESFJ — Cónsul: cooperativo y servicial, armoniza equipos y cuida el bienestar colectivo.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Exploradores (SP)",
+      blocks: [
+        {
+          text: "Flexibilidad, acción y respuesta al presente caracterizan su estilo.",
+        },
+        {
+          list: [
+            "ISTP — Virtuoso: pragmático y habilidoso, resuelve problemas concretos con destreza técnica.",
+            "ISFP — Aventurero: sensible al presente, valora la estética, la libertad y la autenticidad.",
+            "ESTP — Empresario: enérgico y audaz, actúa rápido y disfruta los retos del momento.",
+            "ESFP — Animador: espontáneo y sociable, aporta entusiasmo y vive el aquí y ahora.",
+          ],
+        },
+      ],
+    },
+  ],
+  gallery: [
+    {
+      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+      alt: "Equipo colaborando en una computadora",
+      caption: "Diversidad de estilos en el equipo",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+      alt: "Equipo en reunión estratégica",
+      caption: "Decidir y planear en equipo",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80",
+      alt: "Equipo celebrando un logro",
+      caption: "Equipos complementarios, no iguales",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+      alt: "Reunión de negocios",
+      caption: "Comunicación entre diferentes tipos",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+      alt: "Tecnología e inteligencia artificial",
+      caption: "Talento y herramientas de análisis",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=900&q=80",
+      alt: "Gato curioso, símbolo de exploración",
+      caption: "La curiosidad también tiene personalidad",
+    },
+  ],
+};
