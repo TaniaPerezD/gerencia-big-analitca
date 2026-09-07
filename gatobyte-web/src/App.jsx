@@ -7,6 +7,8 @@ import GestionTecnologia from "./pages/GestionTecnologia";
 import MisionVision from "./pages/MisionVision";
 import Organizacion from "./pages/Organizacion";
 import DescripcionPosiciones from "./pages/DescripcionPosiciones";
+import Mbti from "./pages/Mbti";
+import Scrum from "./pages/Scrum";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/gestion-de-tecnologia" element={<GestionTecnologia />} />
             <Route path="/organizacion" element={<Organizacion />} />
             <Route path="/descripcion-de-posiciones" element={<DescripcionPosiciones />} />
+            <Route path="/mbti-del-equipo" element={<Mbti />} />
+            <Route path="/scrum-del-equipo" element={<Scrum />} />
           </Routes>
         </main>
         <Footer />

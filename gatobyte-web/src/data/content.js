@@ -661,3 +661,315 @@ export const descripcionPosiciones = {
     },
   ],
 };
+
+export const mbti = {
+  hero: {
+    tag: "Equipo GatoByte",
+    title: "MBTI del Equipo",
+    subtitle:
+      "El Indicador de Tipo de Personalidad Myers-Briggs (MBTI), la herramienta que usamos en la colonia para entender cómo percibimos, decidimos y colaboramos.",
+    image:
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80",
+  },
+  stats: [
+    { icon: "users", value: "4", label: "dicotomías o pares de preferencias" },
+    { icon: "layers", value: "16", label: "tipos de personalidad posibles" },
+    { icon: "puzzle", value: "4", label: "letras que componen cada tipo" },
+  ],
+  intro: [
+    "El Indicador de Tipo de Personalidad Myers-Briggs (MBTI) es una herramienta de clasificación psicológica basada en la teoría de tipos de Carl Jung. A través de un cuestionario de autoevaluación, organiza la forma en que cada persona percibe el mundo y toma decisiones en cuatro pares de preferencias opuestas. La combinación de estas preferencias da lugar a uno de los 16 tipos de personalidad posibles.",
+    "No es una prueba para etiquetar ni limitar a las personas, sino un lenguaje para entender y respetar las diferencias: de dónde sacamos energía, qué información atendemos, qué priorizamos al decidir y cómo organizamos la vida. En GatoByte lo usamos para comunicarnos mejor, repartir tareas y aprovechar la diversidad de la colonia.",
+  ],
+  components: [
+    "Primera letra (E/I): de dónde proviene tu energía.",
+    "Segunda letra (S/N): qué tipo de información prefieres atender.",
+    "Tercera letra (T/F): cómo prefieres tomar decisiones.",
+    "Cuarta letra (J/P): cómo organizas tu rutina y tu entorno.",
+  ],
+  dichotomies: [
+    {
+      icon: "users",
+      title: "E — Extroversión vs. I — Introversión",
+      blocks: [
+        {
+          text: "¿De dónde sacas tu energía? Las personas Extrovertidas (E) se cargan con la interacción social y la acción; las Introvertidas (I), con la reflexión y el tiempo a solas. No se trata de timidez, sino de dónde se enfoca y recarga la atención.",
+        },
+      ],
+    },
+    {
+      icon: "lightbulb",
+      title: "S — Sensación vs. N — Intuición",
+      blocks: [
+        {
+          text: "¿Qué información procesas primero? Quienes prefieren la Sensación (S) confían en los datos concretos, los hechos y la experiencia directa; quienes prefieren la Intuición (N), en patrones, ideas y posibilidades futuras.",
+        },
+      ],
+    },
+    {
+      icon: "cpu",
+      title: "T — Pensamiento vs. F — Sentimiento",
+      blocks: [
+        {
+          text: "¿Qué priorizas al decidir? El Pensamiento (T) valora la lógica, la coherencia y la objetividad; el Sentimiento (F), los valores humanos, la armonía y el impacto de cada decisión en las personas.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "J — Juicio vs. P — Percepción",
+      blocks: [
+        {
+          text: "¿Cómo organizas tu vida? Los tipos de Juicio (J) prefieren planear, estructurar y cerrar pendientes; los de Percepción (P) se mantienen flexibles, abiertos a nuevas opciones y enfocados en el momento.",
+        },
+      ],
+    },
+  ],
+  temperaments: [
+    {
+      icon: "cpu",
+      title: "Analistas (NT)",
+      blocks: [
+        {
+          text: "Lógica, estrategia y pensamiento racional guían su toma de decisiones.",
+        },
+        {
+          list: [
+            "INTJ — Arquitecto: estratégico e independiente, disfruta diseñar sistemas y planes a largo plazo.",
+            "INTP — Lógico: pensador analítico y curioso, experto en teorías y problemas abstractos.",
+            "ENTJ — Comandante: líder nato, decidido y orientado a objetivos, organiza personas y recursos.",
+            "ENTP — Innovador: original y debatidor, encuentra oportunidades y desafía el status quo.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Diplomáticos (NF)",
+      blocks: [
+        {
+          text: "Idealismo, empatía y foco en las personas definen su manera de conectar.",
+        },
+        {
+          list: [
+            "INFJ — Abogado: idealista y empático, busca significado y el bienestar de los demás.",
+            "INFP — Mediador: creativo y sensible, guiado por sus valores y su propósito.",
+            "ENFJ — Protagonista: inspirador y sociable, motiva a otros hacia metas colectivas.",
+            "ENFP — Activista: entusiasta e imaginativo, contagia energía y explora posibilidades.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Centinelas (SJ)",
+      blocks: [
+        {
+          text: "Responsabilidad, orden y compromiso sostienen su forma de trabajar.",
+        },
+        {
+          list: [
+            "ISTJ — Logista: responsable y metódico, fiable en el cumplimiento de deberes prácticos.",
+            "ISFJ — Defensor: dedicado y atento a las necesidades de otros, constante y leal.",
+            "ESTJ — Ejecutivo: organizador nato, valora el orden, los procesos y las normas.",
+            "ESFJ — Cónsul: cooperativo y servicial, armoniza equipos y cuida el bienestar colectivo.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Exploradores (SP)",
+      blocks: [
+        {
+          text: "Flexibilidad, acción y respuesta al presente caracterizan su estilo.",
+        },
+        {
+          list: [
+            "ISTP — Virtuoso: pragmático y habilidoso, resuelve problemas concretos con destreza técnica.",
+            "ISFP — Aventurero: sensible al presente, valora la estética, la libertad y la autenticidad.",
+            "ESTP — Empresario: enérgico y audaz, actúa rápido y disfruta los retos del momento.",
+            "ESFP — Animador: espontáneo y sociable, aporta entusiasmo y vive el aquí y ahora.",
+          ],
+        },
+      ],
+    },
+  ],
+  team: {
+    leader: {
+      name: "Tania Peréz",
+      type: "ENTJ",
+      role: "Líder de la colonia",
+      accent: "#0d9488",
+      image: "entj",
+      description:
+        "Comandante nato Capitán Garra: define la visión, organiza la colonia y empuja cada misión hacia sus objetivos sin titubeos.",
+    },
+    members: [
+      {
+        name: "Adriana Rocha",
+        type: "ENTJ",
+        role: "Planeación y ejecución",
+        accent: "#9925eb",
+        image: "entj",
+        description:
+          "Estratega Bigotes pragmático: convierte los grandes planes en procesos claros y hace que las cosas pasen.",
+      },
+      {
+        name: "Dilan Mamani",
+        type: "ENFJ",
+        role: "Talento y cultura",
+        accent: "#06d9b6",
+        image: "enfj",
+        description:
+          "El corazón y garras del equipo: inspira, conecta a cada integrante y se asegura de que la colonia avance junta.",
+      },
+      {
+        name: "Ignacio Retamozo",
+        type: "INFJ",
+        role: "Visión y propósito",
+        accent: "#83b85b",
+        image: "infj",
+        description:
+          "La voz tranquila: percibe el propósito detrás de cada idea y guía decisiones con convicción serena.",
+      },
+      {
+        name: "Ivonne Colque",
+        type: "INFP",
+        role: "Imaginación e ideas",
+        accent: "rgb(140, 183, 61)",
+        image: "infp",
+        description:
+          "La imaginación de la colonia: explora posibilidades, propone soluciones originales y defiende los valores del equipo.",
+      },
+    ],
+  },
+};
+
+export const scrum = {
+  hero: {
+    tag: "Metodologías ágiles",
+    title: "Scrum en GatoByte",
+    subtitle:
+      "Cómo organizamos el trabajo del Área de Big Data y Analítica con Scrum: los roles, las ceremonias, los artefactos y nuestro tablero de trabajo en vivo.",
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+  },
+  intro: [
+    "Scrum es un marco de trabajo ágil para gestionar proyectos complejos y adaptativos. Nació en el desarrollo de software, pero hoy se aplica en cualquier equipo que necesite entregar valor de forma constante. En lugar de planificar todo por adelantado, Scrum trabaja en ciclos cortos llamados sprints: ciclos de duración fija (normalmente de 2 a 4 semanas) al final de los cuales el equipo entrega un incremento potencialmente utilizable y ajusta su rumbo con base en lo aprendido.",
+    "Se apoya en el Manifiesto Ágil (2001), que prioriza a las personas y su interacción sobre los procesos y las herramientas, la colaboración con el cliente sobre la negociación de contratos, la respuesta al cambio sobre seguir un plan rígido y el software funcionando sobre la documentación excesiva. En GatoByte lo usamos para organizar el trabajo del Área de Big Data y Analítica, donde continuamente aparecen nuevos datos, requisitos y prioridades.",
+  ],
+  agileValues: [
+    "Individuos e interacciones por encima de procesos y herramientas.",
+    "Software funcionando por encima de documentación exhaustiva.",
+    "Colaboración con el cliente por encima de negociación contractual.",
+    "Respuesta ante el cambio por encima de seguir un plan fijo.",
+  ],
+  roles: [
+    {
+      icon: "target",
+      title: "Product Owner",
+      blocks: [
+        {
+          text: "El dueño del producto: define qué construir y en qué orden. Prioriza el Product Backlog según el valor para el negocio y es el único autorizado para decidir qué entra y qué sale de cada sprint.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Scrum Master",
+      blocks: [
+        {
+          text: "El facilitador: protege al equipo de distracciones, elimina impedimentos, vela por que se cumplan las reglas, los valores y las ceremonias de Scrum, y fomenta la mejora continua.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Equipo de Desarrollo",
+      blocks: [
+        {
+          text: "Quienes crean el incremento: un grupo multifuncional y auto-organizado que convierte los ítems del backlog en producto terminado dentro del sprint.",
+        },
+      ],
+    },
+  ],
+  ceremonies: [
+    {
+      icon: "compass",
+      title: "Sprint Planning",
+      blocks: [
+        {
+          text: "Da inicio a cada sprint. Product Owner y equipo acuerdan el objetivo del sprint y seleccionan los ítems del Product Backlog que pasarán al Sprint Backlog, con su plan para lograrlos.",
+        },
+      ],
+    },
+    {
+      icon: "activity",
+      title: "Daily Scrum",
+      blocks: [
+        {
+          text: "Reunión diaria de máximo 15 minutos para sincronizar: qué hice ayer, qué haré hoy y qué obstáculos tengo. No es para resolver el problema, sino para detectarlo.",
+        },
+      ],
+    },
+    {
+      icon: "check",
+      title: "Sprint Review",
+      blocks: [
+        {
+          text: "Al final del sprint, el equipo presenta el incremento terminado al Product Owner y a los interesados, se recibe retroalimentación y se ajusta el backlog para el siguiente ciclo.",
+        },
+      ],
+    },
+    {
+      icon: "refresh",
+      title: "Retrospectiva",
+      blocks: [
+        {
+          text: "Antes de cerrar el ciclo, el equipo reflexiona sobre cómo fue el sprint: qué salió bien, qué se puede mejorar y qué compromisos se asumen para el próximo sprint.",
+        },
+      ],
+    },
+  ],
+  artifacts: [
+    {
+      icon: "database",
+      title: "Product Backlog",
+      blocks: [
+        {
+          text: "Lista priorizada de todo lo que el producto necesita. Nunca está cerrada: crece y cambia conforme aparecen nuevas ideas, requisitos y prioridades.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Sprint Backlog",
+      blocks: [
+        {
+          text: "Subconjunto del backlog que el equipo se compromete a completar en el sprint actual, junto con el plan para lograrlo.",
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Definición de Terminado",
+      blocks: [
+        {
+          text: "El conjunto de criterios que un ítem debe cumplir para considerarse terminado. Garantiza que cada incremento sea consistente, probado y de calidad.",
+        },
+      ],
+    },
+  ],
+  board: {
+    heading: "Nuestro tablero Scrum",
+    subtitle:
+      "El tablero vive en ClickUp y refleja el trabajo del sprint en tiempo real. Cada tarjeta es un ítem del backlog que avanza por columnas según su estado, de izquierda a derecha.",
+    columns: [
+      "Por hacer (To Do): los ítems seleccionados para el sprint, listos para comenzar.",
+      "En curso (In Progress): el trabajo que se está ejecutando en este momento.",
+      "En revisión (Review): listo para validarse contra la Definición de Terminado.",
+      "Hecho (Done): completado y aceptado al cierre del sprint.",
+    ],
+    url: "https://sharing.clickup.com/90171470000/b/4-90176923982-2/tablero",
+  },
+};
