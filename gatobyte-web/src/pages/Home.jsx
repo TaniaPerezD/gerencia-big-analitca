@@ -7,7 +7,13 @@ import PhotoMarquee from "../components/PhotoMarquee";
 import StatStrip from "../components/StatStrip";
 import ProcessSteps from "../components/ProcessSteps";
 import { catPhotos, marqueePhotos } from "../data/catPhotos";
-import { homeStats, processSteps } from "../data/content";
+import { homeStats, processSteps, mbti } from "../data/content";
+import entjCat from "../assets/entj-trans.png";
+import enfjCat from "../assets/enfj-trans.png";
+import infjCat from "../assets/infj-trans.png";
+import infpCat from "../assets/infp-trans.png";
+
+const memberCats = { entj: entjCat, enfj: enfjCat, infj: infjCat, infp: infpCat };
 
 const pillars = [
   {
@@ -90,6 +96,28 @@ export default function Home() {
           </p>
         </Reveal>
 
+        <Reveal delay={80} className="component-list">
+          <h4>¿Qué queremos hacer?</h4>
+          <ul>
+            <li>
+              Investigar y documentar, con rigor científico, cómo la ciencia, la tecnología, la
+              innovación y la gestión de tecnología se conectan entre sí.
+            </li>
+            <li>
+              Aplicar esos fundamentos a un caso real de trabajo: la organización, los roles y la
+              forma de operar de un Área de Big Data y Analítica.
+            </li>
+            <li>
+              Practicar metodologías ágiles como Scrum para organizar nuestro propio trabajo en
+              equipo, con roles, ceremonias y un tablero de seguimiento en vivo.
+            </li>
+            <li>
+              Comunicar todo el conocimiento generado de forma clara, visual y accesible, lista
+              para compartirse dentro y fuera de la colonia.
+            </li>
+          </ul>
+        </Reveal>
+
         <div className="pillars-grid">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 90} className="pillar-card-wrap">
@@ -125,6 +153,39 @@ export default function Home() {
 
       <section className="section">
         <Reveal className="section-heading">
+          <span className="tag-pill" style={{ justifyContent: "center" }}>
+            La colonia
+          </span>
+          <h2>Nuestro equipo</h2>
+          <p>Cinco gatos, cinco estilos de trabajo — conoce a quién está detrás de GatoByte.</p>
+        </Reveal>
+
+        <div className="team-grid team-grid-compact">
+          {[mbti.team.leader, ...mbti.team.members].map((m, i) => (
+            <Reveal key={m.name} delay={i * 70} className="team-card-wrap">
+              <article className="team-card" style={{ "--member-color": m.accent }}>
+                <div className="team-card-image">
+                  <img src={memberCats[m.image]} alt={`Gato ${m.type} — ${m.name}`} loading="lazy" />
+                </div>
+                <div className="team-card-body">
+                  <span className="team-type">{m.type}</span>
+                  <h3>{m.name}</h3>
+                  <p className="team-role">{m.role}</p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="team-more-link">
+          <Link to="/mbti-del-equipo">
+            Conoce el MBTI completo del equipo <Icon name="chevronRight" size={16} strokeWidth={2.2} />
+          </Link>
+        </Reveal>
+      </section>
+
+      <section className="section section-alt">
+        <Reveal className="section-heading">
           <h2>Nuestros valores</h2>
           <p>Los principios que guían a la colonia GatoByte en cada proyecto.</p>
         </Reveal>
@@ -141,7 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <Reveal className="section-heading">
           <h2>Cómo trabajamos</h2>
           <p>El proceso que seguimos en cada investigación, paso a paso.</p>
@@ -181,6 +242,12 @@ export default function Home() {
             </Link>
             <Link to="/descripcion-de-posiciones" className="btn btn-cream">
               <Icon name="file" size={18} strokeWidth={2} /> Descripción de Posiciones
+            </Link>
+            <Link to="/mbti-del-equipo" className="btn btn-cream">
+              <Icon name="sparkles" size={18} strokeWidth={2} /> MBTI del Equipo
+            </Link>
+            <Link to="/scrum-del-equipo" className="btn btn-cream">
+              <Icon name="activity" size={18} strokeWidth={2} /> Scrum del Equipo
             </Link>
           </div>
         </Reveal>

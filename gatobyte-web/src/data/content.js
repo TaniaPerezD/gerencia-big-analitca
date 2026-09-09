@@ -214,6 +214,12 @@ export const cienciaInnovacion = {
     title: "¿Cómo funciona el aprendizaje automático? (3Blue1Brown)",
     youtubeId: "aircAruvnKk",
   },
+  references: [
+    "Manual de Frascati — OCDE (definiciones y medición de actividades de I+D).",
+    "Manual de Oslo — OCDE/Eurostat (guía para medir la innovación).",
+    "Future of Jobs Report — Foro Económico Mundial (impacto de la automatización en el empleo).",
+    "Castells, M. — La era de la información: economía, sociedad y cultura.",
+  ],
 };
 
 export const gestionTecnologia = {
@@ -412,6 +418,12 @@ export const gestionTecnologia = {
     title: "Cómo los grandes líderes inspiran la acción (Simon Sinek, TED)",
     youtubeId: "qp0HIF3SfI4",
   },
+  references: [
+    "ITIL 4 — Axelos (marco de referencia para la gestión de servicios de TI).",
+    "COBIT 2019 — ISACA (marco de gobierno y gestión de TI empresarial).",
+    "PMBOK Guide — Project Management Institute (estándar de gestión de proyectos).",
+    "Manifiesto Ágil — agilemanifesto.org (valores y principios del desarrollo ágil).",
+  ],
 };
 
 export const misionVision = {
@@ -893,6 +905,53 @@ export const scrum = {
       ],
     },
   ],
+  orgTeam: {
+    productOwner: {
+      name: "Yamil Cárdenas",
+      role: "Product Owner · Scrum Master",
+      note:
+        "Docente del curso: prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
+    },
+    teamLabel: "Equipo de Desarrollo",
+    positions: [
+      {
+        title: "Analista de Business Intelligence (BI)",
+        name: "Dilan Mamani",
+        color: "#0d9488",
+        mision:
+          "Convertir los datos en información clara y accionable para que cada área tome mejores decisiones, todos los días.",
+        vision:
+          "Ser el punto de referencia de autoservicio de datos, donde cualquier persona resuelva sus propias preguntas de negocio sin depender de un reporte a medida.",
+      },
+      {
+        title: "Ingeniero de Infraestructura de Datos",
+        name: "Adriana Rocha",
+        color: "#2563eb",
+        mision:
+          "Construir y mantener una plataforma de datos confiable, segura y escalable que sostenga todo el trabajo analítico del área.",
+        vision:
+          "Lograr una infraestructura de datos tan estable que se vuelva invisible: siempre disponible, siempre a tiempo.",
+      },
+      {
+        title: "Especialista en Gobernanza de Datos",
+        name: "Ivonne Colque",
+        color: "#4f46e5",
+        mision:
+          "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad, desde que se capturan hasta que se consumen.",
+        vision:
+          "Ser el estándar de confianza del área: que cada dato tenga dueño, definición y un uso claramente autorizado.",
+      },
+      {
+        title: "PM de Ciencia de Datos e Innovación",
+        name: "Ignacio Retamozo",
+        color: "#14b8a6",
+        mision:
+          "Liderar la experimentación con modelos predictivos y de IA que conviertan los datos en decisiones anticipadas, no solo en reportes del pasado.",
+        vision:
+          "Convertir a la analítica predictiva en el motor de innovación que anticipe necesidades antes de que se conviertan en problemas.",
+      },
+    ],
+  },
   ceremonies: [
     {
       icon: "compass",

@@ -10,7 +10,7 @@
   --cream: #f3f8fb;
   --card: #ffffff;
   --border: #dde6ee;
-  --shadow: 0 10px 30px rgba(16, 42, 67, 0.1);
+  --shadow: 0 14px 40px -6px rgba(16, 42, 67, 0.14);
   --radius: 16px;
   font-family: "Nunito", system-ui, sans-serif;
 }
@@ -33,6 +33,37 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1,
+.font-serif {
+  font-family: "Fraunces", "Poppins", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-family: "Fraunces", "Poppins", serif;
+  font-weight: 600;
+}
+
+em,
+.accent-italic {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 #root {
@@ -48,10 +79,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Poppins", "Nunito", system-ui, sans-serif;
   color: var(--ink);
   margin: 0 0 0.5em;
   line-height: 1.15;
+}
+
+h3,
+h4 {
+  font-family: "Poppins", "Nunito", system-ui, sans-serif;
 }
 
 p {
@@ -379,23 +414,28 @@ main {
 }
 
 .tag-pill {
-  display: inline-block;
-  background: rgba(13, 148, 136, 0.14);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--terracotta-dark);
-  border: 1px solid rgba(13, 148, 136, 0.35);
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
 
+.tag-pill::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
 .tag-pill-inverse {
-  background: rgba(243, 248, 251, 0.18);
-  color: var(--cream);
-  border-color: rgba(243, 248, 251, 0.4);
+  color: #5eead4;
 }
 
 .hero-actions {
@@ -1652,6 +1692,115 @@ main {
   flex-shrink: 0;
 }
 
+/* ---------- Scrum org chart (Scrum) ---------- */
+.scrum-org {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrum-org-lead {
+  background: var(--olive);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 22px 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 340px;
+}
+
+.scrum-org-lead-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9fd8ce;
+  margin-bottom: 8px;
+}
+
+.scrum-org-lead h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.scrum-org-lead p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(243, 248, 251, 0.78);
+}
+
+.scrum-org-connector {
+  width: 2px;
+  height: 32px;
+  background: var(--border);
+}
+
+.scrum-org-team-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  color: var(--terracotta-dark);
+  margin: 0 0 24px;
+}
+
+.scrum-org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.scrum-org-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--chip-color, var(--terracotta));
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.scrum-org-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--chip-color, var(--terracotta));
+  margin-bottom: 10px;
+}
+
+.scrum-org-card h4 {
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.scrum-org-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--chip-color, var(--terracotta-dark));
+  margin: 0 0 14px;
+}
+
+.scrum-org-mv p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.scrum-org-mv strong {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .scrum-org-lead {
+    max-width: 100%;
+  }
+}
+
 /* ---------- Article layout (Descripción de Posiciones) ---------- */
 .article-section {
   max-width: 720px;
@@ -2156,6 +2305,40 @@ main {
   flex-shrink: 0;
 }
 
+/* ---------- References ---------- */
+.references-block {
+  border-top: 1px solid var(--border);
+  padding-top: 26px;
+}
+
+.references-block h4 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.references-block ul {
+  margin: 0;
+  padding-left: 1.2em;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.references-block li {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+@media (max-width: 640px) {
+  .references-block ul {
+    columns: 1;
+  }
+}
+
 /* ---------- Video ---------- */
 .video-embed {
   max-width: 840px;
@@ -2358,6 +2541,31 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.team-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.team-more-link {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.team-more-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  border-bottom: 2px solid rgba(13, 148, 136, 0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease, gap 0.2s ease;
+}
+
+.team-more-link a:hover {
+  border-color: var(--terracotta-dark);
+  gap: 10px;
 }
 
 .team-card-wrap {

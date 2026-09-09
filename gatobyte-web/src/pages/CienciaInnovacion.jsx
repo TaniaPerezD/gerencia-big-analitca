@@ -3,6 +3,7 @@ import NumberedList from "../components/NumberedList";
 import Gallery from "../components/Gallery";
 import VideoEmbed from "../components/VideoEmbed";
 import StatStrip from "../components/StatStrip";
+import References from "../components/References";
 import Reveal from "../components/Reveal";
 import { cienciaInnovacion as data } from "../data/content";
 
@@ -37,6 +38,10 @@ export default function CienciaInnovacion() {
           <p>Un vistazo audiovisual a la innovación tecnológica.</p>
         </Reveal>
         <VideoEmbed {...data.video} />
+      </section>
+
+      <section className="section narrow-section">
+        <References items={data.references} />
       </section>
     </>
   );

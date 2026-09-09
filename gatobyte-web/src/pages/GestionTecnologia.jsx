@@ -3,6 +3,7 @@ import Timeline from "../components/Timeline";
 import Gallery from "../components/Gallery";
 import VideoEmbed from "../components/VideoEmbed";
 import StatStrip from "../components/StatStrip";
+import References from "../components/References";
 import Reveal from "../components/Reveal";
 import { gestionTecnologia as data } from "../data/content";
 
@@ -37,6 +38,10 @@ export default function GestionTecnologia() {
           <p>Liderazgo y visión aplicados a la gestión de tecnología.</p>
         </Reveal>
         <VideoEmbed {...data.video} />
+      </section>
+
+      <section className="section narrow-section">
+        <References items={data.references} />
       </section>
     </>
   );
