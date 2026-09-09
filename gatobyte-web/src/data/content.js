@@ -214,6 +214,12 @@ export const cienciaInnovacion = {
     title: "¿Cómo funciona el aprendizaje automático? (3Blue1Brown)",
     youtubeId: "aircAruvnKk",
   },
+  references: [
+    "Manual de Frascati — OCDE (definiciones y medición de actividades de I+D).",
+    "Manual de Oslo — OCDE/Eurostat (guía para medir la innovación).",
+    "Future of Jobs Report — Foro Económico Mundial (impacto de la automatización en el empleo).",
+    "Castells, M. — La era de la información: economía, sociedad y cultura.",
+  ],
 };
 
 export const gestionTecnologia = {
@@ -412,6 +418,12 @@ export const gestionTecnologia = {
     title: "Cómo los grandes líderes inspiran la acción (Simon Sinek, TED)",
     youtubeId: "qp0HIF3SfI4",
   },
+  references: [
+    "ITIL 4 — Axelos (marco de referencia para la gestión de servicios de TI).",
+    "COBIT 2019 — ISACA (marco de gobierno y gestión de TI empresarial).",
+    "PMBOK Guide — Project Management Institute (estándar de gestión de proyectos).",
+    "Manifiesto Ágil — agilemanifesto.org (valores y principios del desarrollo ágil).",
+  ],
 };
 
 export const misionVision = {

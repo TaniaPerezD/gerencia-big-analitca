@@ -4,8 +4,8 @@ import Icon from "./Icon";
 
 const links = [
   { to: "/", label: "Inicio", icon: "home" },
-  { to: "/ciencia-e-innovacion", label: "Ciencia e Innovación", icon: "microscope" },
   { to: "/gestion-de-tecnologia", label: "Gestión de Tecnología", icon: "compass" },
+  { to: "/ciencia-e-innovacion", label: "Ciencia e Innovación", icon: "microscope" },
   { to: "/mision-y-vision", label: "Misión y Visión", icon: "target" },
   { to: "/organizacion", label: "Organización", icon: "network" },
   { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
