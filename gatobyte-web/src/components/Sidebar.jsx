@@ -11,6 +11,7 @@ const links = [
   { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
   { to: "/mbti-del-equipo", label: "MBTI del Equipo", icon: "sparkles" },
   { to: "/scrum-del-equipo", label: "Scrum del Equipo", icon: "activity" },
+  { to: "/idef0", label: "Modelado IDEF0", icon: "layers" },
 ];
 
 export default function Sidebar() {

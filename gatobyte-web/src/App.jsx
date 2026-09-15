@@ -9,6 +9,7 @@ import Organizacion from "./pages/Organizacion";
 import DescripcionPosiciones from "./pages/DescripcionPosiciones";
 import Mbti from "./pages/Mbti";
 import Scrum from "./pages/Scrum";
+import Idef0 from "./pages/Idef0";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/descripcion-de-posiciones" element={<DescripcionPosiciones />} />
             <Route path="/mbti-del-equipo" element={<Mbti />} />
             <Route path="/scrum-del-equipo" element={<Scrum />} />
+            <Route path="/idef0" element={<Idef0 />} />
           </Routes>
         </main>
         <Footer />

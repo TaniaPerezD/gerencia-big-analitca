@@ -857,6 +857,154 @@ export const mbti = {
   },
 };
 
+export const idef0 = {
+  hero: {
+    tag: "Modelado de funciones",
+    title: "IDEF0",
+    subtitle:
+      "La metodología estándar para modelar las funciones de una organización: qué hace cada proceso, con qué entradas, bajo qué controles y con qué recursos lo logra.",
+  },
+  intro: [
+    "IDEF0 es la abreviatura de Integration Definition for Function Modeling: una metodología estandarizada para modelar las funciones de un sistema u organización — sus actividades, procesos y operaciones — y las relaciones entre ellas. No responde a «cuándo» ni «en qué orden» se hacen las cosas, sino a «qué» se hace, «qué se necesita» y «qué se produce» en cada función.",
+    "Nace de la técnica SADT (Structured Analysis and Design Technique), desarrollada por Douglas T. Ross y la compañía SofTech, Inc., y fue adoptada por la Fuerza Aérea de los Estados Unidos en el marco del programa ICAM. En 1993 se convirtió en el estándar estadounidense FIPS PUB 183, mantenido por el NIST, y fue fuertemente recomendado para el análisis, el desarrollo, el rediseño y la integración de sistemas de información.",
+  ],
+  keyPoints: [
+    "Una caja = una función con nombre de verbo (ej. «Transformar datos»).",
+    "Entradas (I): lo que la función transforma o consume, por la izquierda.",
+    "Controles (C): reglas y estándares que gobiernan la función, por arriba.",
+    "Salidas (O): lo que la función produce, por la derecha.",
+    "Mecanismos (M): personas, equipos y herramientas que la ejecutan, por abajo.",
+    "De arriba hacia abajo: del contexto A-0 a diagramas cada vez más detallados.",
+  ],
+  theory: [
+    {
+      icon: "network",
+      title: "¿Qué es IDEF0?",
+      blocks: [
+        {
+          text: "Un modelo IDEF0 es una representación estructurada de las funciones, actividades o procesos dentro del sistema o área modelada, junto con los datos u objetos que las interconectan. Provee una vista funcional completa: qué se hace, para qué, bajo qué reglas y con qué recursos.",
+        },
+        {
+          heading: "Origen",
+          text: "Surgió del programa ICAM de la Fuerza Aérea de los EE. UU. como evolución de SADT, y se estandarizó como FIPS PUB 183 por el NIST en 1993. Forma parte de la familia de métodos IDEF junto con IDEF1 (modelado de información) e IDEF3 (modelado de procesos).",
+        },
+        {
+          heading: "Para qué se usa",
+          list: [
+            "Analizar procesos de negocio y de sistemas.",
+            "Diseñar y rediseñar (re-engineering) procesos.",
+            "Integrar sistemas de información y operaciones.",
+            "Documentar y comunicar el funcionamiento de la organización.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "La notación: cajas y flechas (ICOM)",
+      blocks: [
+        {
+          text: "El lenguaje gráfico de IDEF0 se compone de dos elementos: cajas y flechas. Cada caja representa una función; cada flecha representa un dato u objeto que entra, sale o gobierna esa función.",
+        },
+        {
+          heading: "Entradas (Inputs)",
+          text: "Los datos u objetos que la función transforma o consume. Llegan por el lado izquierdo de la caja.",
+        },
+        {
+          heading: "Controles (Controls)",
+          text: "Las reglas, normas, políticas o estándares que condicionan la realización de la función, sin consumirse. Llegan por el lado superior.",
+        },
+        {
+          heading: "Salidas (Outputs)",
+          text: "Los datos u objetos que la función produce. Salen por el lado derecho de la caja y pueden ser entrada o control de otra función.",
+        },
+        {
+          heading: "Mecanismos (Mechanisms)",
+          text: "Los recursos que ejecutan la función: personas, equipos, herramientas o sistemas. Llegan por el lado inferior.",
+        },
+      ],
+    },
+    {
+      icon: "compass",
+      title: "Descomposición de arriba hacia abajo",
+      blocks: [
+        {
+          text: "IDEF0 modela de forma top-down. El diagrama de contexto (A-0) resume todo el sistema en una sola caja, con sus entradas, controles, salidas y mecanismos globales. A partir de él, cada función se descompone en un diagrama hijo de más detalle, numerado A0, A1, A2…, hasta que cada actividad queda suficientemente clara.",
+        },
+        {
+          list: [
+            "Contexto primero: se definen propósito, punto de vista (viewpoint) y límites del modelo.",
+            "Cada diagrama contiene entre 3 y 6 cajas para conservar legibilidad.",
+            "La numeración A-0 / A0 / A1 / A2… mantiene trazable cada nivel de detalle.",
+            "El acrónimo ICOM ordena las flechas que atraviesan los niveles de descomposición.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Por qué es importante para una organización",
+      blocks: [
+        {
+          text: "IDEF0 no es solo una forma de dibujar procesos: es un lenguaje común que obliga a la organización a ponerse de acuerdo sobre qué hace cada área, bajo qué reglas y con qué recursos. Ese consenso es el primer paso para gobernar y mejorar cualquier operación.",
+        },
+        {
+          list: [
+            "Claridad: cada proceso muestra entradas, salidas, controles y recursos de un vistazo.",
+            "Comunicación: un estándar visual comprensible por todos los niveles de la organización.",
+            "Detección de problemas: hace visibles redundancias, cuellos de botella y vacíos de responsabilidad.",
+            "Mejora continua: base sólida para metodologías como ISO 9000, Six Sigma y gestión por procesos (BPM).",
+            "Integración: apoya el análisis, desarrollo y re-ingeniería de sistemas de información.",
+            "Documentación y onboarding: preserva el conocimiento y acelera la incorporación de nuevo personal.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "database",
+      title: "Aplicación en Big Data y Analítica",
+      blocks: [
+        {
+          text: "En un área de datos, IDEF0 modela de forma natural el flujo completo de la información: las fuentes de datos actúan como entradas, las políticas de calidad, privacidad y cumplimiento como controles, los analistas, ingenieros y plataformas como mecanismos, y los reportes, dashboards y modelos predictivos como salidas.",
+        },
+        {
+          heading: "En el Área de Big Data y Analítica",
+          list: [
+            "Entradas: datos crudos de salud, clínicos y operacionales.",
+            "Controles: gobernanza de datos, normas de privacidad y requisitos regulatorios.",
+            "Mecanismos: analistas BI, ingenieros de datos, especialistas en gobernanza, PM y plataformas cloud.",
+            "Salidas: dashboards, reportes ejecutivos y modelos predictivos para la toma de decisiones.",
+          ],
+        },
+        {
+          text: "Así, el diagrama documenta cómo los datos de salud se transforman en conocimiento estratégico y deja visible qué se requiere en cada paso para lograrlo.",
+        },
+      ],
+    },
+  ],
+  legend: [
+    { label: "Entradas (I)", color: "#2563eb", note: "lo que la función transforma" },
+    { label: "Controles (C)", color: "#d97706", note: "reglas que gobiernan la función" },
+    { label: "Salidas (O)", color: "#0d9488", note: "lo que la función produce" },
+    { label: "Mecanismos (M)", color: "#7c3aed", note: "recursos que la ejecutan" },
+  ],
+  diagram: {
+    title: "Diagrama IDEF0",
+    subtitle:
+      "Representación gráfica de cómo se modelan las funciones del área y sus relaciones de entradas, controles, salidas y mecanismos.",
+    alt: "Diagrama IDEF0 del Área de Big Data y Analítica",
+    caption:
+      "Diseño conceptual del modelo IDEF0 aplicado al Área de Big Data y Analítica. Las flechas y cajas se interpretan según la notación ICOM descrita arriba.",
+    url: "https://drive.google.com/thumbnail?id=1zkIRqox_OLMoGOoxQ1wLVrco56z1u6nt&sz=w2000",
+  },
+  references: [
+    "FIPS PUB 183 (1993) — Integration Definition for Function Modeling (IDEF0), NIST.",
+    "Ross, D. T. — Structured Analysis (SADT): técnica base del lenguaje IDEF0 (SofTech, Inc.).",
+    "Programa ICAM — Integrated Computer-Aided Manufacturing, Fuerza Aérea de los EE. UU.",
+    "Mayer, R. J. et al. — IDEF0 Function Modeling: reconstrucción sobre el estándar original AFWAL.",
+  ],
+};
+
 export const scrum = {
   hero: {
     tag: "Metodologías ágiles",

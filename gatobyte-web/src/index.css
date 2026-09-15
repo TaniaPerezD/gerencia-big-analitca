@@ -1692,6 +1692,19 @@ main {
   flex-shrink: 0;
 }
 
+.legend-note {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.diagram-caption {
+  max-width: 980px;
+  margin: 18px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- Scrum org chart (Scrum) ---------- */
 .scrum-org {
   max-width: 980px;
