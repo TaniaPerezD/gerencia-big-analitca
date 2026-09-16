@@ -1180,3 +1180,146 @@ export const scrum = {
     url: "https://sharing.clickup.com/90171470000/b/4-90176923982-2/tablero",
   },
 };
+
+export const bpmn = {
+  hero: {
+    tag: "Modelado de procesos",
+    title: "BPMN",
+    subtitle:
+      "El estándar visual para modelar procesos de negocio: cómo fluye cada tarea, quién la ejecuta y qué decisiones la gobiernan — aplicado al Área de Big Data y Analítica.",
+  },
+  intro: [
+    "BPMN es la abreviatura de Business Process Model and Notation: un estándar gráfico creado para representar procesos de negocio de una forma comprensible tanto para las personas del negocio como para los equipos técnicos. Nació en el año 2004 impulsado por el Business Process Management Initiative (BPMI) y, desde 2013, es mantenido por el Object Management Group (OMG) bajo la norma ISO/IEC 19510.",
+    "Su propósito es simple pero poderoso: le permite a cualquiera «leer» un proceso de principio a fin. Gracias a BPMN es posible documentar cómo funciona una operación, detectar cuellos de botella, identificar tareas que duplican trabajo y diseñar la automatización de los flujos de trabajo, todo sobre la base de un mismo lenguaje visual.",
+    "A diferencia de IDEF0 — que responde al «qué», con sus funciones y sus entradas, salidas, controles y mecanismos — BPMN responde al «cómo» y al «en qué orden»: cuáles son los eventos que inician y cierran un proceso, qué tareas se ejecutan, quién es responsable de cada una y qué decisiones determinan el camino a seguir.",
+  ],
+  keyPoints: [
+    "Un modelo BPMN documenta el flujo completo: del primer evento de inicio hasta el evento final, pasando por cada tarea y decisión.",
+    "Los eventos se dibujan como círculos: marca el inicio, los pasos intermedios y el final del proceso.",
+    "Las actividades se dibujan como rectángulos con esquinas redondeadas: representan tareas o subprocesos que se ejecutan.",
+    "Las compuertas se dibujan como rombos: modelan decisiones y caminos paralelos o condicionales.",
+    "El flujo secuencial se representa con flechas: indican el orden en que se ejecutan las actividades.",
+    "Piscinas (pools) y calles (lanes) agrupan las actividades según el participante u organización responsable.",
+  ],
+  theory: [
+    {
+      icon: "circle",
+      title: "Eventos",
+      blocks: [
+        {
+          text: "Marcan algo que ocurre dentro del proceso. Sólo hay tres tipos, y todos contribuyen a contar la historia del flujo.",
+        },
+        {
+          heading: "Eventos de inicio",
+          text: "Representado con un círculo de borde delgado. Detecta dónde comienza el proceso: la llegada de una solicitud, un correo, un dato nuevo o una fecha programada.",
+        },
+        {
+          heading: "Eventos intermedios",
+          text: "Círculos de borde doble. Ocurren durante el proceso: una espera, una señal recibida o un temporizador que libera el siguiente paso.",
+        },
+        {
+          heading: "Eventos de fin",
+          text: "Círculos de borde grueso. Marcan dónde termina el proceso: una entrega completada, una notificación enviada o un resultado archivado.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Actividades",
+      blocks: [
+        {
+          text: "Son el trabajo que se ejecuta dentro del proceso. Se representan con rectángulos de esquinas redondeadas.",
+        },
+        {
+          heading: "Tarea",
+          text: "Una unidad de trabajo atómica, de un solo paso: por ejemplo, «Validar datos», «Limpiar registros» o «Generar reporte». Es una actividad simple que no se descompone.",
+        },
+        {
+          heading: "Subproceso",
+          text: "Una actividad compuesta que contiene su propio flujo interno y se marca con un signo más. Sirve para organizar la complejidad sin perder legibilidad.",
+        },
+        {
+          heading: "Transacción",
+          text: "Un tipo de actividad con un comportamiento de cancelación controlado, útil cuando el proceso debe revertirse si algo falla a mitad de camino.",
+        },
+      ],
+    },
+    {
+      icon: "git",
+      title: "Compuertas",
+      blocks: [
+        {
+          text: "Se representan con rombos y controlan la bifurcación y la convergencia del flujo. Son las decisiones del proceso.",
+        },
+        {
+          heading: "Compuerta exclusiva (XOR)",
+          text: "Elige una sola ruta entre varias alternativas, como un «si … entonces». Es la decisión básica de ida o vuelta.",
+        },
+        {
+          heading: "Compuerta paralela (AND)",
+          text: "No decide: dispara todas las ramas al mismo tiempo y espera a que todas converjan antes de continuar. Ideal para tareas que pueden hacerse en simultáneo.",
+        },
+        {
+          heading: "Compuerta inclusiva (OR)",
+          text: "Combina los dos anteriores: activa una o varias rutas según la condición, y continúa cuando todas las activadas hayan terminado.",
+        },
+      ],
+    },
+    {
+      icon: "network",
+      title: "Flujos y participantes",
+      blocks: [
+        {
+          text: "Conectan y organizan las actividades dentro del diagrama.",
+        },
+        {
+          heading: "Flujo secuencial",
+          text: "Flechas continuas que unen eventos, actividades y compuertas e indican el orden de ejecución.",
+        },
+        {
+          heading: "Flujo de mensajes",
+          text: "Flechas con círculo al inicio: representan la comunicación entre piscinas distintas, es decir, entre participantes u organizaciones.",
+        },
+        {
+          heading: "Piscinas y calles (pools y lanes)",
+          text: "Las piscinas agrupan todo el proceso de un participante; las calles, subdivididas dentro de la piscina, asignan cada actividad al rol u equipo responsable. Así se ve quién hace qué en cada paso.",
+        },
+      ],
+    },
+  ],
+  areaContext: {
+    heading: "BPMN en el Área de Big Data y Analítica",
+    subtitle:
+      "Somos el Área de Big Data y Analítica, el motor de conocimiento de servicios médicos basados en datos. El diagrama que sigue documenta, con notación BPMN, el proceso de gestión de demanda analítica: del pedido de información a la entrega del producto final.",
+    description:
+      "El Área de Big Data y Analítica transforma datos masivos de salud en información para la toma de decisiones médicas y de gestión. Nuestro equipo de desarrollo, organizado con Scrum, ejecuta este proceso: el Analista de Business Intelligence construye dashboards y reportes, el Ingeniero de Infraestructura de Datos garantiza pipelines y plataformas confiables, la Especialista en Gobernanza de Datos vela por calidad, trazabilidad y privacidad, y el PM de Ciencia de Datos e Innovación lidera los modelos predictivos y la automatización.",
+    columns: [
+      "El proceso inicia con la llegada de una solicitud de reporte o análisis y la evaluación de los datos disponibles.",
+      "El Ingeniero de Infraestructura de Datos prepara los datos: ingestión, transformación y calidad, con control de la Especialista en Gobernanza de Datos.",
+      "El Analista BI construye el producto: dashboard, reporte o modelo, y lo somete a revisión con el solicitante.",
+      "El proceso cierra con la aprobación, entrega del producto y su publicación para el consumo del área solicitante.",
+    ],
+    legend: [
+      { label: "Eventos", color: "#0d9488", note: "inicio, intermedios y fin del proceso" },
+      { label: "Actividades", color: "#2563eb", note: "tareas y subprocesos que se ejecutan" },
+      { label: "Compuertas", color: "#d97706", note: "decisiones y rutas del flujo" },
+      { label: "Flujo secuencial", color: "#7c3aed", note: "orden de ejecución" },
+      { label: "Piscinas y calles", color: "#4f46e5", note: "roles y participantes responsables" },
+    ],
+  },
+  diagram: {
+    title: "Nuestro diagrama BPMN",
+    subtitle:
+      "Representación del proceso del Área de Big Data y Analítica: de la solicitud de información a la entrega del producto analítico.",
+    alt: "Diagrama BPMN del Área de Big Data y Analítica",
+    caption:
+      "El diagrama se visualiza embebido desde Google Drive. Las figuras siguen la notación BPMN descrita arriba: rectángulos para las actividades, rombos para las decisiones y círculos para los eventos de inicio y fin del proceso.",
+    url: "https://drive.google.com/file/d/1lVZIRtF0gvFqG2cgft-hyvW-3a6dzDED/preview",
+  },
+  references: [
+    "BPMN 2.0 — OMG Business Process Model and Notation (ISO/IEC 19510:2013) para procesos de negocio.",
+    "White, S. A. — Introduction to BPMN: el paper oficial de referencia del estándar.",
+    "Object Management Group (OMG) — especificación oficial BPMN 2.0.",
+    "Relatedes BPMN con el modelado IDEF0 del área: funciones para ordenar el «qué»; procesos para documentar el «cómo».",
+  ],
+};

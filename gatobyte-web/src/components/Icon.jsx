@@ -38,6 +38,8 @@ import {
   Maximize2,
   Minimize2,
   ExternalLink,
+  GitBranch,
+  CircleDot,
 } from "lucide-react";
 
 const ICONS = {
@@ -80,6 +82,8 @@ const ICONS = {
   maximize: Maximize2,
   minimize: Minimize2,
   external: ExternalLink,
+  git: GitBranch,
+  circle: CircleDot,
 };
 
 export default function Icon({ name, size = 22, strokeWidth = 2, className }) {
