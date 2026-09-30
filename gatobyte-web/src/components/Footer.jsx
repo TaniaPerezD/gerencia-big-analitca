@@ -14,7 +14,7 @@ export default function Footer() {
         </p>
         <p className="footer-copy">© {new Date().getFullYear()} GatoByte. Todos los derechos reservados.</p>
         <a
-          href="https://iatech-co-frontend.vercel.app/login"
+          href="https://iatech-co-frontend.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="footer-inventory-btn"

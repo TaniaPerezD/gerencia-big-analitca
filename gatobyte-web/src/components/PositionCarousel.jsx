@@ -18,6 +18,12 @@ export default function PositionCarousel({ positions }) {
           </span>
           <h3>{p.title}</h3>
           <p>{p.summary}</p>
+          {p.objetivo && (
+            <div className="position-objective">
+              <h4>Objetivo</h4>
+              <p>{p.objetivo}</p>
+            </div>
+          )}
           <h4>Responsabilidades</h4>
           <ul>
             {p.responsibilities.map((r, j) => (

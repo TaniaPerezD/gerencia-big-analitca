@@ -2084,6 +2084,24 @@ main {
   margin-bottom: 5px;
 }
 
+.position-objective {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--terracotta);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.position-objective h4 {
+  margin-bottom: 4px;
+}
+
+.position-objective p {
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin: 0;
+}
+
 /* ---------- PDF icon badge ---------- */
 .pdf-icon {
   display: inline-flex;

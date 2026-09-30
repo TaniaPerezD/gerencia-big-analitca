@@ -102,7 +102,7 @@ export default function Sidebar() {
         </nav>
 
         <a
-          href="https://iatech-co-frontend.vercel.app/login"
+          href="https://iatech-co-frontend.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="sidebar-inventory-btn"

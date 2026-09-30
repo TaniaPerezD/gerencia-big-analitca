@@ -637,6 +637,8 @@ export const descripcionPosiciones = {
       icon: "landmark",
       title: "Gerente de Datos y Analítica",
       summary: "Liderazgo del área: estrategia de datos, gobierno del equipo y resultados ante la Dirección General.",
+      objetivo:
+        "Garantizar que la estrategia de datos del área genere valor medible para la organización y sus pacientes.",
       responsibilities: [
         "Definir la estrategia de datos y analítica alineada a los objetivos de la organización.",
         "Liderar y coordinar a las cuatro posiciones del área, asignando prioridades y recursos.",
@@ -648,6 +650,7 @@ export const descripcionPosiciones = {
       icon: "database",
       title: "Analista de Business Intelligence (BI)",
       summary: "Reportes ejecutivos, dashboards, KPIs, analítica descriptiva y autoservicio.",
+      objetivo: "Convertir los datos en información clara y accionable que acelere la toma de decisiones.",
       responsibilities: [
         "Diseñar y mantener dashboards ejecutivos.",
         "Definir y dar seguimiento a indicadores clave (KPIs).",
@@ -659,6 +662,7 @@ export const descripcionPosiciones = {
       icon: "server",
       title: "Ingeniero de Infraestructura de Datos",
       summary: "Plataformas cloud, lakehouse, pipelines, almacenamiento y confiabilidad.",
+      objetivo: "Asegurar una plataforma de datos disponible, segura y escalable en todo momento.",
       responsibilities: [
         "Construir y mantener pipelines de datos.",
         "Administrar plataformas cloud y de almacenamiento.",
@@ -670,6 +674,7 @@ export const descripcionPosiciones = {
       icon: "shield",
       title: "Especialista en Gobernanza de Datos",
       summary: "Políticas, calidad, catálogo, metadatos, privacidad y roles.",
+      objetivo: "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad.",
       responsibilities: [
         "Definir políticas de calidad y uso de datos.",
         "Mantener el catálogo de datos y metadatos.",
@@ -681,6 +686,7 @@ export const descripcionPosiciones = {
       icon: "rocket",
       title: "PM de Ciencia de Datos e Innovación",
       summary: "Modelos predictivos, IA, experimentación, automatización e innovación.",
+      objetivo: "Anticipar necesidades del negocio mediante modelos predictivos y automatización.",
       responsibilities: [
         "Liderar proyectos de modelos predictivos e IA.",
         "Coordinar la experimentación de nuevas soluciones.",
