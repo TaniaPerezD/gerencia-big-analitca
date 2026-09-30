@@ -70,6 +70,9 @@ export default function Scrum() {
             <p>{data.orgTeam.sponsor.note}</p>
             <div className="scrum-org-mv">
               <p>
+                <strong>Objetivo.</strong> {data.orgTeam.sponsor.objetivo}
+              </p>
+              <p>
                 <strong>Misión.</strong> {data.orgTeam.sponsor.mision}
               </p>
               <p>
@@ -96,6 +99,9 @@ export default function Scrum() {
                 <h4>{p.title}</h4>
                 <p className="scrum-org-name">{p.name}</p>
                 <div className="scrum-org-mv">
+                  <p>
+                    <strong>Objetivo.</strong> {p.objetivo}
+                  </p>
                   <p>
                     <strong>Misión.</strong> {p.mision}
                   </p>

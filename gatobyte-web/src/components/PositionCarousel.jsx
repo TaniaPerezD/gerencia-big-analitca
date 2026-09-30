@@ -30,6 +30,20 @@ export default function PositionCarousel({ positions }) {
               <li key={j}>{r}</li>
             ))}
           </ul>
+          {(p.mision || p.vision) && (
+            <div className="position-mv">
+              {p.mision && (
+                <p>
+                  <strong>Misión.</strong> {p.mision}
+                </p>
+              )}
+              {p.vision && (
+                <p>
+                  <strong>Visión.</strong> {p.vision}
+                </p>
+              )}
+            </div>
+          )}
           <RoleLinks role={p.roleId} page="posiciones" />
         </Reveal>
       ))}

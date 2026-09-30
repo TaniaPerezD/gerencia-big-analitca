@@ -639,6 +639,10 @@ export const descripcionPosiciones = {
       summary: "Liderazgo del área: estrategia de datos, gobierno del equipo y resultados ante la Dirección General.",
       objetivo:
         "Garantizar que la estrategia de datos del área genere valor medible para la organización y sus pacientes.",
+      mision:
+        "Convertir la estrategia de datos en prioridades claras, talento y resultados medibles para toda la organización.",
+      vision:
+        "Ser el motor de decisión de la organización: datos confiables y analítica disponible para todos.",
       responsibilities: [
         "Definir la estrategia de datos y analítica alineada a los objetivos de la organización.",
         "Liderar y coordinar a las cuatro posiciones del área, asignando prioridades y recursos.",
@@ -651,6 +655,10 @@ export const descripcionPosiciones = {
       title: "Analista de Business Intelligence (BI)",
       summary: "Reportes ejecutivos, dashboards, KPIs, analítica descriptiva y autoservicio.",
       objetivo: "Convertir los datos en información clara y accionable que acelere la toma de decisiones.",
+      mision:
+        "Convertir los datos en información clara y accionable para que cada área tome mejores decisiones, todos los días.",
+      vision:
+        "Ser el punto de referencia de autoservicio de datos, donde cualquier persona resuelva sus propias preguntas de negocio sin depender de un reporte a medida.",
       responsibilities: [
         "Diseñar y mantener dashboards ejecutivos.",
         "Definir y dar seguimiento a indicadores clave (KPIs).",
@@ -663,6 +671,10 @@ export const descripcionPosiciones = {
       title: "Ingeniero de Infraestructura de Datos",
       summary: "Plataformas cloud, lakehouse, pipelines, almacenamiento y confiabilidad.",
       objetivo: "Asegurar una plataforma de datos disponible, segura y escalable en todo momento.",
+      mision:
+        "Construir y mantener una plataforma de datos confiable, segura y escalable que sostenga todo el trabajo analítico del área.",
+      vision:
+        "Lograr una infraestructura de datos tan estable que se vuelva invisible: siempre disponible, siempre a tiempo.",
       responsibilities: [
         "Construir y mantener pipelines de datos.",
         "Administrar plataformas cloud y de almacenamiento.",
@@ -675,6 +687,10 @@ export const descripcionPosiciones = {
       title: "Especialista en Gobernanza de Datos",
       summary: "Políticas, calidad, catálogo, metadatos, privacidad y roles.",
       objetivo: "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad.",
+      mision:
+        "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad, desde que se capturan hasta que se consumen.",
+      vision:
+        "Ser el estándar de confianza del área: que cada dato tenga dueño, definición y un uso claramente autorizado.",
       responsibilities: [
         "Definir políticas de calidad y uso de datos.",
         "Mantener el catálogo de datos y metadatos.",
@@ -687,6 +703,10 @@ export const descripcionPosiciones = {
       title: "PM de Ciencia de Datos e Innovación",
       summary: "Modelos predictivos, IA, experimentación, automatización e innovación.",
       objetivo: "Anticipar necesidades del negocio mediante modelos predictivos y automatización.",
+      mision:
+        "Liderar la experimentación con modelos predictivos y de IA que conviertan los datos en decisiones anticipadas, no solo en reportes del pasado.",
+      vision:
+        "Convertir a la analítica predictiva en el motor de innovación que anticipe necesidades antes de que se conviertan en problemas.",
       responsibilities: [
         "Liderar proyectos de modelos predictivos e IA.",
         "Coordinar la experimentación de nuevas soluciones.",
@@ -1093,6 +1113,8 @@ export const scrum = {
       role: "Gerente de Datos y Analítica",
       note:
         "Reporta directamente al Product Owner/CEO: traduce la estrategia de datos en prioridades concretas y respalda al equipo con recursos.",
+      objetivo:
+        "Garantizar que la estrategia de datos del área genere valor medible para la organización y sus pacientes.",
       mision:
         "Convertir la estrategia de datos en prioridades claras, talento y resultados medibles para toda la organización.",
       vision:
@@ -1105,6 +1127,7 @@ export const scrum = {
         title: "Analista de Business Intelligence (BI)",
         name: "Dilan Mamani",
         color: "#0d9488",
+        objetivo: "Convertir los datos en información clara y accionable que acelere la toma de decisiones.",
         mision:
           "Convertir los datos en información clara y accionable para que cada área tome mejores decisiones, todos los días.",
         vision:
@@ -1115,6 +1138,7 @@ export const scrum = {
         title: "Ingeniero de Infraestructura de Datos",
         name: "Adriana Rocha",
         color: "#2563eb",
+        objetivo: "Asegurar una plataforma de datos disponible, segura y escalable en todo momento.",
         mision:
           "Construir y mantener una plataforma de datos confiable, segura y escalable que sostenga todo el trabajo analítico del área.",
         vision:
@@ -1125,6 +1149,7 @@ export const scrum = {
         title: "Especialista en Gobernanza de Datos",
         name: "Ivonne Colque",
         color: "#4f46e5",
+        objetivo: "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad.",
         mision:
           "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad, desde que se capturan hasta que se consumen.",
         vision:
@@ -1135,6 +1160,7 @@ export const scrum = {
         title: "PM de Ciencia de Datos e Innovación",
         name: "Ignacio Retamozo",
         color: "#14b8a6",
+        objetivo: "Anticipar necesidades del negocio mediante modelos predictivos y automatización.",
         mision:
           "Liderar la experimentación con modelos predictivos y de IA que conviertan los datos en decisiones anticipadas, no solo en reportes del pasado.",
         vision:

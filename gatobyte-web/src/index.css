@@ -2102,6 +2102,22 @@ main {
   margin: 0;
 }
 
+.position-mv {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.position-mv p {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.position-mv strong {
+  color: var(--ink);
+}
+
 /* ---------- PDF icon badge ---------- */
 .pdf-icon {
   display: inline-flex;
