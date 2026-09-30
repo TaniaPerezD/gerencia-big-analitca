@@ -1,5 +1,7 @@
 import PageHero from "../components/PageHero";
 import Accordion from "../components/Accordion";
+import ProcessSteps from "../components/ProcessSteps";
+import Icon from "../components/Icon";
 import Reveal from "../components/Reveal";
 import References from "../components/References";
 import bpmnDiagram from "../assets/bpmn-diagrama.png";
@@ -20,13 +22,15 @@ export default function Bpmn() {
           ))}
         </Reveal>
 
-        <Reveal delay={100} className="component-list">
-          <h4>La clave para leerlo</h4>
-          <ul>
-            {data.keyPoints.map((k, i) => (
-              <li key={i}>{k}</li>
-            ))}
-          </ul>
+        <Reveal delay={100} className="notation-strip">
+          {data.theory.map((t) => (
+            <div key={t.title} className="notation-chip">
+              <span className="notation-chip-icon">
+                <Icon name={t.icon} size={20} strokeWidth={1.8} />
+              </span>
+              <span>{t.title}</span>
+            </div>
+          ))}
         </Reveal>
       </section>
 
@@ -53,16 +57,10 @@ export default function Bpmn() {
               </p>
             ))}
           </Reveal>
-
-          <Reveal delay={100} className="component-list">
-            <h4>Cómo leer el proceso</h4>
-            <ul>
-              {data.areaContext.columns.map((c, i) => (
-                <li key={i}>{c}</li>
-              ))}
-            </ul>
-          </Reveal>
         </div>
+
+        <h4 className="process-label">Cómo leer el proceso</h4>
+        <ProcessSteps steps={data.areaContext.steps} />
       </section>
 
       <section className="section section-alt">

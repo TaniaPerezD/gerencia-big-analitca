@@ -1210,14 +1210,6 @@ export const bpmn = {
     "Su propósito es simple pero poderoso: le permite a cualquiera «leer» un proceso de principio a fin. Gracias a BPMN es posible documentar cómo funciona una operación, detectar cuellos de botella, identificar tareas que duplican trabajo y diseñar la automatización de los flujos de trabajo, todo sobre la base de un mismo lenguaje visual.",
     "A diferencia de IDEF0 — que responde al «qué», con sus funciones y sus entradas, salidas, controles y mecanismos — BPMN responde al «cómo» y al «en qué orden»: cuáles son los eventos que inician y cierran un proceso, qué tareas se ejecutan, quién es responsable de cada una y qué decisiones determinan el camino a seguir.",
   ],
-  keyPoints: [
-    "Un modelo BPMN documenta el flujo completo: del primer evento de inicio hasta el evento final, pasando por cada tarea y decisión.",
-    "Los eventos se dibujan como círculos: marca el inicio, los pasos intermedios y el final del proceso.",
-    "Las actividades se dibujan como rectángulos con esquinas redondeadas: representan tareas o subprocesos que se ejecutan.",
-    "Las compuertas se dibujan como rombos: modelan decisiones y caminos paralelos o condicionales.",
-    "El flujo secuencial se representa con flechas: indican el orden en que se ejecutan las actividades.",
-    "Piscinas (pools) y calles (lanes) agrupan las actividades según el participante u organización responsable.",
-  ],
   theory: [
     {
       icon: "circle",
@@ -1310,11 +1302,27 @@ export const bpmn = {
       "Somos el Área de Big Data y Analítica, el motor de conocimiento de servicios médicos basados en datos. El diagrama que sigue documenta, con notación BPMN, el proceso de gestión de demanda analítica: del pedido de información a la entrega del producto final.",
     description:
       "El Área de Big Data y Analítica transforma datos masivos de salud en información para la toma de decisiones médicas y de gestión. Nuestro equipo de desarrollo, organizado con Scrum, ejecuta este proceso: el Analista de Business Intelligence construye dashboards y reportes, el Ingeniero de Infraestructura de Datos garantiza pipelines y plataformas confiables, la Especialista en Gobernanza de Datos vela por calidad, trazabilidad y privacidad, y el PM de Ciencia de Datos e Innovación lidera los modelos predictivos y la automatización.",
-    columns: [
-      "El proceso inicia con la llegada de una solicitud de reporte o análisis y la evaluación de los datos disponibles.",
-      "El Ingeniero de Infraestructura de Datos prepara los datos: ingestión, transformación y calidad, con control de la Especialista en Gobernanza de Datos.",
-      "El Analista BI construye el producto: dashboard, reporte o modelo, y lo somete a revisión con el solicitante.",
-      "El proceso cierra con la aprobación, entrega del producto y su publicación para el consumo del área solicitante.",
+    steps: [
+      {
+        icon: "file",
+        title: "Solicitud y evaluación",
+        text: "El proceso inicia con la llegada de una solicitud de reporte o análisis y la evaluación de los datos disponibles.",
+      },
+      {
+        icon: "server",
+        title: "Preparación de datos",
+        text: "El Ingeniero de Infraestructura de Datos prepara los datos: ingestión, transformación y calidad, con control de la Especialista en Gobernanza de Datos.",
+      },
+      {
+        icon: "database",
+        title: "Construcción y revisión",
+        text: "El Analista BI construye el producto: dashboard, reporte o modelo, y lo somete a revisión con el solicitante.",
+      },
+      {
+        icon: "check",
+        title: "Aprobación y entrega",
+        text: "El proceso cierra con la aprobación, entrega del producto y su publicación para el consumo del área solicitante.",
+      },
     ],
     legend: [
       { label: "Eventos", color: "#0d9488", note: "inicio, intermedios y fin del proceso" },

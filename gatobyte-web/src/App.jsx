@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ import Bpmn from "./pages/Bpmn";
 function App() {
   return (
     <div className="app-shell">
+      <ScrollToTop />
       <Sidebar />
       <div className="app-content">
         <main>

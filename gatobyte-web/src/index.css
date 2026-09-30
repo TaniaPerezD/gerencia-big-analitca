@@ -1871,6 +1871,99 @@ main {
   padding: 24px 26px;
 }
 
+/* ---------- Two-column intro (IDEF0) ---------- */
+.intro-split {
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.intro-split-card {
+  position: sticky;
+  top: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow);
+}
+
+.intro-split-card h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  color: var(--terracotta-dark);
+  margin-bottom: 14px;
+}
+
+.intro-split-card ul {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--ink-soft);
+}
+
+.intro-split-card li {
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .intro-split {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-split-card {
+    position: static;
+  }
+}
+
+/* ---------- Notation strip (BPMN) ---------- */
+.notation-strip {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.notation-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.notation-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  color: var(--terracotta-dark);
+  flex-shrink: 0;
+}
+
+.process-label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  margin: 44px 0 8px;
+}
+
 .component-list h4 {
   text-transform: uppercase;
   letter-spacing: 0.04em;

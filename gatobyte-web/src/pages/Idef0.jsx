@@ -10,8 +10,8 @@ export default function Idef0() {
     <>
       <PageHero {...data.hero} variant="minimal" />
 
-      <section className="section narrow-section article-section">
-        <Reveal>
+      <section className="section intro-split">
+        <Reveal className="intro-split-text">
           <h2>¿Qué es IDEF0?</h2>
           {data.intro.map((p, i) => (
             <p key={i} className={i === 0 ? "drop-cap" : ""}>
@@ -20,7 +20,7 @@ export default function Idef0() {
           ))}
         </Reveal>
 
-        <Reveal delay={100} className="component-list">
+        <Reveal delay={100} className="intro-split-card">
           <h4>La clave para leerlo</h4>
           <ul>
             {data.keyPoints.map((k, i) => (
