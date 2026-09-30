@@ -5,6 +5,8 @@ import Accordion from "../components/Accordion";
 import TheorySection from "../components/TheorySection";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import RoleLinks from "../components/RoleLinks";
+import { roleAnchorId } from "../data/roles";
 import { scrum as data } from "../data/content";
 
 export default function Scrum() {
@@ -59,11 +61,23 @@ export default function Scrum() {
 
           <div className="scrum-org-connector" aria-hidden="true" />
 
-          <div className="scrum-org-sponsor">
+          <Reveal
+            className="scrum-org-sponsor"
+            id={roleAnchorId("scrum", data.orgTeam.sponsor.roleId)}
+          >
             <span className="scrum-org-lead-tag">{data.orgTeam.sponsor.role}</span>
             <h3>{data.orgTeam.sponsor.name}</h3>
             <p>{data.orgTeam.sponsor.note}</p>
-          </div>
+            <div className="scrum-org-mv">
+              <p>
+                <strong>Misión.</strong> {data.orgTeam.sponsor.mision}
+              </p>
+              <p>
+                <strong>Visión.</strong> {data.orgTeam.sponsor.vision}
+              </p>
+            </div>
+            <RoleLinks role={data.orgTeam.sponsor.roleId} page="scrum" tone="dark" />
+          </Reveal>
 
           <div className="scrum-org-connector" aria-hidden="true" />
 
@@ -71,7 +85,13 @@ export default function Scrum() {
 
           <div className="scrum-org-grid">
             {data.orgTeam.positions.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="scrum-org-card" style={{ "--chip-color": p.color }}>
+              <Reveal
+                key={p.title}
+                id={roleAnchorId("scrum", p.roleId)}
+                delay={i * 80}
+                className="scrum-org-card"
+                style={{ "--chip-color": p.color }}
+              >
                 <span className="scrum-org-dot" />
                 <h4>{p.title}</h4>
                 <p className="scrum-org-name">{p.name}</p>
@@ -83,6 +103,7 @@ export default function Scrum() {
                     <strong>Visión.</strong> {p.vision}
                   </p>
                 </div>
+                <RoleLinks role={p.roleId} page="scrum" />
               </Reveal>
             ))}
           </div>

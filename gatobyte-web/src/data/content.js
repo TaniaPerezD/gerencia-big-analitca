@@ -633,6 +633,7 @@ export const descripcionPosiciones = {
   ],
   positions: [
     {
+      roleId: "gerente-datos-analitica",
       icon: "landmark",
       title: "Gerente de Datos y Analítica",
       summary: "Liderazgo del área: estrategia de datos, gobierno del equipo y resultados ante la Dirección General.",
@@ -643,6 +644,7 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "analista-bi",
       icon: "database",
       title: "Analista de Business Intelligence (BI)",
       summary: "Reportes ejecutivos, dashboards, KPIs, analítica descriptiva y autoservicio.",
@@ -653,6 +655,7 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "infraestructura-datos",
       icon: "server",
       title: "Ingeniero de Infraestructura de Datos",
       summary: "Plataformas cloud, lakehouse, pipelines, almacenamiento y confiabilidad.",
@@ -663,6 +666,7 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "gobernanza-datos",
       icon: "shield",
       title: "Especialista en Gobernanza de Datos",
       summary: "Políticas, calidad, catálogo, metadatos, privacidad y roles.",
@@ -673,6 +677,7 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "pm-ciencia-datos",
       icon: "rocket",
       title: "PM de Ciencia de Datos e Innovación",
       summary: "Modelos predictivos, IA, experimentación, automatización e innovación.",
@@ -819,6 +824,7 @@ export const mbti = {
   ],
   team: {
     leader: {
+      roleId: "gerente-datos-analitica",
       name: "Tania Peréz",
       type: "ENTJ",
       role: "Líder de la colonia",
@@ -829,6 +835,7 @@ export const mbti = {
     },
     members: [
       {
+        roleId: "infraestructura-datos",
         name: "Adriana Rocha",
         type: "ENTJ",
         role: "Planeación y ejecución",
@@ -838,6 +845,7 @@ export const mbti = {
           "Estratega Bigotes pragmático: convierte los grandes planes en procesos claros y hace que las cosas pasen.",
       },
       {
+        roleId: "analista-bi",
         name: "Dilan Mamani",
         type: "ENFJ",
         role: "Talento y cultura",
@@ -847,6 +855,7 @@ export const mbti = {
           "El corazón y garras del equipo: inspira, conecta a cada integrante y se asegura de que la colonia avance junta.",
       },
       {
+        roleId: "pm-ciencia-datos",
         name: "Ignacio Retamozo",
         type: "INFJ",
         role: "Visión y propósito",
@@ -856,6 +865,7 @@ export const mbti = {
           "La voz tranquila: percibe el propósito detrás de cada idea y guía decisiones con convicción serena.",
       },
       {
+        roleId: "gobernanza-datos",
         name: "Ivonne Colque",
         type: "INFP",
         role: "Imaginación e ideas",
@@ -1072,14 +1082,20 @@ export const scrum = {
         "Docente del curso: representa a la Dirección General (CEO), prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
     },
     sponsor: {
+      roleId: "gerente-datos-analitica",
       name: "Tania Peréz",
       role: "Gerente de Datos y Analítica",
       note:
         "Reporta directamente al Product Owner/CEO: traduce la estrategia de datos en prioridades concretas y respalda al equipo con recursos.",
+      mision:
+        "Convertir la estrategia de datos en prioridades claras, talento y resultados medibles para toda la organización.",
+      vision:
+        "Ser el motor de decisión de la organización: datos confiables y analítica disponible para todos.",
     },
     teamLabel: "Equipo de Desarrollo",
     positions: [
       {
+        roleId: "analista-bi",
         title: "Analista de Business Intelligence (BI)",
         name: "Dilan Mamani",
         color: "#0d9488",
@@ -1089,6 +1105,7 @@ export const scrum = {
           "Ser el punto de referencia de autoservicio de datos, donde cualquier persona resuelva sus propias preguntas de negocio sin depender de un reporte a medida.",
       },
       {
+        roleId: "infraestructura-datos",
         title: "Ingeniero de Infraestructura de Datos",
         name: "Adriana Rocha",
         color: "#2563eb",
@@ -1098,6 +1115,7 @@ export const scrum = {
           "Lograr una infraestructura de datos tan estable que se vuelva invisible: siempre disponible, siempre a tiempo.",
       },
       {
+        roleId: "gobernanza-datos",
         title: "Especialista en Gobernanza de Datos",
         name: "Ivonne Colque",
         color: "#4f46e5",
@@ -1107,6 +1125,7 @@ export const scrum = {
           "Ser el estándar de confianza del área: que cada dato tenga dueño, definición y un uso claramente autorizado.",
       },
       {
+        roleId: "pm-ciencia-datos",
         title: "PM de Ciencia de Datos e Innovación",
         name: "Ignacio Retamozo",
         color: "#14b8a6",

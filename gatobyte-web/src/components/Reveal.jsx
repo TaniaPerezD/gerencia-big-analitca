@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function Reveal({ children, delay = 0, className = "", as: Tag = "div" }) {
+export default function Reveal({
+  children,
+  delay = 0,
+  className = "",
+  as: Tag = "div",
+  id,
+  style,
+  ...rest
+}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -23,8 +31,10 @@ export default function Reveal({ children, delay = 0, className = "", as: Tag = 
   return (
     <Tag
       ref={ref}
+      id={id}
       className={`reveal${visible ? " reveal-visible" : ""}${className ? ` ${className}` : ""}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms`, ...style }}
+      {...rest}
     >
       {children}
     </Tag>
