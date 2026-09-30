@@ -603,6 +603,7 @@ export const organizacion = {
     },
   ],
   positions: [
+    { title: "Gerente de Datos y Analítica", color: "#14304f" },
     { title: "Analista de Business Intelligence (BI)", color: "#0d9488" },
     { title: "Ingeniero de Infraestructura de Datos", color: "#2563eb" },
     { title: "Especialista en Gobernanza de Datos", color: "#4f46e5" },
@@ -631,6 +632,16 @@ export const descripcionPosiciones = {
     "Competencias: habilidades técnicas y humanas esperadas.",
   ],
   positions: [
+    {
+      icon: "landmark",
+      title: "Gerente de Datos y Analítica",
+      summary: "Liderazgo del área: estrategia de datos, gobierno del equipo y resultados ante la Dirección General.",
+      responsibilities: [
+        "Definir la estrategia de datos y analítica alineada a los objetivos de la organización.",
+        "Liderar y coordinar a las cuatro posiciones del área, asignando prioridades y recursos.",
+        "Reportar avances, riesgos y resultados a la Dirección General (CEO).",
+      ],
+    },
     {
       icon: "database",
       title: "Analista de Business Intelligence (BI)",
