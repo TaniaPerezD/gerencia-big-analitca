@@ -59,6 +59,14 @@ export default function Scrum() {
 
           <div className="scrum-org-connector" aria-hidden="true" />
 
+          <div className="scrum-org-sponsor">
+            <span className="scrum-org-lead-tag">{data.orgTeam.sponsor.role}</span>
+            <h3>{data.orgTeam.sponsor.name}</h3>
+            <p>{data.orgTeam.sponsor.note}</p>
+          </div>
+
+          <div className="scrum-org-connector" aria-hidden="true" />
+
           <h4 className="scrum-org-team-label">{data.orgTeam.teamLabel}</h4>
 
           <div className="scrum-org-grid">

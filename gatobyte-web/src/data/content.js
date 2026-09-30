@@ -1067,9 +1067,15 @@ export const scrum = {
   orgTeam: {
     productOwner: {
       name: "Yamil Cárdenas",
-      role: "Product Owner · Scrum Master",
+      role: "Product Owner · Scrum Master · CEO",
       note:
-        "Docente del curso: prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
+        "Docente del curso: representa a la Dirección General (CEO), prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
+    },
+    sponsor: {
+      name: "Tania Peréz",
+      role: "Gerente de Datos y Analítica",
+      note:
+        "Reporta directamente al Product Owner/CEO: traduce la estrategia de datos en prioridades concretas y respalda al equipo con recursos.",
     },
     teamLabel: "Equipo de Desarrollo",
     positions: [

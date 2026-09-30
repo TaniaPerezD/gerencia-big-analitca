@@ -1714,8 +1714,31 @@ main {
   align-items: center;
 }
 
-.scrum-org-lead {
+.scrum-org-sponsor {
   background: var(--olive);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 22px 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 360px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scrum-org-sponsor h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.scrum-org-sponsor p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(243, 248, 251, 0.78);
+}
+
+.scrum-org-lead {
+  background: var(--olive-dark);
   color: var(--cream);
   border-radius: var(--radius);
   padding: 22px 30px;
@@ -1809,7 +1832,8 @@ main {
 }
 
 @media (max-width: 640px) {
-  .scrum-org-lead {
+  .scrum-org-lead,
+  .scrum-org-sponsor {
     max-width: 100%;
   }
 }
