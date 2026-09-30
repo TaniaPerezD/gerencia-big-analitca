@@ -318,9 +318,30 @@ main {
   transform: scale(1.05);
 }
 
-.sidebar-foot {
+.sidebar-inventory-btn {
   margin-top: auto;
-  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 11px 14px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sidebar-inventory-btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-1px);
+}
+
+.sidebar-foot {
+  margin-top: 20px;
+  padding-top: 20px;
   border-top: 1px solid rgba(243, 248, 251, 0.12);
   color: var(--terracotta);
   display: flex;
@@ -2552,7 +2573,26 @@ main {
 .footer-copy {
   color: rgba(243, 248, 251, 0.5);
   font-size: 0.82rem;
-  margin: 0;
+  margin: 0 0 28px;
+}
+
+.footer-inventory-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-inventory-btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 760px) {

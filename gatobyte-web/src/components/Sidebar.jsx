@@ -101,6 +101,17 @@ export default function Sidebar() {
           ))}
         </nav>
 
+        <a
+          href="https://iatech-co-frontend.vercel.app/login"
+          target="_blank"
+          rel="noreferrer"
+          className="sidebar-inventory-btn"
+        >
+          <Icon name="database" size={17} strokeWidth={2} />
+          Sistema de Inventario
+          <Icon name="external" size={13} strokeWidth={2} />
+        </a>
+
         <div className="sidebar-foot">
           <Icon name="paw" size={16} strokeWidth={0} />
           <p>Área de Big Data y Analítica — servicios médicos basados en datos.</p>
