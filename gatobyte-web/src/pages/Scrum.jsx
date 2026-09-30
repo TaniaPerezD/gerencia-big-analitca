@@ -129,6 +129,9 @@ export default function Scrum() {
             loading="lazy"
             allowFullScreen
           />
+          <a href={data.board.url} target="_blank" rel="noreferrer" className="board-open-link">
+            <Icon name="external" size={16} strokeWidth={2} /> Abrir el tablero en ClickUp
+          </a>
         </Reveal>
       </section>
     </>

@@ -2,6 +2,7 @@ import PageHero from "../components/PageHero";
 import Accordion from "../components/Accordion";
 import Reveal from "../components/Reveal";
 import References from "../components/References";
+import idef0Diagram from "../assets/idef0-diagrama.png";
 import { idef0 as data } from "../data/content";
 
 export default function Idef0() {
@@ -44,7 +45,7 @@ export default function Idef0() {
         </Reveal>
 
         <Reveal delay={100} className="orgchart-frame">
-          <img src={data.diagram.url} alt={data.diagram.alt} loading="lazy" />
+          <img src={idef0Diagram} alt={data.diagram.alt} loading="lazy" />
         </Reveal>
 
         <Reveal delay={150} className="orgchart-legend">

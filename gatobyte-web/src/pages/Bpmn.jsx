@@ -2,6 +2,7 @@ import PageHero from "../components/PageHero";
 import Accordion from "../components/Accordion";
 import Reveal from "../components/Reveal";
 import References from "../components/References";
+import bpmnDiagram from "../assets/bpmn-diagrama.png";
 import { bpmn as data } from "../data/content";
 
 export default function Bpmn() {
@@ -71,13 +72,7 @@ export default function Bpmn() {
         </Reveal>
 
         <Reveal delay={100} className="orgchart-frame">
-          <iframe
-            src={data.diagram.url}
-            title={data.diagram.title}
-            className="process-embed"
-            loading="lazy"
-            allowFullScreen
-          />
+          <img src={bpmnDiagram} alt={data.diagram.alt} loading="lazy" />
         </Reveal>
 
         <Reveal delay={150} className="orgchart-legend">

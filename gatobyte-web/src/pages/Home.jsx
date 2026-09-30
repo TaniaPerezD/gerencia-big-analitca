@@ -249,6 +249,12 @@ export default function Home() {
             <Link to="/scrum-del-equipo" className="btn btn-cream">
               <Icon name="activity" size={18} strokeWidth={2} /> Scrum del Equipo
             </Link>
+            <Link to="/idef0" className="btn btn-cream">
+              <Icon name="layers" size={18} strokeWidth={2} /> Modelado IDEF0
+            </Link>
+            <Link to="/bpmn-del-equipo" className="btn btn-cream">
+              <Icon name="network" size={18} strokeWidth={2} /> BPMN del Equipo
+            </Link>
           </div>
         </Reveal>
       </section>

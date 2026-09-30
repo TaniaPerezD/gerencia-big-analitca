@@ -1313,13 +1313,13 @@ export const bpmn = {
       "Representación del proceso del Área de Big Data y Analítica: de la solicitud de información a la entrega del producto analítico.",
     alt: "Diagrama BPMN del Área de Big Data y Analítica",
     caption:
-      "El diagrama se visualiza embebido desde Google Drive. Las figuras siguen la notación BPMN descrita arriba: rectángulos para las actividades, rombos para las decisiones y círculos para los eventos de inicio y fin del proceso.",
+      "Las figuras siguen la notación BPMN descrita arriba: rectángulos para las actividades, rombos para las decisiones y círculos para los eventos de inicio y fin del proceso.",
     url: "https://drive.google.com/file/d/1lVZIRtF0gvFqG2cgft-hyvW-3a6dzDED/preview",
   },
   references: [
     "BPMN 2.0 — OMG Business Process Model and Notation (ISO/IEC 19510:2013) para procesos de negocio.",
     "White, S. A. — Introduction to BPMN: el paper oficial de referencia del estándar.",
     "Object Management Group (OMG) — especificación oficial BPMN 2.0.",
-    "Relatedes BPMN con el modelado IDEF0 del área: funciones para ordenar el «qué»; procesos para documentar el «cómo».",
+    "Relación con IDEF0 en el área: IDEF0 ordena el «qué» (las funciones); BPMN documenta el «cómo» (los procesos).",
   ],
 };
