@@ -13,6 +13,8 @@ const links = [
   { to: "/scrum-del-equipo", label: "Scrum del Equipo", icon: "activity" },
   { to: "/idef0", label: "Modelado IDEF0", icon: "layers" },
   { to: "/bpmn-del-equipo", label: "BPMN del Equipo", icon: "refresh" },
+  { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
+  { to: "/presupuesto", label: "Presupuesto", icon: "landmark" },
 ];
 
 export default function Sidebar() {

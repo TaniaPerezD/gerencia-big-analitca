@@ -1399,3 +1399,196 @@ export const bpmn = {
     "Relación con IDEF0 en el área: IDEF0 ordena el «qué» (las funciones); BPMN documenta el «cómo» (los procesos).",
   ],
 };
+
+export const datosTableau = {
+  hero: {
+    tag: "Visualización de datos",
+    title: "Datos y Tableau",
+    subtitle:
+      "Los gráficos convierten tablas y cifras en decisiones: por qué la visualización de datos es clave en una organización y por qué Tableau es una de las herramientas más usadas para lograrlo.",
+  },
+  intro: [
+    "Un gráfico de datos es una representación visual de la información: una forma de traducir filas, columnas y cifras a posiciones, colores y tamaños que el cerebro humano puede comparar de un vistazo. Donde una tabla obliga a leer número por número, un gráfico muestra la relación completa: qué crece, qué cae, qué se sale de lo esperado y qué se parece a qué.",
+    "En una organización, los datos por sí solos no deciden nada. Se vuelven útiles cuando alguien los entiende y actúa sobre ellos. La visualización es ese puente: reduce el tiempo entre «tener los datos» y «saber qué hacer», y permite que personas con perfiles distintos —dirección, operación, tecnología o negocio— hablen el mismo idioma visual.",
+  ],
+  keyPoints: [
+    "Comparar: pone magnitudes lado a lado para ver diferencias reales.",
+    "Tendencias: muestra cómo evoluciona un indicador en el tiempo.",
+    "Distribución: revela concentraciones, valores atípicos y dispersión.",
+    "Relación: ayuda a descubrir si dos variables se mueven juntas.",
+    "Composición: explica cómo se reparte un total entre sus partes.",
+    "Alerta: destaca lo que se aleja de la meta o de lo esperado.",
+  ],
+  benefits: [
+    {
+      icon: "target",
+      title: "Decisiones informadas y más rápidas",
+      blocks: [
+        {
+          text: "Un buen gráfico responde en segundos preguntas que una tabla tardaría minutos en resolver. Eso acorta el ciclo entre el dato y la acción y reduce las decisiones tomadas «por intuición».",
+        },
+      ],
+    },
+    {
+      icon: "globe",
+      title: "Comunicación entre áreas",
+      blocks: [
+        {
+          text: "La dirección, el área médica, la operación y el equipo técnico pueden mirar el mismo tablero y discutir sobre la misma evidencia. La visualización funciona como un lenguaje común.",
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Detección de patrones y tendencias",
+      blocks: [
+        {
+          text: "Los gráficos hacen visibles relaciones que las tablas esconden: estacionalidades, caídas sostenidas, picos anómalos o segmentos con comportamientos distintos.",
+        },
+      ],
+    },
+    {
+      icon: "activity",
+      title: "Seguimiento de indicadores (KPIs)",
+      blocks: [
+        {
+          text: "Un tablero permite vigilar metas de negocio —tiempos de atención, ocupación, calidad de datos o satisfacción— y detectar desvíos mientras todavía se pueden corregir.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Autoservicio y cultura de datos",
+      blocks: [
+        {
+          text: "Cuando las áreas pueden explorar sus propios datos con filtros e interacciones, disminuye la dependencia de reportes a medida y se multiplica el uso real de la información.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Detección temprana de riesgos",
+      blocks: [
+        {
+          text: "La visualización también sirve para vigilar lo que puede salir mal: activos obsoletos, datos sensibles sin control, procesos con cuellos de botella o resultados fuera de rango.",
+        },
+      ],
+    },
+  ],
+  whyTableau: [
+    {
+      icon: "trending",
+      title: "Análisis visual sin escribir código",
+      blocks: [
+        {
+          text: "Tableau permite construir gráficos arrastrando campos a estantes visuales, sin programar. Eso acerca el análisis a perfiles de negocio y libera al equipo técnico para tareas de mayor valor.",
+        },
+      ],
+    },
+    {
+      icon: "refresh",
+      title: "Conexión a múltiples fuentes de datos",
+      blocks: [
+        {
+          text: "Se conecta a bases de datos, hojas de cálculo, servicios cloud y data warehouses. Un mismo tablero puede combinar datos clínicos, operativos y financieros sin duplicar la información.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Dashboards interactivos",
+      blocks: [
+        {
+          text: "Los filtros, resaltados y acciones permiten pasar de una vista general a un detalle específico en un clic. El usuario explora sus propias preguntas en lugar de recibir una imagen estática.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Colaboración y publicación",
+      blocks: [
+        {
+          text: "Tableau Server y Tableau Cloud permiten publicar tableros, compartirlos con permisos y actualizarlos de forma programada, para que distintas áreas trabajen sobre la misma versión de la verdad.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Gobierno y seguridad",
+      blocks: [
+        {
+          text: "Permite administrar usuarios, permisos, fuentes certificadas y linaje de datos. En un contexto de salud, donde se maneja información sensible, ese control es tan importante como la visualización.",
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Escalabilidad y ecosistema",
+      blocks: [
+        {
+          text: "Puede crecer desde un análisis individual hasta una plataforma corporativa de analítica, integrándose con herramientas de preparación, modelado y ciencia de datos.",
+        },
+      ],
+    },
+  ],
+  embed: {
+    heading: "Tablero interactivo: activos de Big Data en salud",
+    subtitle:
+      "Explora el tablero embebido: los gráficos se filtran entre sí al hacer clic en una barra, una sección o una celda. Es el mismo principio que aplicamos en el Área de Big Data y Analítica.",
+    howTo: [
+      "Haz clic en una barra o sección para filtrar el resto de los gráficos.",
+      "Usa «Quitar filtros» para volver a la vista completa.",
+      "Pasa el cursor sobre cualquier elemento para ver sus valores exactos.",
+    ],
+    caption:
+      "Tablero de ejemplo construido con gráficos interactivos: inventario de activos de datos, sensibilidad de la información, estado, responsables y evolución por año. El objetivo no es solo mostrar cifras, sino permitir que el usuario haga preguntas.",
+  },
+  presupuesto: {
+    heading: "Presupuesto del área",
+    subtitle:
+      "La traducción económica del plan: cuánto cuesta implementar y operar el Área de Big Data y Analítica durante una proyección de cuatro meses, expresado en bolivianos.",
+    intro: [
+      "Un presupuesto es la expresión económica de un plan. No es una lista de deseos: es el cálculo de cuánto dinero, tiempo y recursos necesita una iniciativa para funcionar, y la base para decidir si conviene invertir, en qué orden y con qué prioridades. Sin presupuesto, una estrategia de datos queda como una buena intención sin respaldo.",
+      "Nuestro presupuesto proyecta cuatro meses de operación con un equipo de cinco personas: la Gerencia de Datos y Analítica y las cuatro posiciones especializadas del área. Incluye la mano de obra con cargas sociales, el equipo de trabajo, las licencias de Tableau, la conectividad, la nube, los materiales y un margen de imprevistos.",
+      "El archivo está organizado en dos hojas. «Presupuesto» detalla cada rubro con cantidad, meses, costo unitario y costo total; «Supuestos» concentra los parámetros que mueven todo el cálculo, como el tipo de cambio, los precios de Tableau, las cargas sociales o los porcentajes de imprevistos. Las celdas editables están en azul: si cambia un supuesto, el presupuesto se recalcula solo.",
+    ],
+    figures: [
+      { icon: "database", value: "Bs 443.297", label: "costo total proyectado a 4 meses" },
+      { icon: "trending", value: "Bs 110.824", label: "costo mensual promedio" },
+      { icon: "users", value: "Bs 22.165", label: "costo mensual promedio por persona" },
+      { icon: "refresh", value: "4 meses", label: "horizonte de la proyección" },
+    ],
+    composition: [
+      "Mano de obra: Bs 280.800, equivalentes al 63,3% del total. Es el rubro principal, como corresponde a un área intensiva en conocimiento.",
+      "Equipo de trabajo: Bs 76.505, con laptops, monitores, una estación para infraestructura y ciencia de datos, y la depreciación correspondiente.",
+      "Servicios: Bs 8.052, encabezados por las licencias de Tableau Creator, Explorer y Viewer, además de Microsoft 365 e imprevistos.",
+      "Infraestructura: Bs 17.335, con enlaces de internet, Starlink Business, instalación y servicios de nube para almacenamiento y cómputo.",
+      "Materiales: Bs 2.784, con papelería, cables, accesorios, mobiliario menor e impuestos sobre materiales.",
+      "Imprevistos generales: Bs 57.821, un 15% sobre el subtotal para cubrir variaciones de precios o necesidades no previstas.",
+    ],
+    notes: [
+      "Las licencias de Tableau suman Bs 1.315,44 al mes: Creator (Bs 522) para el Analista BI, Explorer (Bs 292,32) para el PM y Gobernanza, y Viewer (Bs 104,40) para la Gerencia y el Ingeniero. En cuatro meses equivalen a Bs 5.261,76.",
+      "El tipo de cambio referencial es de 6,96 bolivianos por dólar. Los precios de Tableau están verificados y los de conectividad son referencias que conviene confirmar con el proveedor antes de ejecutar el presupuesto.",
+      "El total incluye 15% de imprevistos generales sobre el subtotal de Bs 385.476. El resultado final es un presupuesto de Bs 443.297,43 para cuatro meses.",
+    ],
+    embedHeading: "Presupuesto embebido",
+    embedSubtitle:
+      "Consulta el archivo original hoja por hoja. Puedes cambiar entre «Presupuesto» y «Supuestos», revisar cada rubro y descargar el Excel para editarlo.",
+    caption:
+      "Vista de solo lectura del archivo presupuesto-big-analitica.xlsx. La hoja «Supuestos» explica de dónde sale cada parámetro y la hoja «Presupuesto» muestra el detalle de costos que da lugar a los totales.",
+    references: [
+      "Tableau — Precios oficiales de Creator, Explorer y Viewer (facturación anual).",
+      "eju.tv y Red Uno — Tarifas de Starlink Business y kit estándar (2026).",
+      "AXS y Entel — Referencias de internet empresarial, sujetas a cotización vigente.",
+      "Cost_Analysis.xlsx — Porcentajes de cargas sociales, depreciación, impuestos e imprevistos.",
+    ],
+  },
+  references: [
+    "Tableau — Documentación oficial de Tableau Desktop, Server y Cloud.",
+    "Few, S. — Information Dashboard Design: the effective visual communication of data.",
+    "Knaflic, C. N. — Storytelling with Data: a data visualization guide for business professionals.",
+    "Sharda, R., Delen, D. y Turban, E. — Business Intelligence and Analytics: Systems for Decision Support.",
+  ],
+};
+
+export const presupuesto = datosTableau.presupuesto;

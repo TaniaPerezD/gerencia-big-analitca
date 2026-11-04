@@ -255,6 +255,12 @@ export default function Home() {
             <Link to="/bpmn-del-equipo" className="btn btn-cream">
               <Icon name="network" size={18} strokeWidth={2} /> BPMN del Equipo
             </Link>
+            <Link to="/datos-tableau" className="btn btn-cream">
+              <Icon name="trending" size={18} strokeWidth={2} /> Datos y Tableau
+            </Link>
+            <Link to="/presupuesto" className="btn btn-cream">
+              <Icon name="landmark" size={18} strokeWidth={2} /> Presupuesto
+            </Link>
           </div>
         </Reveal>
       </section>
