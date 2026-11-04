@@ -12,6 +12,7 @@ import Mbti from "./pages/Mbti";
 import Scrum from "./pages/Scrum";
 import Idef0 from "./pages/Idef0";
 import Bpmn from "./pages/Bpmn";
+import DatosTableau from "./pages/DatosTableau";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/scrum-del-equipo" element={<Scrum />} />
             <Route path="/idef0" element={<Idef0 />} />
             <Route path="/bpmn-del-equipo" element={<Bpmn />} />
+            <Route path="/datos-tableau" element={<DatosTableau />} />
           </Routes>
         </main>
         <Footer />

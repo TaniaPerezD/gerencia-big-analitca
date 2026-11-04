@@ -1399,3 +1399,154 @@ export const bpmn = {
     "Relación con IDEF0 en el área: IDEF0 ordena el «qué» (las funciones); BPMN documenta el «cómo» (los procesos).",
   ],
 };
+
+export const datosTableau = {
+  hero: {
+    tag: "Visualización de datos",
+    title: "Datos y Tableau",
+    subtitle:
+      "Los gráficos convierten tablas y cifras en decisiones: por qué la visualización de datos es clave en una organización y por qué Tableau es una de las herramientas más usadas para lograrlo.",
+  },
+  intro: [
+    "Un gráfico de datos es una representación visual de la información: una forma de traducir filas, columnas y cifras a posiciones, colores y tamaños que el cerebro humano puede comparar de un vistazo. Donde una tabla obliga a leer número por número, un gráfico muestra la relación completa: qué crece, qué cae, qué se sale de lo esperado y qué se parece a qué.",
+    "En una organización, los datos por sí solos no deciden nada. Se vuelven útiles cuando alguien los entiende y actúa sobre ellos. La visualización es ese puente: reduce el tiempo entre «tener los datos» y «saber qué hacer», y permite que personas con perfiles distintos —dirección, operación, tecnología o negocio— hablen el mismo idioma visual.",
+  ],
+  keyPoints: [
+    "Comparar: pone magnitudes lado a lado para ver diferencias reales.",
+    "Tendencias: muestra cómo evoluciona un indicador en el tiempo.",
+    "Distribución: revela concentraciones, valores atípicos y dispersión.",
+    "Relación: ayuda a descubrir si dos variables se mueven juntas.",
+    "Composición: explica cómo se reparte un total entre sus partes.",
+    "Alerta: destaca lo que se aleja de la meta o de lo esperado.",
+  ],
+  benefits: [
+    {
+      icon: "target",
+      title: "Decisiones informadas y más rápidas",
+      blocks: [
+        {
+          text: "Un buen gráfico responde en segundos preguntas que una tabla tardaría minutos en resolver. Eso acorta el ciclo entre el dato y la acción y reduce las decisiones tomadas «por intuición».",
+        },
+      ],
+    },
+    {
+      icon: "globe",
+      title: "Comunicación entre áreas",
+      blocks: [
+        {
+          text: "La dirección, el área médica, la operación y el equipo técnico pueden mirar el mismo tablero y discutir sobre la misma evidencia. La visualización funciona como un lenguaje común.",
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Detección de patrones y tendencias",
+      blocks: [
+        {
+          text: "Los gráficos hacen visibles relaciones que las tablas esconden: estacionalidades, caídas sostenidas, picos anómalos o segmentos con comportamientos distintos.",
+        },
+      ],
+    },
+    {
+      icon: "activity",
+      title: "Seguimiento de indicadores (KPIs)",
+      blocks: [
+        {
+          text: "Un tablero permite vigilar metas de negocio —tiempos de atención, ocupación, calidad de datos o satisfacción— y detectar desvíos mientras todavía se pueden corregir.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Autoservicio y cultura de datos",
+      blocks: [
+        {
+          text: "Cuando las áreas pueden explorar sus propios datos con filtros e interacciones, disminuye la dependencia de reportes a medida y se multiplica el uso real de la información.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Detección temprana de riesgos",
+      blocks: [
+        {
+          text: "La visualización también sirve para vigilar lo que puede salir mal: activos obsoletos, datos sensibles sin control, procesos con cuellos de botella o resultados fuera de rango.",
+        },
+      ],
+    },
+  ],
+  whyTableau: [
+    {
+      icon: "trending",
+      title: "Análisis visual sin escribir código",
+      blocks: [
+        {
+          text: "Tableau permite construir gráficos arrastrando campos a estantes visuales, sin programar. Eso acerca el análisis a perfiles de negocio y libera al equipo técnico para tareas de mayor valor.",
+        },
+      ],
+    },
+    {
+      icon: "refresh",
+      title: "Conexión a múltiples fuentes de datos",
+      blocks: [
+        {
+          text: "Se conecta a bases de datos, hojas de cálculo, servicios cloud y data warehouses. Un mismo tablero puede combinar datos clínicos, operativos y financieros sin duplicar la información.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Dashboards interactivos",
+      blocks: [
+        {
+          text: "Los filtros, resaltados y acciones permiten pasar de una vista general a un detalle específico en un clic. El usuario explora sus propias preguntas en lugar de recibir una imagen estática.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Colaboración y publicación",
+      blocks: [
+        {
+          text: "Tableau Server y Tableau Cloud permiten publicar tableros, compartirlos con permisos y actualizarlos de forma programada, para que distintas áreas trabajen sobre la misma versión de la verdad.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Gobierno y seguridad",
+      blocks: [
+        {
+          text: "Permite administrar usuarios, permisos, fuentes certificadas y linaje de datos. En un contexto de salud, donde se maneja información sensible, ese control es tan importante como la visualización.",
+        },
+      ],
+    },
+    {
+      icon: "rocket",
+      title: "Escalabilidad y ecosistema",
+      blocks: [
+        {
+          text: "Puede crecer desde un análisis individual hasta una plataforma corporativa de analítica, integrándose con herramientas de preparación, modelado y ciencia de datos.",
+        },
+      ],
+    },
+  ],
+  embed: {
+    heading: "Tablero interactivo: activos de Big Data en salud",
+    subtitle:
+      "Explora el tablero embebido: los gráficos se filtran entre sí al hacer clic en una barra, una sección o una celda. Es el mismo principio que aplicamos en el Área de Big Data y Analítica.",
+    howTo: [
+      "Haz clic en una barra o sección para filtrar el resto de los gráficos.",
+      "Usa «Quitar filtros» para volver a la vista completa.",
+      "Pasa el cursor sobre cualquier elemento para ver sus valores exactos.",
+    ],
+    caption:
+      "Tablero de ejemplo construido con gráficos interactivos: inventario de activos de datos, sensibilidad de la información, estado, responsables y evolución por año. El objetivo no es solo mostrar cifras, sino permitir que el usuario haga preguntas.",
+  },
+  references: [
+    "Tableau — Documentación oficial de Tableau Desktop, Server y Cloud.",
+    "Few, S. — Information Dashboard Design: the effective visual communication of data.",
+    "Knaflic, C. N. — Storytelling with Data: a data visualization guide for business professionals.",
+    "Sharda, R., Delen, D. y Turban, E. — Business Intelligence and Analytics: Systems for Decision Support.",
+  ],
+};
