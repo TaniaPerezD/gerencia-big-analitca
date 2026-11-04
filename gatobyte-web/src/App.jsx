@@ -13,6 +13,7 @@ import Scrum from "./pages/Scrum";
 import Idef0 from "./pages/Idef0";
 import Bpmn from "./pages/Bpmn";
 import DatosTableau from "./pages/DatosTableau";
+import Presupuesto from "./pages/Presupuesto";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/idef0" element={<Idef0 />} />
             <Route path="/bpmn-del-equipo" element={<Bpmn />} />
             <Route path="/datos-tableau" element={<DatosTableau />} />
+            <Route path="/presupuesto" element={<Presupuesto />} />
           </Routes>
         </main>
         <Footer />

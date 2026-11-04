@@ -1543,6 +1543,46 @@ export const datosTableau = {
     caption:
       "Tablero de ejemplo construido con gráficos interactivos: inventario de activos de datos, sensibilidad de la información, estado, responsables y evolución por año. El objetivo no es solo mostrar cifras, sino permitir que el usuario haga preguntas.",
   },
+  presupuesto: {
+    heading: "Presupuesto del área",
+    subtitle:
+      "La traducción económica del plan: cuánto cuesta implementar y operar el Área de Big Data y Analítica durante una proyección de cuatro meses, expresado en bolivianos.",
+    intro: [
+      "Un presupuesto es la expresión económica de un plan. No es una lista de deseos: es el cálculo de cuánto dinero, tiempo y recursos necesita una iniciativa para funcionar, y la base para decidir si conviene invertir, en qué orden y con qué prioridades. Sin presupuesto, una estrategia de datos queda como una buena intención sin respaldo.",
+      "Nuestro presupuesto proyecta cuatro meses de operación con un equipo de cinco personas: la Gerencia de Datos y Analítica y las cuatro posiciones especializadas del área. Incluye la mano de obra con cargas sociales, el equipo de trabajo, las licencias de Tableau, la conectividad, la nube, los materiales y un margen de imprevistos.",
+      "El archivo está organizado en dos hojas. «Presupuesto» detalla cada rubro con cantidad, meses, costo unitario y costo total; «Supuestos» concentra los parámetros que mueven todo el cálculo, como el tipo de cambio, los precios de Tableau, las cargas sociales o los porcentajes de imprevistos. Las celdas editables están en azul: si cambia un supuesto, el presupuesto se recalcula solo.",
+    ],
+    figures: [
+      { icon: "database", value: "Bs 443.297", label: "costo total proyectado a 4 meses" },
+      { icon: "trending", value: "Bs 110.824", label: "costo mensual promedio" },
+      { icon: "users", value: "Bs 22.165", label: "costo mensual promedio por persona" },
+      { icon: "refresh", value: "4 meses", label: "horizonte de la proyección" },
+    ],
+    composition: [
+      "Mano de obra: Bs 280.800, equivalentes al 63,3% del total. Es el rubro principal, como corresponde a un área intensiva en conocimiento.",
+      "Equipo de trabajo: Bs 76.505, con laptops, monitores, una estación para infraestructura y ciencia de datos, y la depreciación correspondiente.",
+      "Servicios: Bs 8.052, encabezados por las licencias de Tableau Creator, Explorer y Viewer, además de Microsoft 365 e imprevistos.",
+      "Infraestructura: Bs 17.335, con enlaces de internet, Starlink Business, instalación y servicios de nube para almacenamiento y cómputo.",
+      "Materiales: Bs 2.784, con papelería, cables, accesorios, mobiliario menor e impuestos sobre materiales.",
+      "Imprevistos generales: Bs 57.821, un 15% sobre el subtotal para cubrir variaciones de precios o necesidades no previstas.",
+    ],
+    notes: [
+      "Las licencias de Tableau suman Bs 1.315,44 al mes: Creator (Bs 522) para el Analista BI, Explorer (Bs 292,32) para el PM y Gobernanza, y Viewer (Bs 104,40) para la Gerencia y el Ingeniero. En cuatro meses equivalen a Bs 5.261,76.",
+      "El tipo de cambio referencial es de 6,96 bolivianos por dólar. Los precios de Tableau están verificados y los de conectividad son referencias que conviene confirmar con el proveedor antes de ejecutar el presupuesto.",
+      "El total incluye 15% de imprevistos generales sobre el subtotal de Bs 385.476. El resultado final es un presupuesto de Bs 443.297,43 para cuatro meses.",
+    ],
+    embedHeading: "Presupuesto embebido",
+    embedSubtitle:
+      "Consulta el archivo original hoja por hoja. Puedes cambiar entre «Presupuesto» y «Supuestos», revisar cada rubro y descargar el Excel para editarlo.",
+    caption:
+      "Vista de solo lectura del archivo presupuesto-big-analitica.xlsx. La hoja «Supuestos» explica de dónde sale cada parámetro y la hoja «Presupuesto» muestra el detalle de costos que da lugar a los totales.",
+    references: [
+      "Tableau — Precios oficiales de Creator, Explorer y Viewer (facturación anual).",
+      "eju.tv y Red Uno — Tarifas de Starlink Business y kit estándar (2026).",
+      "AXS y Entel — Referencias de internet empresarial, sujetas a cotización vigente.",
+      "Cost_Analysis.xlsx — Porcentajes de cargas sociales, depreciación, impuestos e imprevistos.",
+    ],
+  },
   references: [
     "Tableau — Documentación oficial de Tableau Desktop, Server y Cloud.",
     "Few, S. — Information Dashboard Design: the effective visual communication of data.",
@@ -1550,3 +1590,5 @@ export const datosTableau = {
     "Sharda, R., Delen, D. y Turban, E. — Business Intelligence and Analytics: Systems for Decision Support.",
   ],
 };
+
+export const presupuesto = datosTableau.presupuesto;
