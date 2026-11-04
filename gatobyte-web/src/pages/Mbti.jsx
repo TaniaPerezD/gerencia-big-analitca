@@ -4,6 +4,8 @@ import DefinitionGrid from "../components/DefinitionGrid";
 import Accordion from "../components/Accordion";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import RoleLinks from "../components/RoleLinks";
+import { getPositionTitle, roleAnchorId } from "../data/roles";
 import entjCat from "../assets/entj-trans.png";
 import enfjCat from "../assets/enfj-trans.png";
 import infjCat from "../assets/infj-trans.png";
@@ -18,8 +20,14 @@ const memberCats = {
 };
 
 function MemberCard({ member, memberCats, featured = false, delay = 0 }) {
+  const positionTitle = getPositionTitle(member.roleId);
+
   return (
-    <Reveal delay={delay} className={featured ? "team-featured-wrap" : "team-card-wrap"}>
+    <Reveal
+      delay={delay}
+      id={roleAnchorId("mbti", member.roleId)}
+      className={featured ? "team-featured-wrap" : "team-card-wrap"}
+    >
       <article
         className={featured ? "team-featured" : "team-card"}
         style={{ "--member-color": member.accent }}
@@ -38,7 +46,9 @@ function MemberCard({ member, memberCats, featured = false, delay = 0 }) {
           </span>
           <h3>{member.name}</h3>
           <p className="team-role">{member.role}</p>
+          {positionTitle && <p className="team-position">{positionTitle}</p>}
           <p className="team-desc">{member.description}</p>
+          <RoleLinks role={member.roleId} page="mbti" tone={featured ? "dark" : "light"} />
         </div>
       </article>
     </Reveal>

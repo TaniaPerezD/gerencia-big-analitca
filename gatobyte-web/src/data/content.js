@@ -603,6 +603,7 @@ export const organizacion = {
     },
   ],
   positions: [
+    { title: "Gerente de Datos y Analítica", color: "#14304f" },
     { title: "Analista de Business Intelligence (BI)", color: "#0d9488" },
     { title: "Ingeniero de Infraestructura de Datos", color: "#2563eb" },
     { title: "Especialista en Gobernanza de Datos", color: "#4f46e5" },
@@ -632,9 +633,32 @@ export const descripcionPosiciones = {
   ],
   positions: [
     {
+      roleId: "gerente-datos-analitica",
+      icon: "landmark",
+      title: "Gerente de Datos y Analítica",
+      summary: "Liderazgo del área: estrategia de datos, gobierno del equipo y resultados ante la Dirección General.",
+      objetivo:
+        "Garantizar que la estrategia de datos del área genere valor medible para la organización y sus pacientes.",
+      mision:
+        "Convertir la estrategia de datos en prioridades claras, talento y resultados medibles para toda la organización.",
+      vision:
+        "Ser el motor de decisión de la organización: datos confiables y analítica disponible para todos.",
+      responsibilities: [
+        "Definir la estrategia de datos y analítica alineada a los objetivos de la organización.",
+        "Liderar y coordinar a las cuatro posiciones del área, asignando prioridades y recursos.",
+        "Reportar avances, riesgos y resultados a la Dirección General (CEO).",
+      ],
+    },
+    {
+      roleId: "analista-bi",
       icon: "database",
       title: "Analista de Business Intelligence (BI)",
       summary: "Reportes ejecutivos, dashboards, KPIs, analítica descriptiva y autoservicio.",
+      objetivo: "Convertir los datos en información clara y accionable que acelere la toma de decisiones.",
+      mision:
+        "Convertir los datos en información clara y accionable para que cada área tome mejores decisiones, todos los días.",
+      vision:
+        "Ser el punto de referencia de autoservicio de datos, donde cualquier persona resuelva sus propias preguntas de negocio sin depender de un reporte a medida.",
       responsibilities: [
         "Diseñar y mantener dashboards ejecutivos.",
         "Definir y dar seguimiento a indicadores clave (KPIs).",
@@ -642,9 +666,15 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "infraestructura-datos",
       icon: "server",
       title: "Ingeniero de Infraestructura de Datos",
       summary: "Plataformas cloud, lakehouse, pipelines, almacenamiento y confiabilidad.",
+      objetivo: "Asegurar una plataforma de datos disponible, segura y escalable en todo momento.",
+      mision:
+        "Construir y mantener una plataforma de datos confiable, segura y escalable que sostenga todo el trabajo analítico del área.",
+      vision:
+        "Lograr una infraestructura de datos tan estable que se vuelva invisible: siempre disponible, siempre a tiempo.",
       responsibilities: [
         "Construir y mantener pipelines de datos.",
         "Administrar plataformas cloud y de almacenamiento.",
@@ -652,9 +682,15 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "gobernanza-datos",
       icon: "shield",
       title: "Especialista en Gobernanza de Datos",
       summary: "Políticas, calidad, catálogo, metadatos, privacidad y roles.",
+      objetivo: "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad.",
+      mision:
+        "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad, desde que se capturan hasta que se consumen.",
+      vision:
+        "Ser el estándar de confianza del área: que cada dato tenga dueño, definición y un uso claramente autorizado.",
       responsibilities: [
         "Definir políticas de calidad y uso de datos.",
         "Mantener el catálogo de datos y metadatos.",
@@ -662,9 +698,15 @@ export const descripcionPosiciones = {
       ],
     },
     {
+      roleId: "pm-ciencia-datos",
       icon: "rocket",
       title: "PM de Ciencia de Datos e Innovación",
       summary: "Modelos predictivos, IA, experimentación, automatización e innovación.",
+      objetivo: "Anticipar necesidades del negocio mediante modelos predictivos y automatización.",
+      mision:
+        "Liderar la experimentación con modelos predictivos y de IA que conviertan los datos en decisiones anticipadas, no solo en reportes del pasado.",
+      vision:
+        "Convertir a la analítica predictiva en el motor de innovación que anticipe necesidades antes de que se conviertan en problemas.",
       responsibilities: [
         "Liderar proyectos de modelos predictivos e IA.",
         "Coordinar la experimentación de nuevas soluciones.",
@@ -808,6 +850,7 @@ export const mbti = {
   ],
   team: {
     leader: {
+      roleId: "gerente-datos-analitica",
       name: "Tania Peréz",
       type: "ENTJ",
       role: "Líder de la colonia",
@@ -818,6 +861,7 @@ export const mbti = {
     },
     members: [
       {
+        roleId: "infraestructura-datos",
         name: "Adriana Rocha",
         type: "ENTJ",
         role: "Planeación y ejecución",
@@ -827,6 +871,7 @@ export const mbti = {
           "Estratega Bigotes pragmático: convierte los grandes planes en procesos claros y hace que las cosas pasen.",
       },
       {
+        roleId: "analista-bi",
         name: "Dilan Mamani",
         type: "ENFJ",
         role: "Talento y cultura",
@@ -836,6 +881,7 @@ export const mbti = {
           "El corazón y garras del equipo: inspira, conecta a cada integrante y se asegura de que la colonia avance junta.",
       },
       {
+        roleId: "pm-ciencia-datos",
         name: "Ignacio Retamozo",
         type: "INFJ",
         role: "Visión y propósito",
@@ -845,6 +891,7 @@ export const mbti = {
           "La voz tranquila: percibe el propósito detrás de cada idea y guía decisiones con convicción serena.",
       },
       {
+        roleId: "gobernanza-datos",
         name: "Ivonne Colque",
         type: "INFP",
         role: "Imaginación e ideas",
@@ -855,6 +902,154 @@ export const mbti = {
       },
     ],
   },
+};
+
+export const idef0 = {
+  hero: {
+    tag: "Modelado de funciones",
+    title: "IDEF0",
+    subtitle:
+      "La metodología estándar para modelar las funciones de una organización: qué hace cada proceso, con qué entradas, bajo qué controles y con qué recursos lo logra.",
+  },
+  intro: [
+    "IDEF0 es la abreviatura de Integration Definition for Function Modeling: una metodología estandarizada para modelar las funciones de un sistema u organización — sus actividades, procesos y operaciones — y las relaciones entre ellas. No responde a «cuándo» ni «en qué orden» se hacen las cosas, sino a «qué» se hace, «qué se necesita» y «qué se produce» en cada función.",
+    "Nace de la técnica SADT (Structured Analysis and Design Technique), desarrollada por Douglas T. Ross y la compañía SofTech, Inc., y fue adoptada por la Fuerza Aérea de los Estados Unidos en el marco del programa ICAM. En 1993 se convirtió en el estándar estadounidense FIPS PUB 183, mantenido por el NIST, y fue fuertemente recomendado para el análisis, el desarrollo, el rediseño y la integración de sistemas de información.",
+  ],
+  keyPoints: [
+    "Una caja = una función con nombre de verbo (ej. «Transformar datos»).",
+    "Entradas (I): lo que la función transforma o consume, por la izquierda.",
+    "Controles (C): reglas y estándares que gobiernan la función, por arriba.",
+    "Salidas (O): lo que la función produce, por la derecha.",
+    "Mecanismos (M): personas, equipos y herramientas que la ejecutan, por abajo.",
+    "De arriba hacia abajo: del contexto A-0 a diagramas cada vez más detallados.",
+  ],
+  theory: [
+    {
+      icon: "network",
+      title: "¿Qué es IDEF0?",
+      blocks: [
+        {
+          text: "Un modelo IDEF0 es una representación estructurada de las funciones, actividades o procesos dentro del sistema o área modelada, junto con los datos u objetos que las interconectan. Provee una vista funcional completa: qué se hace, para qué, bajo qué reglas y con qué recursos.",
+        },
+        {
+          heading: "Origen",
+          text: "Surgió del programa ICAM de la Fuerza Aérea de los EE. UU. como evolución de SADT, y se estandarizó como FIPS PUB 183 por el NIST en 1993. Forma parte de la familia de métodos IDEF junto con IDEF1 (modelado de información) e IDEF3 (modelado de procesos).",
+        },
+        {
+          heading: "Para qué se usa",
+          list: [
+            "Analizar procesos de negocio y de sistemas.",
+            "Diseñar y rediseñar (re-engineering) procesos.",
+            "Integrar sistemas de información y operaciones.",
+            "Documentar y comunicar el funcionamiento de la organización.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "La notación: cajas y flechas (ICOM)",
+      blocks: [
+        {
+          text: "El lenguaje gráfico de IDEF0 se compone de dos elementos: cajas y flechas. Cada caja representa una función; cada flecha representa un dato u objeto que entra, sale o gobierna esa función.",
+        },
+        {
+          heading: "Entradas (Inputs)",
+          text: "Los datos u objetos que la función transforma o consume. Llegan por el lado izquierdo de la caja.",
+        },
+        {
+          heading: "Controles (Controls)",
+          text: "Las reglas, normas, políticas o estándares que condicionan la realización de la función, sin consumirse. Llegan por el lado superior.",
+        },
+        {
+          heading: "Salidas (Outputs)",
+          text: "Los datos u objetos que la función produce. Salen por el lado derecho de la caja y pueden ser entrada o control de otra función.",
+        },
+        {
+          heading: "Mecanismos (Mechanisms)",
+          text: "Los recursos que ejecutan la función: personas, equipos, herramientas o sistemas. Llegan por el lado inferior.",
+        },
+      ],
+    },
+    {
+      icon: "compass",
+      title: "Descomposición de arriba hacia abajo",
+      blocks: [
+        {
+          text: "IDEF0 modela de forma top-down. El diagrama de contexto (A-0) resume todo el sistema en una sola caja, con sus entradas, controles, salidas y mecanismos globales. A partir de él, cada función se descompone en un diagrama hijo de más detalle, numerado A0, A1, A2…, hasta que cada actividad queda suficientemente clara.",
+        },
+        {
+          list: [
+            "Contexto primero: se definen propósito, punto de vista (viewpoint) y límites del modelo.",
+            "Cada diagrama contiene entre 3 y 6 cajas para conservar legibilidad.",
+            "La numeración A-0 / A0 / A1 / A2… mantiene trazable cada nivel de detalle.",
+            "El acrónimo ICOM ordena las flechas que atraviesan los niveles de descomposición.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Por qué es importante para una organización",
+      blocks: [
+        {
+          text: "IDEF0 no es solo una forma de dibujar procesos: es un lenguaje común que obliga a la organización a ponerse de acuerdo sobre qué hace cada área, bajo qué reglas y con qué recursos. Ese consenso es el primer paso para gobernar y mejorar cualquier operación.",
+        },
+        {
+          list: [
+            "Claridad: cada proceso muestra entradas, salidas, controles y recursos de un vistazo.",
+            "Comunicación: un estándar visual comprensible por todos los niveles de la organización.",
+            "Detección de problemas: hace visibles redundancias, cuellos de botella y vacíos de responsabilidad.",
+            "Mejora continua: base sólida para metodologías como ISO 9000, Six Sigma y gestión por procesos (BPM).",
+            "Integración: apoya el análisis, desarrollo y re-ingeniería de sistemas de información.",
+            "Documentación y onboarding: preserva el conocimiento y acelera la incorporación de nuevo personal.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "database",
+      title: "Aplicación en Big Data y Analítica",
+      blocks: [
+        {
+          text: "En un área de datos, IDEF0 modela de forma natural el flujo completo de la información: las fuentes de datos actúan como entradas, las políticas de calidad, privacidad y cumplimiento como controles, los analistas, ingenieros y plataformas como mecanismos, y los reportes, dashboards y modelos predictivos como salidas.",
+        },
+        {
+          heading: "En el Área de Big Data y Analítica",
+          list: [
+            "Entradas: datos crudos de salud, clínicos y operacionales.",
+            "Controles: gobernanza de datos, normas de privacidad y requisitos regulatorios.",
+            "Mecanismos: analistas BI, ingenieros de datos, especialistas en gobernanza, PM y plataformas cloud.",
+            "Salidas: dashboards, reportes ejecutivos y modelos predictivos para la toma de decisiones.",
+          ],
+        },
+        {
+          text: "Así, el diagrama documenta cómo los datos de salud se transforman en conocimiento estratégico y deja visible qué se requiere en cada paso para lograrlo.",
+        },
+      ],
+    },
+  ],
+  legend: [
+    { label: "Entradas (I)", color: "#2563eb", note: "lo que la función transforma" },
+    { label: "Controles (C)", color: "#d97706", note: "reglas que gobiernan la función" },
+    { label: "Salidas (O)", color: "#0d9488", note: "lo que la función produce" },
+    { label: "Mecanismos (M)", color: "#7c3aed", note: "recursos que la ejecutan" },
+  ],
+  diagram: {
+    title: "Diagrama IDEF0",
+    subtitle:
+      "Representación gráfica de cómo se modelan las funciones del área y sus relaciones de entradas, controles, salidas y mecanismos.",
+    alt: "Diagrama IDEF0 del Área de Big Data y Analítica",
+    caption:
+      "Diseño conceptual del modelo IDEF0 aplicado al Área de Big Data y Analítica. Las flechas y cajas se interpretan según la notación ICOM descrita arriba.",
+    url: "https://drive.google.com/thumbnail?id=1zkIRqox_OLMoGOoxQ1wLVrco56z1u6nt&sz=w2000",
+  },
+  references: [
+    "FIPS PUB 183 (1993) — Integration Definition for Function Modeling (IDEF0), NIST.",
+    "Ross, D. T. — Structured Analysis (SADT): técnica base del lenguaje IDEF0 (SofTech, Inc.).",
+    "Programa ICAM — Integrated Computer-Aided Manufacturing, Fuerza Aérea de los EE. UU.",
+    "Mayer, R. J. et al. — IDEF0 Function Modeling: reconstrucción sobre el estándar original AFWAL.",
+  ],
 };
 
 export const scrum = {
@@ -908,43 +1103,64 @@ export const scrum = {
   orgTeam: {
     productOwner: {
       name: "Yamil Cárdenas",
-      role: "Product Owner · Scrum Master",
+      role: "Product Owner · Scrum Master · CEO",
       note:
-        "Docente del curso: prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
+        "Docente del curso: representa a la Dirección General (CEO), prioriza el backlog y facilita el proceso ágil desde fuera del equipo de desarrollo.",
+    },
+    sponsor: {
+      roleId: "gerente-datos-analitica",
+      name: "Tania Peréz",
+      role: "Gerente de Datos y Analítica",
+      note:
+        "Reporta directamente al Product Owner/CEO: traduce la estrategia de datos en prioridades concretas y respalda al equipo con recursos.",
+      objetivo:
+        "Garantizar que la estrategia de datos del área genere valor medible para la organización y sus pacientes.",
+      mision:
+        "Convertir la estrategia de datos en prioridades claras, talento y resultados medibles para toda la organización.",
+      vision:
+        "Ser el motor de decisión de la organización: datos confiables y analítica disponible para todos.",
     },
     teamLabel: "Equipo de Desarrollo",
     positions: [
       {
+        roleId: "analista-bi",
         title: "Analista de Business Intelligence (BI)",
         name: "Dilan Mamani",
         color: "#0d9488",
+        objetivo: "Convertir los datos en información clara y accionable que acelere la toma de decisiones.",
         mision:
           "Convertir los datos en información clara y accionable para que cada área tome mejores decisiones, todos los días.",
         vision:
           "Ser el punto de referencia de autoservicio de datos, donde cualquier persona resuelva sus propias preguntas de negocio sin depender de un reporte a medida.",
       },
       {
+        roleId: "infraestructura-datos",
         title: "Ingeniero de Infraestructura de Datos",
         name: "Adriana Rocha",
         color: "#2563eb",
+        objetivo: "Asegurar una plataforma de datos disponible, segura y escalable en todo momento.",
         mision:
           "Construir y mantener una plataforma de datos confiable, segura y escalable que sostenga todo el trabajo analítico del área.",
         vision:
           "Lograr una infraestructura de datos tan estable que se vuelva invisible: siempre disponible, siempre a tiempo.",
       },
       {
+        roleId: "gobernanza-datos",
         title: "Especialista en Gobernanza de Datos",
         name: "Ivonne Colque",
         color: "#4f46e5",
+        objetivo: "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad.",
         mision:
           "Garantizar que los datos del área se usen con calidad, trazabilidad y respeto a la privacidad, desde que se capturan hasta que se consumen.",
         vision:
           "Ser el estándar de confianza del área: que cada dato tenga dueño, definición y un uso claramente autorizado.",
       },
       {
+        roleId: "pm-ciencia-datos",
         title: "PM de Ciencia de Datos e Innovación",
         name: "Ignacio Retamozo",
         color: "#14b8a6",
+        objetivo: "Anticipar necesidades del negocio mediante modelos predictivos y automatización.",
         mision:
           "Liderar la experimentación con modelos predictivos y de IA que conviertan los datos en decisiones anticipadas, no solo en reportes del pasado.",
         vision:
@@ -1031,4 +1247,155 @@ export const scrum = {
     ],
     url: "https://sharing.clickup.com/90171470000/b/4-90176923982-2/tablero",
   },
+};
+
+export const bpmn = {
+  hero: {
+    tag: "Modelado de procesos",
+    title: "BPMN",
+    subtitle:
+      "El estándar visual para modelar procesos de negocio: cómo fluye cada tarea, quién la ejecuta y qué decisiones la gobiernan — aplicado al Área de Big Data y Analítica.",
+  },
+  intro: [
+    "BPMN es la abreviatura de Business Process Model and Notation: un estándar gráfico creado para representar procesos de negocio de una forma comprensible tanto para las personas del negocio como para los equipos técnicos. Nació en el año 2004 impulsado por el Business Process Management Initiative (BPMI) y, desde 2013, es mantenido por el Object Management Group (OMG) bajo la norma ISO/IEC 19510.",
+    "Su propósito es simple pero poderoso: le permite a cualquiera «leer» un proceso de principio a fin. Gracias a BPMN es posible documentar cómo funciona una operación, detectar cuellos de botella, identificar tareas que duplican trabajo y diseñar la automatización de los flujos de trabajo, todo sobre la base de un mismo lenguaje visual.",
+    "A diferencia de IDEF0 — que responde al «qué», con sus funciones y sus entradas, salidas, controles y mecanismos — BPMN responde al «cómo» y al «en qué orden»: cuáles son los eventos que inician y cierran un proceso, qué tareas se ejecutan, quién es responsable de cada una y qué decisiones determinan el camino a seguir.",
+  ],
+  theory: [
+    {
+      icon: "circle",
+      title: "Eventos",
+      blocks: [
+        {
+          text: "Marcan algo que ocurre dentro del proceso. Sólo hay tres tipos, y todos contribuyen a contar la historia del flujo.",
+        },
+        {
+          heading: "Eventos de inicio",
+          text: "Representado con un círculo de borde delgado. Detecta dónde comienza el proceso: la llegada de una solicitud, un correo, un dato nuevo o una fecha programada.",
+        },
+        {
+          heading: "Eventos intermedios",
+          text: "Círculos de borde doble. Ocurren durante el proceso: una espera, una señal recibida o un temporizador que libera el siguiente paso.",
+        },
+        {
+          heading: "Eventos de fin",
+          text: "Círculos de borde grueso. Marcan dónde termina el proceso: una entrega completada, una notificación enviada o un resultado archivado.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Actividades",
+      blocks: [
+        {
+          text: "Son el trabajo que se ejecuta dentro del proceso. Se representan con rectángulos de esquinas redondeadas.",
+        },
+        {
+          heading: "Tarea",
+          text: "Una unidad de trabajo atómica, de un solo paso: por ejemplo, «Validar datos», «Limpiar registros» o «Generar reporte». Es una actividad simple que no se descompone.",
+        },
+        {
+          heading: "Subproceso",
+          text: "Una actividad compuesta que contiene su propio flujo interno y se marca con un signo más. Sirve para organizar la complejidad sin perder legibilidad.",
+        },
+        {
+          heading: "Transacción",
+          text: "Un tipo de actividad con un comportamiento de cancelación controlado, útil cuando el proceso debe revertirse si algo falla a mitad de camino.",
+        },
+      ],
+    },
+    {
+      icon: "git",
+      title: "Compuertas",
+      blocks: [
+        {
+          text: "Se representan con rombos y controlan la bifurcación y la convergencia del flujo. Son las decisiones del proceso.",
+        },
+        {
+          heading: "Compuerta exclusiva (XOR)",
+          text: "Elige una sola ruta entre varias alternativas, como un «si … entonces». Es la decisión básica de ida o vuelta.",
+        },
+        {
+          heading: "Compuerta paralela (AND)",
+          text: "No decide: dispara todas las ramas al mismo tiempo y espera a que todas converjan antes de continuar. Ideal para tareas que pueden hacerse en simultáneo.",
+        },
+        {
+          heading: "Compuerta inclusiva (OR)",
+          text: "Combina los dos anteriores: activa una o varias rutas según la condición, y continúa cuando todas las activadas hayan terminado.",
+        },
+      ],
+    },
+    {
+      icon: "network",
+      title: "Flujos y participantes",
+      blocks: [
+        {
+          text: "Conectan y organizan las actividades dentro del diagrama.",
+        },
+        {
+          heading: "Flujo secuencial",
+          text: "Flechas continuas que unen eventos, actividades y compuertas e indican el orden de ejecución.",
+        },
+        {
+          heading: "Flujo de mensajes",
+          text: "Flechas con círculo al inicio: representan la comunicación entre piscinas distintas, es decir, entre participantes u organizaciones.",
+        },
+        {
+          heading: "Piscinas y calles (pools y lanes)",
+          text: "Las piscinas agrupan todo el proceso de un participante; las calles, subdivididas dentro de la piscina, asignan cada actividad al rol u equipo responsable. Así se ve quién hace qué en cada paso.",
+        },
+      ],
+    },
+  ],
+  areaContext: {
+    heading: "BPMN en el Área de Big Data y Analítica",
+    subtitle:
+      "Somos el Área de Big Data y Analítica, el motor de conocimiento de servicios médicos basados en datos. El diagrama que sigue documenta, con notación BPMN, el proceso de gestión de demanda analítica: del pedido de información a la entrega del producto final.",
+    description:
+      "El Área de Big Data y Analítica transforma datos masivos de salud en información para la toma de decisiones médicas y de gestión. Nuestro equipo de desarrollo, organizado con Scrum, ejecuta este proceso: el Analista de Business Intelligence construye dashboards y reportes, el Ingeniero de Infraestructura de Datos garantiza pipelines y plataformas confiables, la Especialista en Gobernanza de Datos vela por calidad, trazabilidad y privacidad, y el PM de Ciencia de Datos e Innovación lidera los modelos predictivos y la automatización.",
+    steps: [
+      {
+        icon: "file",
+        title: "Solicitud y evaluación",
+        text: "El proceso inicia con la llegada de una solicitud de reporte o análisis y la evaluación de los datos disponibles.",
+      },
+      {
+        icon: "server",
+        title: "Preparación de datos",
+        text: "El Ingeniero de Infraestructura de Datos prepara los datos: ingestión, transformación y calidad, con control de la Especialista en Gobernanza de Datos.",
+      },
+      {
+        icon: "database",
+        title: "Construcción y revisión",
+        text: "El Analista BI construye el producto: dashboard, reporte o modelo, y lo somete a revisión con el solicitante.",
+      },
+      {
+        icon: "check",
+        title: "Aprobación y entrega",
+        text: "El proceso cierra con la aprobación, entrega del producto y su publicación para el consumo del área solicitante.",
+      },
+    ],
+    legend: [
+      { label: "Eventos", color: "#0d9488", note: "inicio, intermedios y fin del proceso" },
+      { label: "Actividades", color: "#2563eb", note: "tareas y subprocesos que se ejecutan" },
+      { label: "Compuertas", color: "#d97706", note: "decisiones y rutas del flujo" },
+      { label: "Flujo secuencial", color: "#7c3aed", note: "orden de ejecución" },
+      { label: "Piscinas y calles", color: "#4f46e5", note: "roles y participantes responsables" },
+    ],
+  },
+  diagram: {
+    title: "Nuestro diagrama BPMN",
+    subtitle:
+      "Representación del proceso del Área de Big Data y Analítica: de la solicitud de información a la entrega del producto analítico.",
+    alt: "Diagrama BPMN del Área de Big Data y Analítica",
+    caption:
+      "Las figuras siguen la notación BPMN descrita arriba: rectángulos para las actividades, rombos para las decisiones y círculos para los eventos de inicio y fin del proceso.",
+    url: "https://drive.google.com/file/d/1lVZIRtF0gvFqG2cgft-hyvW-3a6dzDED/preview",
+  },
+  references: [
+    "BPMN 2.0 — OMG Business Process Model and Notation (ISO/IEC 19510:2013) para procesos de negocio.",
+    "White, S. A. — Introduction to BPMN: el paper oficial de referencia del estándar.",
+    "Object Management Group (OMG) — especificación oficial BPMN 2.0.",
+    "Relación con IDEF0 en el área: IDEF0 ordena el «qué» (las funciones); BPMN documenta el «cómo» (los procesos).",
+  ],
 };

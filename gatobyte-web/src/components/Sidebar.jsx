@@ -11,6 +11,8 @@ const links = [
   { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
   { to: "/mbti-del-equipo", label: "MBTI del Equipo", icon: "sparkles" },
   { to: "/scrum-del-equipo", label: "Scrum del Equipo", icon: "activity" },
+  { to: "/idef0", label: "Modelado IDEF0", icon: "layers" },
+  { to: "/bpmn-del-equipo", label: "BPMN del Equipo", icon: "refresh" },
 ];
 
 export default function Sidebar() {
@@ -98,6 +100,17 @@ export default function Sidebar() {
             </NavLink>
           ))}
         </nav>
+
+        <a
+          href="https://iatech-co-frontend.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="sidebar-inventory-btn"
+        >
+          <Icon name="database" size={17} strokeWidth={2} />
+          Sistema de Inventario
+          <Icon name="external" size={13} strokeWidth={2} />
+        </a>
 
         <div className="sidebar-foot">
           <Icon name="paw" size={16} strokeWidth={0} />

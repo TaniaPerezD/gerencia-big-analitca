@@ -1,0 +1,98 @@
+import PageHero from "../components/PageHero";
+import Accordion from "../components/Accordion";
+import ProcessSteps from "../components/ProcessSteps";
+import Icon from "../components/Icon";
+import Reveal from "../components/Reveal";
+import References from "../components/References";
+import bpmnDiagram from "../assets/bpmn-diagrama.png";
+import { bpmn as data } from "../data/content";
+
+export default function Bpmn() {
+  return (
+    <>
+      <PageHero {...data.hero} variant="minimal" />
+
+      <section className="section narrow-section article-section">
+        <Reveal>
+          <h2>¿Qué es BPMN?</h2>
+          {data.intro.map((p, i) => (
+            <p key={i} className={i === 0 ? "drop-cap" : ""}>
+              {p}
+            </p>
+          ))}
+        </Reveal>
+
+        <Reveal delay={100} className="notation-strip">
+          {data.theory.map((t) => (
+            <div key={t.title} className="notation-chip">
+              <span className="notation-chip-icon">
+                <Icon name={t.icon} size={20} strokeWidth={1.8} />
+              </span>
+              <span>{t.title}</span>
+            </div>
+          ))}
+        </Reveal>
+      </section>
+
+      <section className="section section-alt">
+        <Reveal className="section-heading">
+          <h2>Fundamentos del modelado BPMN</h2>
+          <p>La notación básica: eventos, actividades, compuertas y flujos que cuentan cada proceso.</p>
+        </Reveal>
+        <Accordion items={data.theory} />
+      </section>
+
+      <section className="section">
+        <Reveal className="section-heading">
+          <h2>{data.areaContext.heading}</h2>
+          <p>{data.areaContext.subtitle}</p>
+        </Reveal>
+
+        <div className="narrow-section">
+          <Reveal className="article-section">
+            {data.areaContext.description.split(". ").map((sentence, i, arr) => (
+              <p key={i}>
+                {sentence}
+                {i < arr.length - 1 ? "." : ""}
+              </p>
+            ))}
+          </Reveal>
+        </div>
+
+        <h4 className="process-label">Cómo leer el proceso</h4>
+        <ProcessSteps steps={data.areaContext.steps} />
+      </section>
+
+      <section className="section section-alt">
+        <Reveal className="section-heading">
+          <h2>{data.diagram.title}</h2>
+          <p>{data.diagram.subtitle}</p>
+        </Reveal>
+
+        <Reveal delay={100} className="orgchart-frame">
+          <img src={bpmnDiagram} alt={data.diagram.alt} loading="lazy" />
+        </Reveal>
+
+        <Reveal delay={150} className="orgchart-legend">
+          {data.areaContext.legend.map((l) => (
+            <span key={l.label} className="legend-chip" style={{ "--chip-color": l.color }}>
+              <span className="legend-dot" />
+              {l.label}
+              <span className="legend-note">&nbsp;· {l.note}</span>
+            </span>
+          ))}
+        </Reveal>
+
+        <Reveal delay={180} className="diagram-caption">
+          <p>{data.diagram.caption}</p>
+        </Reveal>
+      </section>
+
+      <section className="section">
+        <div className="narrow-section">
+          <References items={data.references} />
+        </div>
+      </section>
+    </>
+  );
+}

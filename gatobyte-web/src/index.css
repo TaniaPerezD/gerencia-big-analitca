@@ -318,9 +318,30 @@ main {
   transform: scale(1.05);
 }
 
-.sidebar-foot {
+.sidebar-inventory-btn {
   margin-top: auto;
-  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 11px 14px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sidebar-inventory-btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-1px);
+}
+
+.sidebar-foot {
+  margin-top: 20px;
+  padding-top: 20px;
   border-top: 1px solid rgba(243, 248, 251, 0.12);
   color: var(--terracotta);
   display: flex;
@@ -1692,6 +1713,19 @@ main {
   flex-shrink: 0;
 }
 
+.legend-note {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.diagram-caption {
+  max-width: 980px;
+  margin: 18px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- Scrum org chart (Scrum) ---------- */
 .scrum-org {
   max-width: 980px;
@@ -1701,14 +1735,38 @@ main {
   align-items: center;
 }
 
-.scrum-org-lead {
-  background: var(--olive);
+.scrum-org-lead,
+.scrum-org-sponsor {
   color: var(--cream);
   border-radius: var(--radius);
-  padding: 22px 30px;
+  padding: 24px 34px;
   text-align: center;
   box-shadow: var(--shadow);
-  max-width: 340px;
+  width: 100%;
+  max-width: 540px;
+}
+
+.scrum-org-sponsor {
+  background: var(--olive);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scrum-org-lead {
+  background: var(--olive-dark);
+}
+
+.scrum-org-sponsor h3,
+.scrum-org-lead h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.scrum-org-sponsor p,
+.scrum-org-lead p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(243, 248, 251, 0.78);
 }
 
 .scrum-org-lead-tag {
@@ -1719,18 +1777,6 @@ main {
   font-weight: 700;
   color: #9fd8ce;
   margin-bottom: 8px;
-}
-
-.scrum-org-lead h3 {
-  font-size: 1.2rem;
-  margin: 0 0 8px;
-  color: #fff;
-}
-
-.scrum-org-lead p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: rgba(243, 248, 251, 0.78);
 }
 
 .scrum-org-connector {
@@ -1795,9 +1841,28 @@ main {
   color: var(--ink);
 }
 
+.scrum-org-sponsor .scrum-org-mv {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(243, 248, 251, 0.18);
+}
+
+.scrum-org-sponsor .scrum-org-mv p {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: rgba(243, 248, 251, 0.82);
+  margin: 0 0 6px;
+}
+
+.scrum-org-sponsor .scrum-org-mv strong {
+  color: #9fd8ce;
+}
+
 @media (max-width: 640px) {
-  .scrum-org-lead {
+  .scrum-org-lead,
+  .scrum-org-sponsor {
     max-width: 100%;
+    padding: 22px 20px;
   }
 }
 
@@ -1832,6 +1897,99 @@ main {
   border-left: 4px solid var(--terracotta);
   border-radius: 14px;
   padding: 24px 26px;
+}
+
+/* ---------- Two-column intro (IDEF0) ---------- */
+.intro-split {
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.intro-split-card {
+  position: sticky;
+  top: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow);
+}
+
+.intro-split-card h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  color: var(--terracotta-dark);
+  margin-bottom: 14px;
+}
+
+.intro-split-card ul {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--ink-soft);
+}
+
+.intro-split-card li {
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .intro-split {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-split-card {
+    position: static;
+  }
+}
+
+/* ---------- Notation strip (BPMN) ---------- */
+.notation-strip {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.notation-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.notation-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  color: var(--terracotta-dark);
+  flex-shrink: 0;
+}
+
+.process-label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  margin: 44px 0 8px;
 }
 
 .component-list h4 {
@@ -1924,6 +2082,40 @@ main {
 
 .position-card li {
   margin-bottom: 5px;
+}
+
+.position-objective {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--terracotta);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.position-objective h4 {
+  margin-bottom: 4px;
+}
+
+.position-objective p {
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.position-mv {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.position-mv p {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.position-mv strong {
+  color: var(--ink);
 }
 
 /* ---------- PDF icon badge ---------- */
@@ -2415,7 +2607,26 @@ main {
 .footer-copy {
   color: rgba(243, 248, 251, 0.5);
   font-size: 0.82rem;
-  margin: 0;
+  margin: 0 0 28px;
+}
+
+.footer-inventory-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-inventory-btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 760px) {
@@ -2647,6 +2858,126 @@ main {
   }
 }
 
+/* ---------- Cross-links between role blocks (Scrum / MBTI / Puestos) ---------- */
+.scrum-org-sponsor,
+.scrum-org-card,
+.position-card,
+.team-card-wrap,
+.team-featured-wrap {
+  scroll-margin-block: 28px;
+  scroll-margin-inline: 12px;
+}
+
+.position-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-position {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.team-featured-body .team-position {
+  color: var(--cream);
+}
+
+.role-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.team-card .role-links,
+.scrum-org-sponsor .role-links {
+  justify-content: center;
+}
+
+.scrum-org-sponsor .role-links {
+  margin-top: 16px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.role-links-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.role-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--terracotta);
+  background: rgba(13, 148, 136, 0.08);
+  color: var(--terracotta-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.role-link:hover {
+  background: var(--terracotta);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.role-links-dark {
+  border-top-color: rgba(243, 248, 251, 0.28);
+}
+
+.role-links-dark .role-links-label {
+  color: rgba(243, 248, 251, 0.72);
+}
+
+.role-links-dark .role-link {
+  border-color: rgba(243, 248, 251, 0.45);
+  background: rgba(243, 248, 251, 0.12);
+  color: var(--cream);
+}
+
+.role-links-dark .role-link:hover {
+  background: var(--cream);
+  border-color: var(--cream);
+  color: var(--olive-dark);
+}
+
+.role-anchor-target {
+  animation: role-outline 2.2s ease-out;
+}
+
+@keyframes role-outline {
+  0% {
+    outline: 3px solid rgba(13, 148, 136, 0.85);
+    outline-offset: 3px;
+  }
+
+  70% {
+    outline: 3px solid rgba(13, 148, 136, 0.3);
+    outline-offset: 6px;
+  }
+
+  100% {
+    outline: 3px solid rgba(13, 148, 136, 0);
+    outline-offset: 9px;
+  }
+}
+
 /* ---------- Scrum board embed ---------- */
 .board-columns {
   max-width: 760px;
@@ -2670,6 +3001,22 @@ main {
   border: 0;
   border-radius: 12px;
   display: block;
+}
+
+.board-open-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--terracotta-dark);
+}
+
+.board-open-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {

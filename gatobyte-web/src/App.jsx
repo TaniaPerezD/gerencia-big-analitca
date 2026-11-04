@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -9,10 +10,13 @@ import Organizacion from "./pages/Organizacion";
 import DescripcionPosiciones from "./pages/DescripcionPosiciones";
 import Mbti from "./pages/Mbti";
 import Scrum from "./pages/Scrum";
+import Idef0 from "./pages/Idef0";
+import Bpmn from "./pages/Bpmn";
 
 function App() {
   return (
     <div className="app-shell">
+      <ScrollToTop />
       <Sidebar />
       <div className="app-content">
         <main>
@@ -25,6 +29,8 @@ function App() {
             <Route path="/descripcion-de-posiciones" element={<DescripcionPosiciones />} />
             <Route path="/mbti-del-equipo" element={<Mbti />} />
             <Route path="/scrum-del-equipo" element={<Scrum />} />
+            <Route path="/idef0" element={<Idef0 />} />
+            <Route path="/bpmn-del-equipo" element={<Bpmn />} />
           </Routes>
         </main>
         <Footer />
