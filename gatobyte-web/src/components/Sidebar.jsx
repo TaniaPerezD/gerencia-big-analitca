@@ -14,6 +14,8 @@ const links = [
   { to: "/idef0", label: "Modelado IDEF0", icon: "layers" },
   { to: "/bpmn-del-equipo", label: "BPMN del Equipo", icon: "refresh" },
   { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
+  { to: "/monitoreo-solarwinds", label: "Monitoreo con SolarWinds", icon: "server" },
+  { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
   { to: "/presupuesto", label: "Presupuesto", icon: "landmark" },
 ];
 
