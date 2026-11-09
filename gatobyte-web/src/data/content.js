@@ -1571,6 +1571,82 @@ export const datosTableau = {
       "El tipo de cambio referencial es de 6,96 bolivianos por dólar. Los precios de Tableau están verificados y los de conectividad son referencias que conviene confirmar con el proveedor antes de ejecutar el presupuesto.",
       "El total incluye 15% de imprevistos generales sobre el subtotal de Bs 385.476. El resultado final es un presupuesto de Bs 443.297,43 para cuatro meses.",
     ],
+    serviceEval: [
+      {
+        name: "Tableau Creator",
+        use: "Creación de dashboards y modelos analíticos.",
+        cost: "Bs 522 / mes · Bs 2.088 en 4 meses",
+        status: "esencial",
+        badge: "Esencial",
+        detail:
+          "Una licencia para el Analista BI. Es la única que permite publicar y editar contenido, por lo que concentra la producción analítica del área.",
+      },
+      {
+        name: "Tableau Explorer",
+        use: "Exploración y edición de contenido compartido.",
+        cost: "Bs 292,32 / mes · Bs 2.338,56 en 4 meses",
+        status: "recomendado",
+        badge: "Recomendado",
+        detail:
+          "Dos licencias para el PM y Gobernanza: ajustan y exploran tableros existentes sin necesitar una licencia Creator completa.",
+      },
+      {
+        name: "Tableau Viewer",
+        use: "Consulta de dashboards en modo lectura.",
+        cost: "Bs 104,40 / mes · Bs 835,20 en 4 meses",
+        status: "recomendado",
+        badge: "Recomendado",
+        detail:
+          "Dos licencias para Gerencia e Ingeniería: cubren la necesidad de consulta con el costo más bajo del ecosistema Tableau.",
+      },
+      {
+        name: "Microsoft 365 Business",
+        use: "Correo, documentos y colaboración.",
+        cost: "Bs 87 / usuario/mes · Bs 1.740 en 4 meses",
+        status: "esencial",
+        badge: "Esencial",
+        detail:
+          "Cinco cuentas para el equipo. Sostiene la comunicación, el almacenamiento de documentos y la edición colaborativa del día a día.",
+      },
+      {
+        name: "Internet AXS 80 Mbps",
+        use: "Enlace principal del área.",
+        cost: "Bs 479 / mes · Bs 1.916 en 4 meses",
+        status: "esencial",
+        badge: "Esencial",
+        detail:
+          "Conexión primaria para operar pipelines y publicar reportes. Su tarifa es una referencia y debe confirmarse antes de ejecutar el presupuesto.",
+      },
+      {
+        name: "Internet Entel 150 Mbps",
+        use: "Enlace de respaldo y mayor ancho de banda.",
+        cost: "Bs 720 / mes · Bs 2.880 en 4 meses",
+        status: "revisar",
+        badge: "Revisar",
+        detail:
+          "Aporta redundancia, aunque la tarifa proviene de 2021: conviene pedir una cotización vigente para validar el monto real.",
+      },
+      {
+        name: "Starlink Business 500 GB",
+        use: "Respaldo ante caída de la fibra.",
+        cost: "Bs 1.085 / mes · Bs 4.340 en 4 meses",
+        status: "recomendado",
+        badge: "Recomendado",
+        detail:
+          "Tercer enlace de contingencia para no interrumpir pipelines ni reportes críticos cuando fallan los enlaces fijos.",
+      },
+      {
+        name: "Nube (almacenamiento y cómputo)",
+        use: "Plataforma de datos y modelos.",
+        cost: "Bs 2.000 / mes · Bs 8.000 en 4 meses",
+        status: "esencial",
+        badge: "Esencial",
+        detail:
+          "Aloja el data lake, el warehouse y el cómputo de modelos. Es el servicio de mayor peso dentro de infraestructura y el corazón técnico del área.",
+      },
+    ],
+    serviceEvalNote:
+      "Los servicios suman Bs 8.052,02 y la infraestructura Bs 17.335, incluido un 15 % de imprevistos en servicios. Los rubros marcados como «Revisar» dependen de una cotización vigente antes de ejecutar el presupuesto.",
     embedHeading: "Presupuesto embebido",
     embedSubtitle:
       "Consulta el archivo original hoja por hoja. Puedes cambiar entre «Presupuesto» y «Supuestos», revisar cada rubro y descargar el Excel para editarlo.",

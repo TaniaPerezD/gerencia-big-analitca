@@ -3340,3 +3340,85 @@ main {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ---------- Service evaluation (budget) ---------- */
+.service-eval-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.service-eval-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.service-eval-card.service-eval-recomendado {
+  border-top-color: #2563eb;
+}
+
+.service-eval-card.service-eval-revisar {
+  border-top-color: #d97706;
+}
+
+.service-eval-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.service-eval-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.service-eval-badge {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.service-eval-recomendado .service-eval-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.service-eval-revisar .service-eval-badge {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.service-eval-use {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.service-eval-cost {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.service-eval-detail {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
