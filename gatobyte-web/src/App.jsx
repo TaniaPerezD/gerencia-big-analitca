@@ -13,6 +13,8 @@ import Scrum from "./pages/Scrum";
 import Idef0 from "./pages/Idef0";
 import Bpmn from "./pages/Bpmn";
 import DatosTableau from "./pages/DatosTableau";
+import Monitoreo from "./pages/Monitoreo";
+import Patrones from "./pages/Patrones";
 import Presupuesto from "./pages/Presupuesto";
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/idef0" element={<Idef0 />} />
             <Route path="/bpmn-del-equipo" element={<Bpmn />} />
             <Route path="/datos-tableau" element={<DatosTableau />} />
+            <Route path="/monitoreo-solarwinds" element={<Monitoreo />} />
+            <Route path="/patrones-weka" element={<Patrones />} />
             <Route path="/presupuesto" element={<Presupuesto />} />
           </Routes>
         </main>

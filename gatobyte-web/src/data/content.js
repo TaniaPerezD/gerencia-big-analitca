@@ -1592,3 +1592,223 @@ export const datosTableau = {
 };
 
 export const presupuesto = datosTableau.presupuesto;
+
+export const monitoreoSolarWinds = {
+  hero: {
+    tag: "Monitoreo de infraestructura",
+    title: "Monitoreo con SolarWinds",
+    subtitle:
+      "Cómo SolarWinds da visibilidad continua sobre servidores, redes y servicios, y por qué ese monitoreo es clave para sostener la operación de un área de Big Data.",
+  },
+  intro: [
+    "SolarWinds es una plataforma de monitoreo de infraestructura de TI que centraliza en una sola vista el estado de servidores, redes, servicios y aplicaciones. En lugar de enterarse de una caída cuando los usuarios ya reportan el problema, la organización obtiene visibilidad continua sobre disponibilidad, latencia, saturación de recursos y conectividad.",
+    "Su valor no está solo en las alertas: está en convertir señales dispersas —CPU alta, latencia en aumento, un servicio sin respuesta— en información accionable para decidir dónde intervenir antes de que el incidente afecte al negocio.",
+  ],
+  keyPoints: [
+    "Disponibilidad: confirma si los servicios críticos están operativos.",
+    "Rendimiento: mide latencia, CPU, memoria y uso de red en el tiempo.",
+    "Conectividad: vigila enlaces, respaldos y calidad de la comunicación.",
+    "Alertas: notifica desvíos antes de que se conviertan en caídas.",
+    "Capacidad: anticipa la saturación de recursos y planifica el crecimiento.",
+    "Historial: deja evidencia objetiva para auditorías y acuerdos de servicio (SLA).",
+  ],
+  benefits: [
+    {
+      icon: "activity",
+      title: "Continuidad operativa",
+      blocks: [
+        {
+          text: "Un área de Big Data depende de pipelines, servidores y plataformas que deben estar disponibles todo el tiempo. El monitoreo permite detectar una degradación y actuar antes de que el servicio se caiga.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Cumplimiento de SLA",
+      blocks: [
+        {
+          text: "Los acuerdos de nivel de servicio dejan de ser promesas: con métricas históricas se demuestra cuánto tiempo estuvo disponible cada servicio y qué incidentes ocurrieron.",
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Decisiones de capacidad",
+      blocks: [
+        {
+          text: "Ver la evolución de CPU, almacenamiento y tráfico permite planificar compras o escalar la nube con base en datos, no en suposiciones.",
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Menos tiempo de inactividad",
+      blocks: [
+        {
+          text: "Las alertas tempranas reducen el tiempo medio de detección y de resolución (MTTD y MTTR), el indicador que más pesa cuando un reporte ejecutivo o un modelo debe entregarse a tiempo.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Coordinación entre equipos",
+      blocks: [
+        {
+          text: "Infraestructura, datos y negocio miran el mismo panel. Cuando un pipeline falla, todos entienden qué servicio se afectó y quién debe intervenir.",
+        },
+      ],
+    },
+    {
+      icon: "globe",
+      title: "Trazabilidad y auditoría",
+      blocks: [
+        {
+          text: "El historial de eventos y cambios permite reconstruir qué pasó, cuándo y por qué, algo indispensable en entornos regulados como la salud.",
+        },
+      ],
+    },
+  ],
+  embed: {
+    heading: "Panel de monitoreo: Área de Big Data y Analítica",
+    subtitle:
+      "A continuación se muestran explícitamente los resultados vistos con SolarWinds en este entorno: los KPI, el estado de los servicios, la conectividad, la latencia y las alertas que entrega la herramienta.",
+    caption:
+      "Panel embebido con datos de ejemplo de las últimas 24 horas. Resume la salida de SolarWinds: pipelines activos, disponibilidad, calidad de datos, servicios, enlaces de red, latencia y alertas recientes. El objetivo es mostrar cómo se ve la operación monitoreada en la práctica.",
+    openLabel: "Abrir el panel en una pestaña nueva",
+  },
+  references: [
+    "SolarWinds — Documentación oficial de Network Performance Monitor y Server & Application Monitor.",
+    "SolarWinds — Guías de monitoreo de infraestructura híbrida y gestión de servicios de TI.",
+    "Gartner — Magic Quadrant for Network Performance Monitoring and Diagnostics.",
+    "NIST — Prácticas de monitoreo de disponibilidad y continuidad de servicios de TI.",
+  ],
+};
+
+export const patronesWeka = {
+  hero: {
+    tag: "Minería de datos",
+    title: "Patrones con Weka",
+    subtitle:
+      "Cómo Weka transforma un inventario de datos en reglas, grupos y modelos predictivos, y por qué ese conocimiento es útil para decidir en una organización.",
+  },
+  intro: [
+    "Weka es una suite de aprendizaje automático que reúne algoritmos de minería de datos para descubrir patrones, agrupar registros y predecir comportamientos a partir de datos reales. En una organización sirve para transformar datos históricos en conocimiento accionable: reglas que explican relaciones entre variables, segmentos con comportamiento similar y modelos capaces de anticipar un resultado.",
+    "Su aporte a la gestión es que permite pasar de la intuición a la evidencia. Con Weka se puede detectar qué combinaciones de atributos anticipan un activo obsoleto, agrupar activos con perfiles parecidos o construir un clasificador que apoye las decisiones de gobierno de datos, reduciendo el esfuerzo manual y haciendo reproducible el criterio con el que se decide.",
+  ],
+  keyPoints: [
+    "Reglas de asociación: qué atributos aparecen juntos con frecuencia.",
+    "Clustering: agrupa registros parecidos sin una etiqueta previa.",
+    "Clasificación: aprende de casos históricos para predecir una categoría.",
+    "Soporte y confianza: miden qué tan frecuente y qué tan fiable es una regla.",
+    "Lift: indica si la relación encontrada es más fuerte que el azar.",
+    "Validación: precisión, Kappa y matriz de confusión respaldan el modelo.",
+  ],
+  methods: [
+    {
+      icon: "link",
+      title: "Reglas de asociación",
+      blocks: [
+        {
+          text: "Buscan combinaciones de atributos que aparecen juntas con frecuencia. Se evalúan con soporte (qué tan frecuente es la combinación), confianza (qué tan seguido se cumple la consecuencia) y lift (cuánto supera la relación al azar).",
+        },
+        {
+          text: "En el inventario de activos permiten descubrir, por ejemplo, que los conjuntos de datos con información sensible tienden a permanecer activos o que un tipo de activo se asocia con un estado de revisión.",
+        },
+      ],
+    },
+    {
+      icon: "puzzle",
+      title: "Agrupamiento (clustering)",
+      blocks: [
+        {
+          text: "Agrupa registros parecidos sin usar una etiqueta previa. El algoritmo mide similitud entre atributos y forma grupos internamente homogéneos y distintos entre sí.",
+        },
+        {
+          text: "Aplicado a los activos, ayuda a separar perfiles de datos —por sensibilidad, tipo o antigüedad— para diseñar políticas diferenciadas de gobierno y acceso.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Clasificación",
+      blocks: [
+        {
+          text: "Aprende de casos históricos ya etiquetados y construye un modelo que predice la categoría de un registro nuevo. El árbol de decisión es una de las técnicas más interpretables, porque muestra las reglas que usa para decidir.",
+        },
+        {
+          text: "En este caso predice el estado del activo (Activo u Obsoleto) a partir de variables como la sensibilidad, el tipo y la antigüedad, y se evalúa con precisión y el estadístico Kappa.",
+        },
+      ],
+    },
+  ],
+  benefits: [
+    {
+      icon: "lightbulb",
+      title: "Conocimiento a partir de los datos",
+      blocks: [
+        {
+          text: "La minería de datos convierte registros acumulados en hallazgos comprensibles: reglas, segmentos y relaciones que de otro modo quedarían ocultas en una tabla.",
+        },
+      ],
+    },
+    {
+      icon: "target",
+      title: "Decisiones basadas en evidencia",
+      blocks: [
+        {
+          text: "En lugar de decidir por intuición, el área puede apoyarse en patrones medidos y en modelos con métricas de calidad conocidas.",
+        },
+      ],
+    },
+    {
+      icon: "shield",
+      title: "Gobierno de datos más preciso",
+      blocks: [
+        {
+          text: "Identificar qué activos se comportan igual o qué variables anticipan obsolescencia permite focalizar controles, revisiones y políticas de acceso.",
+        },
+      ],
+    },
+    {
+      icon: "trending",
+      title: "Anticipación en lugar de reacción",
+      blocks: [
+        {
+          text: "Un clasificador entrenado con datos históricos puede señalar qué activos probablemente queden obsoletos, antes de que el problema aparezca.",
+        },
+      ],
+    },
+    {
+      icon: "refresh",
+      title: "Análisis reproducible",
+      blocks: [
+        {
+          text: "Weka deja documentado el algoritmo, los parámetros y las métricas. Cualquier persona puede repetir el análisis y obtener el mismo resultado.",
+        },
+      ],
+    },
+    {
+      icon: "users",
+      title: "Puente entre técnico y negocio",
+      blocks: [
+        {
+          text: "Árboles y reglas son fáciles de explicar a perfiles no técnicos, lo que facilita que las decisiones de datos se discutan con el resto de la organización.",
+        },
+      ],
+    },
+  ],
+  embed: {
+    heading: "Resultados de Weka: patrones en el inventario de activos",
+    subtitle:
+      "A continuación se muestran explícitamente los resultados obtenidos con Weka sobre el inventario de activos de Big Data (100 instancias): las reglas de asociación, el agrupamiento y el árbol de decisión que produjo la herramienta.",
+    caption:
+      "Salida embebida de Weka con datos de ejemplo. Resume tres técnicas: reglas de asociación con soporte, confianza y lift; un clustering en tres grupos; y un árbol de decisión que predice el estado del activo con su precisión y Kappa. Es la evidencia concreta del análisis, no una representación genérica.",
+    openLabel: "Abrir los resultados en una pestaña nueva",
+  },
+  references: [
+    "Witten, I. H., Frank, E., Hall, M. A. y Pal, C. J. — Data Mining: Practical Machine Learning Tools and Techniques.",
+    "Weka — Documentación oficial de la suite de aprendizaje automático (University of Waikato).",
+    "Han, J., Kamber, M. y Pei, J. — Data Mining: Concepts and Techniques.",
+    "Agrawal, R. y Srikant, R. — Fast Algorithms for Mining Association Rules.",
+  ],
+};
