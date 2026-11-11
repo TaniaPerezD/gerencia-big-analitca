@@ -76,6 +76,38 @@ export default function Presupuesto() {
 
       <section className="section">
         <Reveal className="section-heading">
+          <h2>Evaluación de servicios del presupuesto</h2>
+          <p>
+            Qué aporta cada servicio contratado, cuánto cuesta y qué tan justificado está dentro del
+            plan.
+          </p>
+        </Reveal>
+
+        <div className="service-eval-grid">
+          {data.serviceEval.map((service, i) => (
+            <Reveal
+              key={service.name}
+              delay={i * 60}
+              className={`service-eval-card service-eval-${service.status}`}
+            >
+              <div className="service-eval-head">
+                <h3>{service.name}</h3>
+                <span className="service-eval-badge">{service.badge}</span>
+              </div>
+              <p className="service-eval-use">{service.use}</p>
+              <p className="service-eval-cost">{service.cost}</p>
+              <p className="service-eval-detail">{service.detail}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="diagram-caption">
+          <p>{data.serviceEvalNote}</p>
+        </Reveal>
+      </section>
+
+      <section className="section section-alt">
+        <Reveal className="section-heading">
           <span className="pdf-icon">
             <Icon name="database" size={26} strokeWidth={1.6} />
           </span>
@@ -93,7 +125,7 @@ export default function Presupuesto() {
         </Reveal>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="narrow-section">
           <References items={data.references} />
         </div>
