@@ -4,8 +4,8 @@ import Reveal from "../components/Reveal";
 import References from "../components/References";
 import Icon from "../components/Icon";
 import LiveMonitor from "../components/LiveMonitor";
-import { monitoreoGrafana as data } from "../data/content";
-import { grafanaShots } from "../data/grafanaShots";
+import { monitoreoPrometheus as data } from "../data/content";
+import { prometheusShots } from "../data/prometheusShots";
 
 export default function Monitoreo() {
   return (
@@ -14,7 +14,7 @@ export default function Monitoreo() {
 
       <section className="section intro-split">
         <Reveal className="intro-split-text">
-          <h2>¿Qué es Grafana?</h2>
+          <h2>¿Qué es Prometheus?</h2>
           {data.intro.map((p, i) => (
             <p key={i} className={i === 0 ? "drop-cap" : ""}>
               {p}
@@ -61,7 +61,7 @@ export default function Monitoreo() {
         </Reveal>
       </section>
 
-      {grafanaShots.length > 0 && (
+      {prometheusShots.length > 0 && (
         <section className="section section-alt">
           <Reveal className="section-heading">
             <span className="pdf-icon">
@@ -72,7 +72,7 @@ export default function Monitoreo() {
           </Reveal>
 
           <div className="shot-grid">
-            {grafanaShots.map((shot, i) => (
+            {prometheusShots.map((shot, i) => (
               <Reveal key={shot.title} delay={i * 80}>
                 <figure className="shot">
                   <a href={shot.src} target="_blank" rel="noreferrer" title="Abrir la captura completa">

@@ -38,8 +38,9 @@ function App() {
             <Route path="/idef0" element={<Idef0 />} />
             <Route path="/bpmn-del-equipo" element={<Bpmn />} />
             <Route path="/datos-tableau" element={<DatosTableau />} />
-            <Route path="/monitoreo-grafana" element={<Monitoreo />} />
-            <Route path="/monitoreo-solarwinds" element={<Navigate to="/monitoreo-grafana" replace />} />
+            <Route path="/monitoreo-prometheus" element={<Monitoreo />} />
+            <Route path="/monitoreo-grafana" element={<Navigate to="/monitoreo-prometheus" replace />} />
+            <Route path="/monitoreo-solarwinds" element={<Navigate to="/monitoreo-prometheus" replace />} />
             <Route path="/patrones-weka" element={<Patrones />} />
             <Route path="/presupuesto" element={<Presupuesto />} />
             <Route path="/analisis-de-servicios" element={<AnalisisServicios />} />

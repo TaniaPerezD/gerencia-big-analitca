@@ -28,7 +28,7 @@ export const navGroups = [
       { to: "/bpmn-del-equipo", label: "BPMN del Equipo", icon: "refresh" },
       { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
       { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
-      { to: "/monitoreo-grafana", label: "Monitoreo con Grafana", icon: "server" },
+      { to: "/monitoreo-prometheus", label: "Monitoreo con Prometheus", icon: "server" },
     ],
   },
   {

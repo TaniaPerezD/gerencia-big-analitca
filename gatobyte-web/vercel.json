@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!api/|weka/|documents/).*)", "destination": "/index.html" }
   ]
 }

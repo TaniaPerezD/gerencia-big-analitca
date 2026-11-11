@@ -1669,16 +1669,16 @@ export const datosTableau = {
 
 export const presupuesto = datosTableau.presupuesto;
 
-export const monitoreoGrafana = {
+export const monitoreoPrometheus = {
   hero: {
     tag: "Monitoreo de infraestructura",
-    title: "Monitoreo con Grafana",
+    title: "Monitoreo con Prometheus",
     subtitle:
-      "Cómo Grafana y Prometheus dan visibilidad continua sobre los servicios y la infraestructura del área, y por qué ese monitoreo sostiene la operación de un área de Big Data.",
+      "Cómo Prometheus y su exportador Blackbox dan visibilidad continua sobre los servicios y la infraestructura del área, y por qué ese monitoreo sostiene la operación de un área de Big Data.",
   },
   intro: [
-    "Grafana es una plataforma de código abierto para visualizar métricas en tableros interactivos, y Prometheus es la base de datos de series de tiempo que las recolecta. Juntos centralizan en una sola vista el estado de servidores, enlaces de red y servicios: en lugar de enterarse de una caída cuando los usuarios ya reportan el problema, el área ve la disponibilidad, la latencia y el consumo de recursos mientras ocurren.",
-    "Su valor no está solo en los gráficos: está en convertir señales dispersas —CPU alta, latencia en aumento, un servicio sin respuesta— en información accionable para decidir dónde intervenir antes de que el incidente afecte al negocio. Además es gratuita, se despliega con Docker y se adapta a cualquier fuente de datos.",
+    "Prometheus es una plataforma de monitoreo de código abierto que recolecta métricas como series de tiempo y permite consultarlas con un lenguaje propio (PromQL). Junto con el exportador Blackbox, que sondea servicios por HTTP, y Node exporter, que mide el consumo de una máquina, centraliza en una sola vista la disponibilidad, la latencia y los recursos: en lugar de enterarse de una caída cuando los usuarios ya reportan el problema, el área la ve mientras ocurre.",
+    "Su valor no está solo en medir: está en convertir señales dispersas —CPU alta, latencia en aumento, un servicio sin respuesta— en información accionable para decidir dónde intervenir antes de que el incidente afecte al negocio. Además es gratuito, se despliega con Docker y se integra con herramientas de tableros como Grafana.",
   ],
   keyPoints: [
     "Disponibilidad: confirma si los servicios críticos están operativos.",
@@ -1752,24 +1752,32 @@ export const monitoreoGrafana = {
       "Medición real de disponibilidad HTTP hecha por una función del servidor de este sitio hacia AXS, Entel, Starlink, el Sistema de Inventario y Tableau. Mide si el sitio del proveedor responde desde la nube de Vercel (el campo «desde» indica la región); no mide la línea contratada ni datos internos de la empresa ficticia.",
   },
   shots: {
-    heading: "Grafana en acción",
+    heading: "Prometheus en acción",
     subtitle:
-      "El tablero del área corriendo en Grafana con Prometheus, midiendo la disponibilidad y la latencia de los mismos servicios y el consumo del equipo.",
+      "El stack de monitoreo del área corriendo con Docker: Prometheus recolecta la disponibilidad y la latencia de los mismos servicios y el consumo del equipo.",
     caption:
-      "Capturas reales del tablero «Monitoreo del Área de Big Data y Analítica». Los datos son mediciones hechas por Prometheus y el exportador Blackbox sobre sitios públicos y sobre la máquina donde se ejecutó el stack. La configuración completa (Docker Compose, Prometheus, Grafana) está en la carpeta monitoring/ del repositorio.",
+      "Capturas reales de la interfaz de Prometheus. Los datos son mediciones hechas por Prometheus y el exportador Blackbox sobre sitios públicos y sobre la máquina donde se ejecutó el stack. La configuración completa (Docker Compose, Prometheus y Blackbox) está en la carpeta monitoring/ del repositorio.",
   },
   tools: {
-    heading: "¿Por qué Grafana y no otra herramienta?",
+    heading: "¿Por qué Prometheus y no otra herramienta?",
     subtitle:
-      "Evaluamos cinco opciones de monitoreo. Elegimos Grafana con Prometheus por costo, flexibilidad y porque se puede mostrar y reproducir sin licencias.",
+      "Evaluamos varias opciones de monitoreo. Elegimos Prometheus con Blackbox por costo, porque se despliega con un comando y porque se puede reproducir sin licencias.",
     rows: [
       {
-        name: "Grafana + Prometheus",
+        name: "Prometheus + Blackbox",
         cost: "Gratis (código abierto)",
-        strength: "Tableros muy flexibles, estándar de la industria, se despliega con Docker.",
-        limit: "Hay que montar y mantener el stack.",
+        strength: "Recolecta métricas y sondea servicios; estándar de la industria y se despliega con Docker.",
+        limit: "Su interfaz de gráficos es básica; se suele complementar con Grafana.",
         verdict: "Elegida",
         status: "elegida",
+      },
+      {
+        name: "Grafana",
+        cost: "Gratis (código abierto)",
+        strength: "Tableros muy flexibles sobre las métricas de Prometheus.",
+        limit: "Es un complemento visual: no recolecta datos por sí sola.",
+        verdict: "Complemento recomendado",
+        status: "referencia",
       },
       {
         name: "SolarWinds Observability",
@@ -1806,8 +1814,9 @@ export const monitoreoGrafana = {
     ],
   },
   references: [
-    "Grafana Labs — Documentación oficial de Grafana (paneles, fuentes de datos, incrustación).",
-    "Prometheus — Documentación oficial y Blackbox exporter (sondeos HTTP).",
+    "Prometheus — Documentación oficial (modelo de datos, PromQL, configuración).",
+    "Prometheus — Blackbox exporter y Node exporter (sondeos HTTP y métricas de sistema).",
+    "Grafana Labs — Documentación de Grafana como capa de tableros sobre Prometheus.",
     "SolarWinds — Demo en línea de Observability Self-Hosted y prueba gratuita de 30 días.",
     "Sensu — Documentación de Sensu Go (interfaz web independiente desde la versión 6.0).",
     "NIST — Prácticas de monitoreo de disponibilidad y continuidad de servicios de TI.",
