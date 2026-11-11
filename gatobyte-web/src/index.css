@@ -4132,3 +4132,16 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+.sidebar-search-btn {
+  white-space: nowrap;
+  text-align: left;
+}
+.sidebar-search-btn kbd {
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .sidebar-search-btn kbd {
+    display: none;
+  }
+}
