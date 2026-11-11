@@ -1,0 +1,11 @@
+Resultados reales de Weka 3.8.6 sobre el inventario de activos de Big Data (100 instancias).
+
+Datos: inventario.arff / inventario.csv (inventario simulado de la empresa ficticia; es el mismo
+conjunto que usa el tablero de Tableau del sitio).
+
+Cómo repetirlo (Java 17 + weka-stable-3.8.6.jar y sus dependencias en el classpath):
+  Reglas de asociación : weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1 -t inventario.arff
+  Agrupamiento         : weka.clusterers.SimpleKMeans -N 3 -S 10 -t inventario.arff
+  Árbol (podado)       : weka.classifiers.trees.J48 -C 0.25 -M 2 -c 3 -x 10 -s 1 -t inventario.arff
+  Árbol (sin podar)    : weka.classifiers.trees.J48 -U -M 2 -c 3 -x 10 -s 1 -t inventario.arff
+La clase a predecir es «estado» (atributo 3). La validación es cruzada de 10 pliegues.

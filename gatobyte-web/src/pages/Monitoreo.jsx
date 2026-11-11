@@ -3,8 +3,9 @@ import DefinitionGrid from "../components/DefinitionGrid";
 import Reveal from "../components/Reveal";
 import References from "../components/References";
 import Icon from "../components/Icon";
-import monitoreoUrl from "../assets/monitoreo_big_analitica.html?url";
-import { monitoreoSolarWinds as data } from "../data/content";
+import LiveMonitor from "../components/LiveMonitor";
+import { monitoreoGrafana as data } from "../data/content";
+import { grafanaShots } from "../data/grafanaShots";
 
 export default function Monitoreo() {
   return (
@@ -13,7 +14,7 @@ export default function Monitoreo() {
 
       <section className="section intro-split">
         <Reveal className="intro-split-text">
-          <h2>¿Qué es SolarWinds?</h2>
+          <h2>¿Qué es Grafana?</h2>
           {data.intro.map((p, i) => (
             <p key={i} className={i === 0 ? "drop-cap" : ""}>
               {p}
@@ -47,24 +48,83 @@ export default function Monitoreo() {
           <span className="pdf-icon">
             <Icon name="activity" size={26} strokeWidth={1.6} />
           </span>
-          <h2>{data.embed.heading}</h2>
-          <p>{data.embed.subtitle}</p>
+          <h2>{data.live.heading}</h2>
+          <p>{data.live.subtitle}</p>
         </Reveal>
 
-        <Reveal delay={140} className="chart-frame-wrap">
-          <iframe
-            src={monitoreoUrl}
-            title={data.embed.heading}
-            className="chart-embed"
-            loading="lazy"
-          />
-          <a href={monitoreoUrl} target="_blank" rel="noreferrer" className="board-open-link">
-            <Icon name="external" size={16} strokeWidth={2} /> {data.embed.openLabel}
-          </a>
+        <Reveal delay={120}>
+          <LiveMonitor />
         </Reveal>
 
-        <Reveal delay={180} className="diagram-caption">
-          <p>{data.embed.caption}</p>
+        <Reveal delay={160} className="diagram-caption">
+          <p>{data.live.caption}</p>
+        </Reveal>
+      </section>
+
+      {grafanaShots.length > 0 && (
+        <section className="section section-alt">
+          <Reveal className="section-heading">
+            <span className="pdf-icon">
+              <Icon name="server" size={26} strokeWidth={1.6} />
+            </span>
+            <h2>{data.shots.heading}</h2>
+            <p>{data.shots.subtitle}</p>
+          </Reveal>
+
+          <div className="shot-grid">
+            {grafanaShots.map((shot, i) => (
+              <Reveal key={shot.title} delay={i * 80}>
+                <figure className="shot">
+                  <a href={shot.src} target="_blank" rel="noreferrer" title="Abrir la captura completa">
+                    <img src={shot.src} alt={shot.alt} loading="lazy" />
+                  </a>
+                  <figcaption>
+                    <b>{shot.title}</b>
+                    {shot.text}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={180} className="diagram-caption">
+            <p>{data.shots.caption}</p>
+          </Reveal>
+        </section>
+      )}
+
+      <section className="section">
+        <Reveal className="section-heading">
+          <h2>{data.tools.heading}</h2>
+          <p>{data.tools.subtitle}</p>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <div className="sim-card">
+            <div className="compare-table" role="table" aria-label="Comparación de herramientas de monitoreo">
+              <div className="compare-row compare-head tools-row" role="row">
+                <span>Herramienta</span>
+                <span>Costo</span>
+                <span>Fortaleza y límite</span>
+                <span>Decisión</span>
+              </div>
+              {data.tools.rows.map((row) => (
+                <div className="compare-row tools-row" role="row" key={row.name}>
+                  <span>
+                    <b>{row.name}</b>
+                  </span>
+                  <span>{row.cost}</span>
+                  <span>
+                    {row.strength}
+                    <small>{row.limit}</small>
+                  </span>
+                  <span>
+                    <span className={`verify-badge verify-${row.status}`}>{row.verdict}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </Reveal>
       </section>
 

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -16,6 +16,8 @@ import DatosTableau from "./pages/DatosTableau";
 import Monitoreo from "./pages/Monitoreo";
 import Patrones from "./pages/Patrones";
 import Presupuesto from "./pages/Presupuesto";
+import Contactos from "./pages/Contactos";
+import AnalisisServicios from "./pages/AnalisisServicios";
 
 function App() {
   return (
@@ -36,9 +38,12 @@ function App() {
             <Route path="/idef0" element={<Idef0 />} />
             <Route path="/bpmn-del-equipo" element={<Bpmn />} />
             <Route path="/datos-tableau" element={<DatosTableau />} />
-            <Route path="/monitoreo-solarwinds" element={<Monitoreo />} />
+            <Route path="/monitoreo-grafana" element={<Monitoreo />} />
+            <Route path="/monitoreo-solarwinds" element={<Navigate to="/monitoreo-grafana" replace />} />
             <Route path="/patrones-weka" element={<Patrones />} />
             <Route path="/presupuesto" element={<Presupuesto />} />
+            <Route path="/analisis-de-servicios" element={<AnalisisServicios />} />
+            <Route path="/contactos" element={<Contactos />} />
           </Routes>
         </main>
         <Footer />

@@ -1669,22 +1669,22 @@ export const datosTableau = {
 
 export const presupuesto = datosTableau.presupuesto;
 
-export const monitoreoSolarWinds = {
+export const monitoreoGrafana = {
   hero: {
     tag: "Monitoreo de infraestructura",
-    title: "Monitoreo con SolarWinds",
+    title: "Monitoreo con Grafana",
     subtitle:
-      "Cómo SolarWinds da visibilidad continua sobre servidores, redes y servicios, y por qué ese monitoreo es clave para sostener la operación de un área de Big Data.",
+      "Cómo Grafana y Prometheus dan visibilidad continua sobre los servicios y la infraestructura del área, y por qué ese monitoreo sostiene la operación de un área de Big Data.",
   },
   intro: [
-    "SolarWinds es una plataforma de monitoreo de infraestructura de TI que centraliza en una sola vista el estado de servidores, redes, servicios y aplicaciones. En lugar de enterarse de una caída cuando los usuarios ya reportan el problema, la organización obtiene visibilidad continua sobre disponibilidad, latencia, saturación de recursos y conectividad.",
-    "Su valor no está solo en las alertas: está en convertir señales dispersas —CPU alta, latencia en aumento, un servicio sin respuesta— en información accionable para decidir dónde intervenir antes de que el incidente afecte al negocio.",
+    "Grafana es una plataforma de código abierto para visualizar métricas en tableros interactivos, y Prometheus es la base de datos de series de tiempo que las recolecta. Juntos centralizan en una sola vista el estado de servidores, enlaces de red y servicios: en lugar de enterarse de una caída cuando los usuarios ya reportan el problema, el área ve la disponibilidad, la latencia y el consumo de recursos mientras ocurren.",
+    "Su valor no está solo en los gráficos: está en convertir señales dispersas —CPU alta, latencia en aumento, un servicio sin respuesta— en información accionable para decidir dónde intervenir antes de que el incidente afecte al negocio. Además es gratuita, se despliega con Docker y se adapta a cualquier fuente de datos.",
   ],
   keyPoints: [
     "Disponibilidad: confirma si los servicios críticos están operativos.",
     "Rendimiento: mide latencia, CPU, memoria y uso de red en el tiempo.",
-    "Conectividad: vigila enlaces, respaldos y calidad de la comunicación.",
-    "Alertas: notifica desvíos antes de que se conviertan en caídas.",
+    "Conectividad: vigila los enlaces de internet y su respaldo.",
+    "Alertas: puede notificar desvíos antes de que se conviertan en caídas.",
     "Capacidad: anticipa la saturación de recursos y planifica el crecimiento.",
     "Historial: deja evidencia objetiva para auditorías y acuerdos de servicio (SLA).",
   ],
@@ -1744,18 +1744,72 @@ export const monitoreoSolarWinds = {
       ],
     },
   ],
-  embed: {
-    heading: "Panel de monitoreo: Área de Big Data y Analítica",
+  live: {
+    heading: "Monitoreo en vivo de los servicios del área",
     subtitle:
-      "A continuación se muestran explícitamente los resultados vistos con SolarWinds en este entorno: los KPI, el estado de los servicios, la conectividad, la latencia y las alertas que entrega la herramienta.",
+      "Cada 30 segundos se mide si los enlaces y plataformas del área responden y cuánto tardan. Son mediciones reales, hechas al abrir esta página.",
     caption:
-      "Panel embebido con datos de ejemplo de las últimas 24 horas. Resume la salida de SolarWinds: pipelines activos, disponibilidad, calidad de datos, servicios, enlaces de red, latencia y alertas recientes. El objetivo es mostrar cómo se ve la operación monitoreada en la práctica.",
-    openLabel: "Abrir el panel en una pestaña nueva",
+      "Medición real de disponibilidad HTTP hecha por una función del servidor de este sitio hacia AXS, Entel, Starlink, el Sistema de Inventario y Tableau. Mide si el sitio del proveedor responde desde la nube de Vercel (el campo «desde» indica la región); no mide la línea contratada ni datos internos de la empresa ficticia.",
+  },
+  shots: {
+    heading: "Grafana en acción",
+    subtitle:
+      "El tablero del área corriendo en Grafana con Prometheus, midiendo la disponibilidad y la latencia de los mismos servicios y el consumo del equipo.",
+    caption:
+      "Capturas reales del tablero «Monitoreo del Área de Big Data y Analítica». Los datos son mediciones hechas por Prometheus y el exportador Blackbox sobre sitios públicos y sobre la máquina donde se ejecutó el stack. La configuración completa (Docker Compose, Prometheus, Grafana) está en la carpeta monitoring/ del repositorio.",
+  },
+  tools: {
+    heading: "¿Por qué Grafana y no otra herramienta?",
+    subtitle:
+      "Evaluamos cinco opciones de monitoreo. Elegimos Grafana con Prometheus por costo, flexibilidad y porque se puede mostrar y reproducir sin licencias.",
+    rows: [
+      {
+        name: "Grafana + Prometheus",
+        cost: "Gratis (código abierto)",
+        strength: "Tableros muy flexibles, estándar de la industria, se despliega con Docker.",
+        limit: "Hay que montar y mantener el stack.",
+        verdict: "Elegida",
+        status: "elegida",
+      },
+      {
+        name: "SolarWinds Observability",
+        cost: "De pago; prueba gratuita de 30 días",
+        strength: "Plataforma completa para redes y servidores, con demo en línea.",
+        limit: "Licencia comercial y demo detrás de un registro.",
+        verdict: "Evaluada en demo",
+        status: "referencia",
+      },
+      {
+        name: "Zabbix",
+        cost: "Gratis (código abierto)",
+        strength: "Monitoreo muy completo de servidores y redes con agentes.",
+        limit: "Interfaz más técnica y curva de configuración mayor.",
+        verdict: "Alternativa válida",
+        status: "referencia",
+      },
+      {
+        name: "Uptime Kuma",
+        cost: "Gratis (MIT)",
+        strength: "Muy simple; páginas de estado atractivas.",
+        limit: "Solo mide disponibilidad y latencia; no recursos de servidores.",
+        verdict: "Insuficiente",
+        status: "pendiente",
+      },
+      {
+        name: "Sensu Go",
+        cost: "Núcleo gratuito (MIT)",
+        strength: "Monitoreo orientado a eventos y automatización.",
+        limit: "Desde la versión 6.0 la interfaz web es un producto aparte.",
+        verdict: "Descartada",
+        status: "pendiente",
+      },
+    ],
   },
   references: [
-    "SolarWinds — Documentación oficial de Network Performance Monitor y Server & Application Monitor.",
-    "SolarWinds — Guías de monitoreo de infraestructura híbrida y gestión de servicios de TI.",
-    "Gartner — Magic Quadrant for Network Performance Monitoring and Diagnostics.",
+    "Grafana Labs — Documentación oficial de Grafana (paneles, fuentes de datos, incrustación).",
+    "Prometheus — Documentación oficial y Blackbox exporter (sondeos HTTP).",
+    "SolarWinds — Demo en línea de Observability Self-Hosted y prueba gratuita de 30 días.",
+    "Sensu — Documentación de Sensu Go (interfaz web independiente desde la versión 6.0).",
     "NIST — Prácticas de monitoreo de disponibilidad y continuidad de servicios de TI.",
   ],
 };
@@ -1812,7 +1866,7 @@ export const patronesWeka = {
           text: "Aprende de casos históricos ya etiquetados y construye un modelo que predice la categoría de un registro nuevo. El árbol de decisión es una de las técnicas más interpretables, porque muestra las reglas que usa para decidir.",
         },
         {
-          text: "En este caso predice el estado del activo (Activo u Obsoleto) a partir de variables como la sensibilidad, el tipo y la antigüedad, y se evalúa con precisión y el estadístico Kappa.",
+          text: "En este caso intenta predecir el estado del activo (Activo, Obsoleto o En revisión) a partir del tipo, la sensibilidad, el responsable y el año, y se evalúa con validación cruzada, precisión y el estadístico Kappa.",
         },
       ],
     },
@@ -1876,9 +1930,9 @@ export const patronesWeka = {
   embed: {
     heading: "Resultados de Weka: patrones en el inventario de activos",
     subtitle:
-      "A continuación se muestran explícitamente los resultados obtenidos con Weka sobre el inventario de activos de Big Data (100 instancias): las reglas de asociación, el agrupamiento y el árbol de decisión que produjo la herramienta.",
+      "Resultados de ejecutar Weka 3.8.6 sobre el inventario de activos de Big Data (100 instancias simuladas para la empresa ficticia): reglas de asociación con Apriori, agrupamiento con SimpleKMeans y un árbol de decisión J48 validado con validación cruzada de 10 pliegues.",
     caption:
-      "Salida embebida de Weka con datos de ejemplo. Resume tres técnicas: reglas de asociación con soporte, confianza y lift; un clustering en tres grupos; y un árbol de decisión que predice el estado del activo con su precisión y Kappa. Es la evidencia concreta del análisis, no una representación genérica.",
+      "Salida real de Weka. Las reglas, los grupos y las métricas del árbol son los que imprimió la herramienta al correr sobre el inventario; los datos de entrada son simulados porque la empresa es ficticia. El hallazgo principal es honesto: con estos atributos el estado del activo no se predice mejor que la clase mayoritaria («Activo», 78 %). Los archivos de datos y la salida completa se pueden descargar para repetir el análisis.",
     openLabel: "Abrir los resultados en una pestaña nueva",
   },
   references: [
@@ -1886,5 +1940,148 @@ export const patronesWeka = {
     "Weka — Documentación oficial de la suite de aprendizaje automático (University of Waikato).",
     "Han, J., Kamber, M. y Pei, J. — Data Mining: Concepts and Techniques.",
     "Agrawal, R. y Srikant, R. — Fast Algorithms for Mining Association Rules.",
+  ],
+};
+
+export const contactos = {
+  hero: {
+    tag: "Equipo GatoByte",
+    title: "Nuestros contactos",
+    subtitle:
+      "Las cinco personas del Área de Big Data y Analítica, con su rol y su correo institucional para escribirles directamente.",
+  },
+  intro:
+    "Cada integrante responde por una parte del área. Si tienes una duda sobre un tema específico, escribe a quien lo lidera; si es general, puedes escribir a todo el equipo con un solo clic.",
+  teamSubject: "Consulta para el equipo GatoByte",
+  // Orden de presentación: la gerencia primero y luego las cuatro posiciones especializadas.
+  members: [
+    { roleId: "gerente-datos-analitica", name: "Tania Peréz", email: "tania.perez.d@ucb.edu.bo" },
+    { roleId: "analista-bi", name: "Dilan Mamani", email: "dilan.mamani@ucb.edu.bo" },
+    { roleId: "infraestructura-datos", name: "Adriana Rocha", email: "adriana.rocha@ucb.edu.bo" },
+    { roleId: "gobernanza-datos", name: "Ivonne Colque", email: "ivonne.colque@ucb.edu.bo" },
+    { roleId: "pm-ciencia-datos", name: "Ignacio Retamozo", email: "ignacio.retamozo@ucb.edu.bo" },
+  ],
+  note: "Solo publicamos correos institucionales. No compartimos teléfonos ni datos personales.",
+};
+
+export const analisisServicios = {
+  hero: {
+    tag: "Decisiones de contratación",
+    title: "Análisis de servicios",
+    subtitle:
+      "Comparamos los proveedores de internet y las licencias de visualización del presupuesto para decidir qué contratar, con cada cifra rotulada según cuánto se ha podido verificar.",
+  },
+  intro: [
+    "El presupuesto del área incluye tres enlaces de internet y un paquete de licencias de Tableau. Antes de comprometer dinero conviene responder dos preguntas: ¿qué combinación de enlaces nos mantiene operando si uno falla? y ¿qué software de visualización nos da más por menos?",
+    "Todas las cifras salen de la hoja «Supuestos» del Excel del presupuesto y de las fuentes públicas citadas. Cada una lleva una etiqueta: «Verificado» si coincide con una fuente reciente, «Referencia» si viene de una sola fuente o sin fecha clara, y «Pendiente de cotización» si debe pedirse al proveedor.",
+  ],
+  budgetMonthlyAverage: 110824.36,
+  links: [
+    {
+      id: "axs",
+      name: "AXS · Fibra Empresa 80 Mbps",
+      short: "AXS",
+      medium: "Fibra óptica",
+      monthly: 479,
+      once: 199,
+      status: "referencia",
+      role: "Enlace principal",
+      pros: "El menor costo mensual de los tres y fibra dedicada a empresas.",
+      cons: "La tarifa tiene una sola fuente sin fecha clara: debe confirmarse.",
+      source:
+        "btw.media: 80 Mbps por Bs 479 y Bs 199 de instalación; planes superiores desde Bs 669 (Fibra Negocio 100/50 Mbps).",
+    },
+    {
+      id: "entel",
+      name: "Entel · Fibra Empresa 150 Mbps",
+      short: "Entel",
+      medium: "Fibra óptica",
+      monthly: 720,
+      once: 0,
+      status: "pendiente",
+      role: "Respaldo en fibra (a revisar)",
+      pros: "Mayor ancho de banda (150 Mbps) y una red con amplia cobertura nacional.",
+      cons: "La tarifa es de 2021 y otras fuentes citan planes corporativos mucho más caros: no es comparable sin cotización.",
+      source:
+        "Tarifa publicada en 2021 (Bs 720 por 150 Mbps). Otra fuente lista planes corporativos desde Bs 13.360 por 300 Mbps; son productos distintos.",
+    },
+    {
+      id: "starlink500",
+      name: "Starlink Business · prioridad local 500 GB",
+      short: "Starlink 500 GB",
+      medium: "Satélite (órbita baja)",
+      monthly: 1085,
+      once: 3050,
+      status: "verificado",
+      role: "Respaldo satelital",
+      pros: "Otro medio físico: sigue funcionando si se corta la fibra terrestre.",
+      cons: "El más caro por mes y con un costo inicial de equipo (kit Bs 2.800 y envío Bs 250).",
+      source: "Red Uno / Eju.tv, marzo 2026, tras la rebaja de tarifas. Kit y envío del mismo medio.",
+    },
+    {
+      id: "starlink50",
+      name: "Starlink Business · prioridad local 50 GB",
+      short: "Starlink 50 GB",
+      medium: "Satélite (órbita baja)",
+      monthly: 425,
+      once: 3050,
+      status: "verificado",
+      role: "Respaldo satelital económico",
+      pros: "Mantiene el respaldo satelital por menos de la mitad del precio mensual.",
+      cons: "50 GB alcanzan solo para tareas críticas: no soporta cargas de datos pesadas.",
+      source: "Red Uno / Eju.tv, marzo 2026 (plan de empresas con prioridad local de 50 GB).",
+    },
+  ],
+  badges: {
+    verificado: "Verificado",
+    referencia: "Referencia",
+    pendiente: "Pendiente de cotización",
+  },
+  licenses: {
+    fx: 6.96,
+    tableau: [
+      { name: "Tableau Creator", usd: 75, seats: 1, who: "Analista BI" },
+      { name: "Tableau Explorer", usd: 42, seats: 2, who: "PM y Gobernanza" },
+      { name: "Tableau Viewer", usd: 15, seats: 2, who: "Gerencia e Infraestructura" },
+    ],
+    powerBi: { name: "Power BI Pro", usd: 14, seats: 5, note: "Facturación anual; verificar en Microsoft." },
+    looker: { name: "Looker Studio", usd: 0, seats: 5, note: "Gratuito, con funciones básicas." },
+  },
+  recommendation: {
+    heading: "Qué recomendamos",
+    points: [
+      "Enlace principal: AXS Fibra Empresa 80 Mbps, por costo y por ser el único con tarifa de empresa publicada. Falta confirmar la tarifa con AXS.",
+      "Respaldo: Starlink Business. Es el único que cambia de medio físico (satélite en lugar de fibra), así que cubre cortes que afectarían a cualquier proveedor de fibra. El plan de 500 GB sostiene los pipelines; el de 50 GB sirve solo para lo crítico.",
+      "Entel: mantenerlo como alternativa hasta tener una cotización vigente. Si su precio real es mucho mayor al de 2021, conviene sacarlo del presupuesto: con AXS y Starlink ya hay dos enlaces independientes.",
+      "Visualización: seguir con Tableau, porque el equipo ya construyó sus tableros ahí y ofrece roles diferenciados (Creator, Explorer, Viewer). Power BI Pro es la alternativa más barata si el presupuesto aprieta.",
+    ],
+  },
+  quoteTemplates: [
+    {
+      provider: "AXS",
+      subject: "Solicitud de cotización: internet de fibra para empresa",
+      body:
+        "Buenos días:\n\nSomos el Área de Big Data y Analítica y queremos cotizar un enlace de fibra óptica para uso empresarial. Les pedimos por favor:\n\n1. Plan simétrico de al menos 80 Mbps, con costo mensual y costo de instalación.\n2. IP fija pública y si está incluida en el precio.\n3. Acuerdo de nivel de servicio (disponibilidad y tiempo máximo de reparación).\n4. Plazo mínimo de contrato y condiciones de facturación.\n5. Cobertura en nuestra dirección y tiempo estimado de instalación.\n\nQuedamos atentos a su respuesta.\nSaludos cordiales.",
+    },
+    {
+      provider: "Entel",
+      subject: "Solicitud de cotización vigente: Fibra Empresa",
+      body:
+        "Buenos días:\n\nSomos el Área de Big Data y Analítica y necesitamos una cotización vigente de internet de fibra para empresas (referencia: plan de 150 Mbps). Les pedimos por favor:\n\n1. Costo mensual e instalación del plan de 150 Mbps y de planes superiores.\n2. Ancho de banda garantizado y relación de compartición.\n3. Acuerdo de nivel de servicio y soporte técnico.\n4. Opciones de enlace de respaldo o redundancia.\n5. Plazo mínimo de contrato.\n\nGracias por su atención.\nSaludos cordiales.",
+    },
+    {
+      provider: "Starlink",
+      subject: "Consulta de plan Starlink Business con prioridad local",
+      body:
+        "Buenos días:\n\nSomos el Área de Big Data y Analítica y queremos contratar Starlink Business como enlace de respaldo. Les pedimos por favor:\n\n1. Precio vigente de los planes con prioridad local de 50 GB y de 500 GB.\n2. Costo del kit estándar, envío e instalación.\n3. Condiciones del servicio en nuestra zona y velocidades esperadas.\n4. Facturación para empresas.\n5. Garantía del equipo y soporte.\n\nQuedamos atentos.\nSaludos cordiales.",
+    },
+  ],
+  references: [
+    "Excel del presupuesto del área — hoja «Supuestos» (tipo de cambio y tarifas).",
+    "Red Uno y Eju.tv — Tarifas de Starlink Business y kit estándar en Bolivia (2026).",
+    "btw.media — Planes de AXS Bolivia para empresas (fecha sin confirmar).",
+    "DPL News — Tarifas históricas de Entel (2021).",
+    "Tableau — Precios oficiales de Creator, Explorer y Viewer.",
+    "Microsoft — Precios de Power BI Pro (confirmar tarifa vigente).",
   ],
 };

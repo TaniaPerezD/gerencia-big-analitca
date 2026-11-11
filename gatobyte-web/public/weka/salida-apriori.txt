@@ -1,0 +1,32 @@
+WARNING: core mtj jar files are not available as resources to this classloader (jdk.internal.loader.ClassLoaders$AppClassLoader@42110406)
+
+Apriori
+=======
+
+Minimum support: 0.1 (10 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 20
+
+Size of set of large itemsets L(2): 22
+
+Size of set of large itemsets L(3): 3
+
+Best rules found:
+
+ 1. tipo=Dataset sensibilidad=PHI 14 ==> estado=Activo 14    <conf:(1)> lift:(1.28) lev:(0.03) [3] conv:(3.08)
+ 2. tipo=Modelo ML 15 ==> estado=Activo 14    <conf:(0.93)> lift:(1.2) lev:(0.02) [2] conv:(1.65)
+ 3. responsable=Equipo de Data Engineering 22 ==> estado=Activo 20    <conf:(0.91)> lift:(1.17) lev:(0.03) [2] conv:(1.61)
+ 4. sensibilidad=PHI anio=2022 11 ==> estado=Activo 10    <conf:(0.91)> lift:(1.17) lev:(0.01) [1] conv:(1.21)
+ 5. sensibilidad=PHI 36 ==> estado=Activo 32    <conf:(0.89)> lift:(1.14) lev:(0.04) [3] conv:(1.58)
+ 6. anio=2022 24 ==> estado=Activo 21    <conf:(0.88)> lift:(1.12) lev:(0.02) [2] conv:(1.32)
+ 7. tipo=Dataset 25 ==> estado=Activo 20    <conf:(0.8)> lift:(1.03) lev:(0.01) [0] conv:(0.92)
+ 8. sensibilidad=Confidencial anio=2023 15 ==> estado=Activo 12    <conf:(0.8)> lift:(1.03) lev:(0) [0] conv:(0.82)
+
+=== Evaluation ===
+
+Elapsed time: 0.063s
+

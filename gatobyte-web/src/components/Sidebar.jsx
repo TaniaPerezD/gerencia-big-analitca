@@ -1,32 +1,29 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Icon from "./Icon";
-
-const links = [
-  { to: "/", label: "Inicio", icon: "home" },
-  { to: "/gestion-de-tecnologia", label: "Gestión de Tecnología", icon: "compass" },
-  { to: "/ciencia-e-innovacion", label: "Ciencia e Innovación", icon: "microscope" },
-  { to: "/mision-y-vision", label: "Misión y Visión", icon: "target" },
-  { to: "/organizacion", label: "Organización", icon: "network" },
-  { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
-  { to: "/mbti-del-equipo", label: "MBTI del Equipo", icon: "sparkles" },
-  { to: "/scrum-del-equipo", label: "Scrum del Equipo", icon: "activity" },
-  { to: "/idef0", label: "Modelado IDEF0", icon: "layers" },
-  { to: "/bpmn-del-equipo", label: "BPMN del Equipo", icon: "refresh" },
-  { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
-  { to: "/monitoreo-solarwinds", label: "Monitoreo con SolarWinds", icon: "server" },
-  { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
-  { to: "/presupuesto", label: "Presupuesto", icon: "landmark" },
-];
+import CommandSearch from "./CommandSearch";
+import { navGroups } from "../data/navigation";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    function onKey(e) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
     <>
@@ -91,17 +88,28 @@ export default function Sidebar() {
           </button>
         </div>
 
+        <button type="button" className="sidebar-search-btn" onClick={() => setSearchOpen(true)}>
+          <Icon name="zoomIn" size={16} strokeWidth={2} />
+          Buscar página
+          <kbd>Ctrl K</kbd>
+        </button>
+
         <nav className="sidebar-nav">
-          {links.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === "/"}
-              className={({ isActive }) => "sidebar-link" + (isActive ? " active" : "")}
-            >
-              <Icon name={link.icon} size={18} strokeWidth={2} />
-              {link.label}
-            </NavLink>
+          {navGroups.map((group) => (
+            <div key={group.label || "general"}>
+              {group.label && <p className="sidebar-group-label">{group.label}</p>}
+              {group.links.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  end={link.to === "/"}
+                  className={({ isActive }) => "sidebar-link" + (isActive ? " active" : "")}
+                >
+                  <Icon name={link.icon} size={18} strokeWidth={2} />
+                  {link.label}
+                </NavLink>
+              ))}
+            </div>
           ))}
         </nav>
 
@@ -121,6 +129,8 @@ export default function Sidebar() {
           <p>Área de Big Data y Analítica — servicios médicos basados en datos.</p>
         </div>
       </aside>
+
+      <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }

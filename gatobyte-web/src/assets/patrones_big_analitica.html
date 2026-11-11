@@ -21,37 +21,54 @@
 .ba svg{width:100%;height:auto;display:block}
 .ba .tree{flex:2;min-width:380px}.ba .wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
 @media(max-width:480px){.ba .grid{grid-template-columns:1fr}.ba .tree{min-width:0}}
+body{margin:0;padding:12px;font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif}
 </style>
 
-<div><h1>Patrones descubiertos en los datos</h1><div class="m">Inventario de activos de Big Data · 100 instancias · Datos de ejemplo</div></div>
+<div><h1>Patrones descubiertos con Weka 3.8.6</h1><div class="m">Salida real de Weka · inventario de activos de Big Data (100 instancias, simuladas para la empresa ficticia)</div></div>
 
-<div class="grid">
-<div class="card"><h2>Reglas de asociación</h2>
-<div class="row hd c4r"><span>Regla</span><span>Soporte</span><span>Confianza</span><span>Lift</span></div>
-<div class="row c4r"><span>tipo=Dataset, sensibilidad=PHI ⇒ estado=Activo</span><span>0,18</span><span>0,90</span><span>1,35</span></div>
-<div class="row c4r"><span>estado=Obsoleto ⇒ sensibilidad=Interna</span><span>0,12</span><span>0,75</span><span>1,50</span></div>
-<div class="row c4r"><span>tipo=Dashboard ⇒ sensibilidad=Pública</span><span>0,10</span><span>0,83</span><span>1,66</span></div>
-<div class="row c4r"><span>tipo=Modelo ML ⇒ estado=En revisión</span><span>0,08</span><span>0,72</span><span>1,44</span></div></div>
-<div class="card"><h2>Agrupamiento (clustering)</h2>
-<svg viewBox="0 0 360 190" role="img" aria-label="Dispersión con tres grupos: teal a la izquierda, ámbar arriba a la derecha y azul oscuro abajo a la derecha" style="background:#f8fafc;border-radius:4px">
-<g fill="#0d9488"><circle cx="50" cy="60" r="5"/><circle cx="70" cy="85" r="5"/><circle cx="45" cy="100" r="5"/><circle cx="85" cy="55" r="5"/><circle cx="65" cy="120" r="5"/><circle cx="100" cy="95" r="5"/></g>
-<g fill="#f59e0b"><circle cx="230" cy="40" r="5"/><circle cx="260" cy="60" r="5"/><circle cx="285" cy="35" r="5"/><circle cx="250" cy="80" r="5"/><circle cx="300" cy="70" r="5"/><circle cx="270" cy="95" r="5"/></g>
-<g fill="#16283b"><circle cx="200" cy="140" r="5"/><circle cx="235" cy="155" r="5"/><circle cx="270" cy="135" r="5"/><circle cx="300" cy="160" r="5"/><circle cx="250" cy="170" r="5"/><circle cx="215" cy="120" r="5"/></g>
-<g fill="#fff" stroke="#16283b" stroke-width="2"><rect x="62" y="82" width="12" height="12"/><rect x="262" y="58" width="12" height="12"/><rect x="242" y="144" width="12" height="12"/></g></svg>
-<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;font-size:12px"><span><i class="dot" style="background:#0d9488"></i>Grupo 0 · 38 %</span><span><i class="dot" style="background:#f59e0b"></i>Grupo 1 · 34 %</span><span><i class="dot" style="background:#16283b"></i>Grupo 2 · 28 %</span></div></div>
+<div class="kpis">
+<div class="card kpi"><span class="m">Instancias analizadas</span><b>100</b><span class="m">5 atributos · clase: estado</span></div>
+<div class="card kpi"><span class="m">Reglas de asociación</span><b>8</b><span class="m">confianza ≥ 0,80 · soporte ≥ 0,10</span></div>
+<div class="card kpi"><span class="m">Grupos (SimpleKMeans)</span><b>3</b><span class="m">53 % · 37 % · 10 %</span></div>
+<div class="card kpi" style="border-top-color:var(--warn)"><span class="m">Clase mayoritaria «Activo»</span><b>78 %</b><span class="m">línea base a superar</span></div>
 </div>
 
-<div class="card"><h2>Clasificación: predice el estado del activo</h2>
-<div class="wrap">
-<svg class="tree" viewBox="0 0 560 230" role="img" aria-label="Árbol de decisión: sensibilidad PHI lleva a revisar acceso, Pública a Activo, Confidencial se divide por antigüedad en Activo u Obsoleto">
-<g stroke="#5b6b7c" stroke-width="1.5"><line x1="280" y1="50" x2="100" y2="130"/><line x1="280" y1="50" x2="280" y2="130"/><line x1="280" y1="50" x2="460" y2="130"/><line x1="280" y1="160" x2="200" y2="205"/><line x1="280" y1="160" x2="360" y2="205"/></g>
-<g font-family="inherit" font-size="12" text-anchor="middle"><rect x="215" y="25" width="130" height="30" rx="4" fill="#16283b"/><text x="280" y="45" fill="#fff">sensibilidad</text>
-<rect x="40" y="130" width="120" height="30" rx="4" fill="#fde68a"/><text x="100" y="150" fill="#16283b">Revisar acceso</text>
-<rect x="220" y="130" width="120" height="30" rx="4" fill="#16283b"/><text x="280" y="150" fill="#fff">antigüedad</text>
-<rect x="400" y="130" width="120" height="30" rx="4" fill="#99f6e4"/><text x="460" y="150" fill="#16283b">Activo</text>
-<rect x="150" y="200" width="100" height="26" rx="4" fill="#99f6e4"/><text x="200" y="217" fill="#16283b">Activo</text>
-<rect x="310" y="200" width="100" height="26" rx="4" fill="#e5e7eb"/><text x="360" y="217" fill="#16283b">Obsoleto</text>
-<g fill="#5b6b7c" font-size="11"><text x="170" y="82">PHI</text><text x="300" y="90">Confidencial</text><text x="400" y="82">Pública</text><text x="228" y="188">≤ 12 meses</text><text x="344" y="188">&gt; 12 meses</text></g></g></svg>
-<div class="stats"><div><div class="m">Precisión</div><b>88 %</b></div><div><div class="m">Kappa</div><b>0,79</b></div><div><div class="m">Instancias</div><b>100</b></div><div><div class="m">Hojas</div><b>4</b></div></div>
-</div></div>
+<div class="grid">
+<div class="card"><h2>Reglas de asociación (Apriori)</h2>
+<div class="row hd c4r"><span>Regla</span><span>Soporte</span><span>Confianza</span><span>Lift</span></div>
+<div class="row c4r"><span>tipo=Dataset, sensibilidad=PHI ⇒ estado=Activo</span><span>0,14</span><span>1,00</span><span>1,28</span></div>
+<div class="row c4r"><span>tipo=Modelo ML ⇒ estado=Activo</span><span>0,14</span><span>0,93</span><span>1,20</span></div>
+<div class="row c4r"><span>responsable=Data Engineering ⇒ estado=Activo</span><span>0,20</span><span>0,91</span><span>1,17</span></div>
+<div class="row c4r"><span>sensibilidad=PHI, año=2022 ⇒ estado=Activo</span><span>0,10</span><span>0,91</span><span>1,17</span></div>
+<div class="row c4r"><span>sensibilidad=PHI ⇒ estado=Activo</span><span>0,32</span><span>0,89</span><span>1,14</span></div>
+<div class="row c4r"><span>año=2022 ⇒ estado=Activo</span><span>0,21</span><span>0,88</span><span>1,12</span></div>
+<p class="m" style="margin:12px 0 0">Lectura: todas las reglas apuntan a «Activo», pero con lift entre 1,12 y 1,28 apenas superan la tasa base (78 %). Son patrones débiles.</p></div>
+
+<div class="card"><h2>Agrupamiento (SimpleKMeans, k = 3)</h2>
+<div class="row hd c3"><span>Centroide</span><span>Perfil</span><span>Tamaño</span></div>
+<div class="row c3"><span><i class="dot" style="background:#0d9488"></i>Grupo 0</span><span>Dataset · PHI · Activo · Gobierno de Datos · 2025</span><span>53 (53 %)</span></div>
+<div class="row c3"><span><i class="dot" style="background:#f59e0b"></i>Grupo 1</span><span>Tabla · Confidencial · Activo · Data Engineering · 2023</span><span>37 (37 %)</span></div>
+<div class="row c3"><span><i class="dot" style="background:#d92d20"></i>Grupo 2</span><span>Pipeline ETL · PHI · Obsoleto · IoT Médico · 2022</span><span>10 (10 %)</span></div>
+<p class="m" style="margin:12px 0 0">Suma de errores cuadráticos intra-grupo: 244,0. El grupo 2 concentra el riesgo: pipelines antiguos de IoT Médico con datos PHI.</p></div>
+</div>
+
+<div class="card"><h2>Clasificación: ¿se puede predecir el estado del activo? (J48, validación cruzada de 10 pliegues)</h2>
+<div class="row hd c4"><span>Modelo</span><span>Hojas / tamaño</span><span>Precisión (CV)</span><span>Kappa (CV)</span></div>
+<div class="row c4"><span>Línea base: siempre «Activo»</span><span>—</span><span>78 %</span><span>0,00</span></div>
+<div class="row c4"><span>J48 podado (C = 0,25)</span><span>1 / 1</span><span>78 %</span><span>0,00</span></div>
+<div class="row c4"><span>J48 sin podar</span><span>28 / 33</span><span>69 %</span><span>−0,11</span></div>
+<div class="wrap" style="margin-top:14px"><div class="stats">
+<div><div class="m">Precisión en entrenamiento (sin podar)</div><b>85 %</b></div>
+<div><div class="m">Precisión validada (sin podar)</div><b>69 %</b></div></div>
+<p class="m" style="flex:2;min-width:260px;margin:0">Hallazgo: el árbol podado se reduce a una sola hoja «Activo» y el árbol sin podar memoriza el entrenamiento (85 %) pero cae a 69 % al validarlo, por debajo de la línea base. Con estos cinco atributos el estado del activo no se puede predecir mejor que el azar; para lograrlo el inventario necesita variables como último acceso, uso real o criticidad.</p></div></div>
+
+<div class="card"><h2>Reproducibilidad</h2>
+<div class="m">Los datos y la salida completa de cada algoritmo se pueden descargar y repetir:
+<a target="_blank" rel="noreferrer" href="/weka/inventario.arff">inventario.arff</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/inventario.csv">inventario.csv</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/salida-apriori.txt">Apriori</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/salida-simplekmeans.txt">SimpleKMeans</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/salida-j48-podado.txt">J48 podado</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/salida-j48-sin-podar.txt">J48 sin podar</a> ·
+<a target="_blank" rel="noreferrer" href="/weka/LEEME.txt">cómo repetirlo</a></div></div>
 </section>

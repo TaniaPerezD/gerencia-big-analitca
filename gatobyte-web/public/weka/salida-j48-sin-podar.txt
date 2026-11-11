@@ -1,0 +1,109 @@
+
+Options: -U -M 2 
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+anio = 2023: Activo (33.0/7.0)
+anio = 2025
+|   tipo = Tabla: En revisión (1.0)
+|   tipo = Dataset: Activo (6.0/1.0)
+|   tipo = Pipeline ETL: En revisión (1.0)
+|   tipo = Dashboard: Activo (3.0/1.0)
+|   tipo = Modelo ML: Activo (6.0)
+anio = 2024
+|   responsable = Equipo de Data Engineering: Activo (2.0)
+|   responsable = Gobierno de Datos: Activo (3.0/1.0)
+|   responsable = Equipo de IoT Médico: Activo (1.0)
+|   responsable = Equipo de Integración HL7/FHIR: Activo (3.0/1.0)
+|   responsable = Equipo de BI: Activo (4.0/1.0)
+|   responsable = Inteligencia Epidemiológica: Activo (0.0)
+|   responsable = Dirección de Analítica Clínica: Obsoleto (2.0)
+|   responsable = Equipo de Ciencia de Datos: Activo (1.0)
+|   responsable = Equipo de ML Engineering: Activo (0.0)
+anio = 2022
+|   sensibilidad = PHI: Activo (11.0/1.0)
+|   sensibilidad = Confidencial: Activo (6.0/1.0)
+|   sensibilidad = Pública: Obsoleto (1.0)
+|   sensibilidad = Interna: Activo (6.0)
+anio = 2026
+|   responsable = Equipo de Data Engineering: Activo (3.0)
+|   responsable = Gobierno de Datos: Activo (1.0)
+|   responsable = Equipo de IoT Médico: En revisión (1.0)
+|   responsable = Equipo de Integración HL7/FHIR: Activo (1.0)
+|   responsable = Equipo de BI: En revisión (1.0)
+|   responsable = Inteligencia Epidemiológica: Activo (1.0)
+|   responsable = Dirección de Analítica Clínica: Activo (2.0/1.0)
+|   responsable = Equipo de Ciencia de Datos: Activo (0.0)
+|   responsable = Equipo de ML Engineering: Activo (0.0)
+
+Number of Leaves  : 	28
+
+Size of the tree : 	33
+
+
+Time taken to build model: 0.02 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          85               85      %
+Incorrectly Classified Instances        15               15      %
+Kappa statistic                          0.4386
+Mean absolute error                      0.1553
+Root mean squared error                  0.2786
+Relative absolute error                 62.2057 %
+Root relative squared error             79.783  %
+Total Number of Instances              100     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.682    0.839      1.000    0.912      0.517    0.816     0.926     Activo
+                 0.214    0.000    1.000      0.214    0.353      0.436    0.802     0.467     Obsoleto
+                 0.500    0.000    1.000      0.500    0.667      0.692    0.946     0.735     En revisión
+Weighted Avg.    0.850    0.532    0.874      0.850    0.814      0.519    0.825     0.846     
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 78  0  0 |  a = Activo
+ 11  3  0 |  b = Obsoleto
+  4  0  4 |  c = En revisión
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          69               69      %
+Incorrectly Classified Instances        31               31      %
+Kappa statistic                         -0.1143
+Mean absolute error                      0.2753
+Root mean squared error                  0.4472
+Relative absolute error                109.8392 %
+Root relative squared error            127.8358 %
+Total Number of Instances              100     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.885    1.000    0.758      0.885    0.817      -0.167   0.318     0.713     Activo
+                 0.000    0.093    0.000      0.000    0.000      -0.119   0.317     0.111     Obsoleto
+                 0.000    0.011    0.000      0.000    0.000      -0.030   0.599     0.126     En revisión
+Weighted Avg.    0.690    0.794    0.591      0.690    0.637      -0.149   0.340     0.581     
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 69  8  1 |  a = Activo
+ 14  0  0 |  b = Obsoleto
+  8  0  0 |  c = En revisión
+

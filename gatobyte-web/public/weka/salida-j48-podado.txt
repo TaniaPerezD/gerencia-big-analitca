@@ -1,0 +1,77 @@
+
+Options: -C 0.25 -M 2 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: Activo (100.0/22.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 0.02 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          78               78      %
+Incorrectly Classified Instances        22               22      %
+Kappa statistic                          0     
+Mean absolute error                      0.2437
+Root mean squared error                  0.3491
+Relative absolute error                 97.6577 %
+Root relative squared error             99.9651 %
+Total Number of Instances              100     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.780      1.000    0.876      ?        0.500     0.780     Activo
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.140     Obsoleto
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.080     En revisión
+Weighted Avg.    0.780    0.780    ?          0.780    ?          ?        0.500     0.634     
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 78  0  0 |  a = Activo
+ 14  0  0 |  b = Obsoleto
+  8  0  0 |  c = En revisión
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          78               78      %
+Incorrectly Classified Instances        22               22      %
+Kappa statistic                          0     
+Mean absolute error                      0.2441
+Root mean squared error                  0.3497
+Relative absolute error                 97.4218 %
+Root relative squared error             99.9634 %
+Total Number of Instances              100     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.780      1.000    0.876      ?        0.453     0.766     Activo
+                 0.000    0.000    ?          0.000    ?          ?        0.400     0.123     Obsoleto
+                 0.000    0.000    ?          0.000    ?          ?        0.391     0.080     En revisión
+Weighted Avg.    0.780    0.780    ?          0.780    ?          ?        0.441     0.621     
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 78  0  0 |  a = Activo
+ 14  0  0 |  b = Obsoleto
+  8  0  0 |  c = En revisión
+

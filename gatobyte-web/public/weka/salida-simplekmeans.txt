@@ -1,0 +1,37 @@
+WARNING: core mtj jar files are not available as resources to this classloader (jdk.internal.loader.ClassLoaders$AppClassLoader@42110406)
+
+kMeans
+======
+
+Number of iterations: 2
+Within cluster sum of squared errors: 244.0
+
+Initial starting points (random):
+
+Cluster 0: Dataset,PHI,Activo,'Gobierno de Datos',2025
+Cluster 1: Tabla,Confidencial,Activo,'Equipo de Data Engineering',2023
+Cluster 2: 'Pipeline ETL',PHI,Obsoleto,'Equipo de IoT Médico',2022
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                                               Cluster#
+Attribute                                          Full Data                          0                          1                          2
+                                                     (100.0)                     (53.0)                     (37.0)                     (10.0)
+=============================================================================================================================================
+tipo                                                 Dataset                    Dataset                      Tabla               Pipeline ETL
+sensibilidad                                             PHI                        PHI               Confidencial                        PHI
+estado                                                Activo                     Activo                     Activo                   Obsoleto
+responsable                       Equipo de Data Engineering          Gobierno de Datos Equipo de Data Engineering       Equipo de IoT Médico
+anio                                                    2023                       2025                       2023                       2022
+
+
+
+
+=== Clustering stats for training data ===
+
+Clustered Instances
+0       53 ( 53%)
+1       37 ( 37%)
+2       10 ( 10%)
+
