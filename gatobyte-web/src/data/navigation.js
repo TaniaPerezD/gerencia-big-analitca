@@ -29,6 +29,7 @@ export const navGroups = [
       { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
       { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
       { to: "/monitoreo-prometheus", label: "Monitoreo con Prometheus", icon: "server" },
+      { to: "/plan-de-contingencia", label: "Plan de Contingencia", icon: "shield" },
     ],
   },
   {

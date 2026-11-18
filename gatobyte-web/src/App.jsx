@@ -18,6 +18,7 @@ import Patrones from "./pages/Patrones";
 import Presupuesto from "./pages/Presupuesto";
 import Contactos from "./pages/Contactos";
 import AnalisisServicios from "./pages/AnalisisServicios";
+import PlanContingencia from "./pages/PlanContingencia";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/presupuesto" element={<Presupuesto />} />
             <Route path="/analisis-de-servicios" element={<AnalisisServicios />} />
             <Route path="/contactos" element={<Contactos />} />
+            <Route path="/plan-de-contingencia" element={<PlanContingencia />} />
           </Routes>
         </main>
         <Footer />

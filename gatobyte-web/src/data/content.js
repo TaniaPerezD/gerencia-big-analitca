@@ -2094,3 +2094,178 @@ export const analisisServicios = {
     "Microsoft — Precios de Power BI Pro (confirmar tarifa vigente).",
   ],
 };
+
+export const planContingencia = {
+  hero: {
+    tag: "Gestión de TIC",
+    title: "Plan de Contingencia",
+    subtitle:
+      "La estrategia que garantiza la continuidad de los sistemas de información y los procesos críticos del área ante cualquier evento que pueda interrumpirlos.",
+  },
+  intro: [
+    "Un plan de contingencia es una estrategia planificada, con una serie de procedimientos, que ofrece alternativas para restituir rápidamente los servicios de una organización ante cualquier evento que los paralice, total o parcialmente. Es la herramienta que permite que los procesos críticos sigan funcionando —aunque sea al mínimo— frente a una falla en los sistemas computarizados.",
+    "Forma parte integral de la gestión de calidad y de la estrategia de continuidad operativa del Centro de Tecnologías de Información y Comunicaciones (CTIC), asegurando una respuesta organizada, eficiente y oportuna ante cualquier incidente.",
+  ],
+  keyPoints: [
+    "Objetivo general: garantizar la continuidad de los sistemas de información y procesos críticos, protegiendo su integridad, disponibilidad y confiabilidad.",
+    "Identificar los riesgos que puedan interrumpir las actividades del área.",
+    "Evaluar la probabilidad e impacto de esos riesgos sobre los sistemas de información.",
+    "Definir procedimientos de prevención, mitigación y recuperación ante incidentes.",
+    "Establecer responsabilidades y protocolos de actuación para el personal involucrado.",
+    "Asegurar la recuperación oportuna de los datos y la reanudación de los servicios esenciales.",
+  ],
+  theory: [
+    {
+      icon: "shield",
+      title: "Seguridad física: antes, durante y después",
+      blocks: [
+        {
+          heading: "Antes",
+          text: "Acciones para evitar el fallo o reducir sus consecuencias: ubicación del centro de procesamiento de datos, sistemas contra incendios, control de accesos, selección de personal y medidas de protección de los medios.",
+        },
+        {
+          heading: "Durante",
+          text: "Ejecución del plan de contingencia propiamente dicho: análisis de riesgos de los sistemas críticos, definición de un periodo crítico de recuperación y un análisis de aplicaciones críticas para establecer prioridades.",
+        },
+        {
+          heading: "Después",
+          text: "Los seguros compensan pérdidas, gastos o responsabilidades una vez corregido el fallo: daño físico al centro de cómputo, reconstrucción de software, gastos extra, interrupción del negocio y pérdida de documentos valiosos, entre otros.",
+        },
+      ],
+    },
+    {
+      icon: "layers",
+      title: "Las 8 fases de la metodología",
+      blocks: [
+        {
+          list: [
+            "Planificación: preparación y aprobación de esfuerzos y costos.",
+            "Identificación de riesgos: funciones y flujos del proceso de la empresa.",
+            "Identificación de soluciones: evaluación de riesgos de fallas o interrupciones.",
+            "Estrategias: soluciones alternativas y procedimientos manuales.",
+            "Documentación del proceso: creación de un manual del proceso.",
+            "Realización de pruebas: selección de casos que probablemente funcionen.",
+            "Implementación: creación de las soluciones requeridas y su documentación.",
+            "Monitoreo: probar nuevas soluciones o validar los casos.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "network",
+      title: "Las 10 etapas del plan",
+      blocks: [
+        {
+          list: [
+            "I. Análisis y selección de las operaciones críticas (datos, aplicaciones, hardware, software, instalaciones y personal).",
+            "II. Identificación de los procesos internos de cada operación crítica.",
+            "III. Listado de recursos y proveedores utilizados (servidores, respaldos, software, red).",
+            "IV. Especificación de escenarios de riesgo y su probabilidad e impacto.",
+            "V. Determinación de medidas preventivas y correctivas para cada escenario.",
+            "VI. Formación del Comité de Contingencia y sus funciones.",
+            "VII. Desarrollo de los planes de acción ante emergencias.",
+            "VIII. Preparación del directorio de contactos de emergencia.",
+            "IX. Pruebas y monitoreo periódico del plan.",
+            "X. Comprobación, mantenimiento y revisión del plan.",
+          ],
+        },
+      ],
+    },
+    {
+      icon: "check",
+      title: "Pruebas del plan",
+      blocks: [
+        {
+          heading: "Niveles de prueba",
+          list: [
+            "Pruebas en pequeñas unidades funcionales del área.",
+            "Pruebas departamentales (todo el departamento).",
+            "Pruebas interdepartamentales con otros sectores del CTIC.",
+          ],
+        },
+        {
+          heading: "Métodos de prueba",
+          list: [
+            "Prueba específica: una sola actividad o procedimiento.",
+            "Prueba de escritorio: simulación teórica con preguntas y escenarios.",
+            "Simulación en tiempo real: recreación de un evento real para medir la capacidad de respuesta.",
+          ],
+        },
+      ],
+    },
+  ],
+  document: {
+    heading: "Documento completo del Plan de Contingencia",
+    description:
+      "Consulta y descarga el documento oficial con el plan de contingencia detallado: riesgos identificados, medidas preventivas, comité de contingencia y protocolos de recuperación.",
+    src: "/documents/plan-de-contingencia-gestion-tic.pdf",
+    title: "Plan de Contingencia — Gestión de TIC",
+    downloadName: "Plan-de-Contingencia-Gestion-TIC-GatoByte.pdf",
+  },
+  conclusiones: {
+    heading: "Conclusiones",
+    subtitle: "Lo que deja este plan a nivel de equipo, de aprendizaje personal y de tecnología.",
+    general: [
+      "El equipo del Área de Big Data y Analítica cumplió el objetivo general de construir un Plan de Contingencia TIC completo, con riesgos identificados, responsables asignados y procedimientos de respuesta documentados, replicando en un caso real lo revisado en la materia de Gerencia de TIC.",
+      "El trabajo en equipo permitió cubrir, de forma complementaria, los distintos frentes de un plan de contingencia: infraestructura, monitoreo, gobernanza de datos y gestión de proyectos, lo que confirma que la continuidad de un servicio de TIC depende de la coordinación entre roles y no de un esfuerzo individual.",
+    ],
+    objetivoIntro:
+      "Al inicio de la materia, cada integrante planteó un objetivo personal de aprendizaje. Este plan es también la evidencia de en qué medida se cumplió cada uno:",
+    objetivos: [
+      {
+        name: "Tania Pérez Dick",
+        role: "Gerente de Datos y Analítica",
+        inicial:
+          "Adquirir conocimientos teóricos y prácticos sobre la gerencia estratégica de TIC, incluyendo administración de procesos, sistemas de soporte a decisiones, planificación de proyectos y seguridad de información, para aplicarlos en mi carrera.",
+        conclusion:
+          "Se cumplió: liderar la construcción de este plan exigió aplicar en conjunto administración de procesos, planificación de proyectos, sistemas de soporte a decisiones (monitoreo y tableros) y seguridad de la información, integrando esos conocimientos en una herramienta de gestión real para el área.",
+      },
+      {
+        name: "Ignacio Retamozo Torrez",
+        role: "PM de Ciencia de Datos e Innovación",
+        inicial: "Aprender a gestionar las tecnologías de la información para poder usar ese conocimiento en mi vida profesional.",
+        conclusion:
+          "Se cumplió: coordinar los procesos de ciencia de datos dentro de un plan de contingencia formal dio una visión práctica de cómo se gestionan las TIC más allá del código, considerando continuidad, proveedores y riesgos.",
+      },
+      {
+        name: "Adriana Nathalie Rocha Vedia",
+        role: "Ingeniera de Infraestructura de Datos",
+        inicial:
+          "Desarrollar conocimientos teóricos y prácticos sobre la Gerencia de las TIC, mediante la comprensión de sus principios, herramientas y metodologías, para optimizar recursos y fortalecer la toma de decisiones dentro de las organizaciones.",
+        conclusion:
+          "Se cumplió: documentar la infraestructura (enlaces, respaldos, servidores) dentro de este plan permitió aplicar metodologías de gerencia de TIC para optimizar recursos y sustentar decisiones con información concreta, no solo intuición.",
+      },
+      {
+        name: "Dilan Mamani",
+        role: "Analista de Business Intelligence",
+        inicial:
+          "Aprender de manera general cómo se planifica, organiza y controla el uso de las TIC en una empresa, para poder comprender su importancia y su aporte al logro de los objetivos organizacionales.",
+        conclusion:
+          "Se cumplió: participar en la planificación de este plan mostró de forma concreta cómo se planifica, organiza y controla el uso de las TIC, y cómo ese control protege directamente los objetivos del área y de la organización.",
+      },
+      {
+        name: "Ivonne Micaela Colque Murillo",
+        role: "Especialista en Gobernanza de Datos",
+        inicial: "Aprender sobre la materia de Gerencia de las TIC para poder aplicar los conocimientos en mi vida profesional.",
+        conclusion:
+          "Se cumplió: aportar la perspectiva de gobernanza de datos a este plan permitió aplicar de forma práctica lo aprendido en la materia, en la definición de responsables, respaldos y control de accesos ante contingencias.",
+      },
+    ],
+    tecnologicas: [
+      "A nivel tecnológico, el equipo concluye que la combinación de Prometheus para monitoreo, respaldos automatizados y enlaces de conectividad redundantes (AXS, Entel y Starlink) es suficiente para sostener los servicios analíticos del área ante incidentes comunes, aunque requiere mantenimiento y pruebas periódicas para no quedar obsoleta.",
+    ],
+  },
+  recomendaciones: {
+    heading: "Recomendaciones",
+    subtitle: "Hacia dónde debería evolucionar este plan a futuro.",
+    general: [
+      "Revisar este plan formalmente cada semestre, o antes si cambian los sistemas, proveedores o integrantes clave del área, para que se mantenga vigente conforme el proyecto crezca a futuro.",
+    ],
+    tecnologicas: [
+      "A futuro, automatizar las alertas de Prometheus hacia canales directos del equipo (correo o chat), evaluar un segundo proveedor de respaldo en la nube además del respaldo local, y documentar junto al plan las credenciales y contactos de soporte de cada proveedor (AXS, Entel, Starlink) para reducir el tiempo de respuesta ante una caída.",
+    ],
+    academica: [
+      "Trabajar el plan de contingencia desde etapas más tempranas del curso, junto con los demás entregables (BPMN, IDEF0, presupuesto), para reutilizar directamente en el plan los riesgos y procesos ya documentados en lugar de reconstruirlos al final.",
+    ],
+  },
+};
