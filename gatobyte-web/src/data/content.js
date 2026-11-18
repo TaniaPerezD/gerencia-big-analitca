@@ -1976,7 +1976,7 @@ export const contactos = {
 export const analisisServicios = {
   hero: {
     tag: "Decisiones de contratación",
-    title: "Análisis de servicios",
+    title: "Soporte externo",
     subtitle:
       "Comparamos los proveedores de internet y las licencias de visualización del presupuesto para decidir qué contratar, con cada cifra rotulada según cuánto se ha podido verificar.",
   },

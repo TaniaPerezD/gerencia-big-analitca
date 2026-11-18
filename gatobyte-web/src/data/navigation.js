@@ -36,7 +36,7 @@ export const navGroups = [
     ],
   },
   {
-    label: "Cierre",
+    label: "Comunidad",
     links: [{ to: "/contactos", label: "Contactos", icon: "users" }],
   },
 ];
