@@ -1197,6 +1197,8 @@ main {
 /* ---------- Narrow / left-aligned section heading variants ---------- */
 .narrow-section {
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-heading-left {
@@ -1869,6 +1871,8 @@ main {
 /* ---------- Article layout (Descripción de Posiciones) ---------- */
 .article-section {
   max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-section h2 {

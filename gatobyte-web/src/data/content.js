@@ -2202,9 +2202,14 @@ export const planContingencia = {
     title: "Plan de Contingencia — Gestión de TIC",
     downloadName: "Plan-de-Contingencia-Gestion-TIC-GatoByte.pdf",
   },
-  conclusiones: {
-    heading: "Conclusiones",
-    subtitle: "Lo que deja este plan a nivel de equipo, de aprendizaje personal y de tecnología.",
+};
+
+export const conclusiones = {
+    hero: {
+      tag: "Cierre del proyecto",
+      title: "Conclusiones",
+      subtitle: "Lo que deja este proyecto a nivel de equipo, de aprendizaje personal y de tecnología.",
+    },
     general: [
       "El equipo del Área de Big Data y Analítica cumplió el objetivo general de construir un Plan de Contingencia TIC completo, con riesgos identificados, responsables asignados y procedimientos de respuesta documentados, replicando en un caso real lo revisado en la materia de Gerencia de TIC.",
       "El trabajo en equipo permitió cubrir, de forma complementaria, los distintos frentes de un plan de contingencia: infraestructura, monitoreo, gobernanza de datos y gestión de proyectos, lo que confirma que la continuidad de un servicio de TIC depende de la coordinación entre roles y no de un esfuerzo individual.",
@@ -2254,10 +2259,14 @@ export const planContingencia = {
     tecnologicas: [
       "A nivel tecnológico, el equipo concluye que la combinación de Prometheus para monitoreo, respaldos automatizados y enlaces de conectividad redundantes (AXS, Entel y Starlink) es suficiente para sostener los servicios analíticos del área ante incidentes comunes, aunque requiere mantenimiento y pruebas periódicas para no quedar obsoleta.",
     ],
-  },
-  recomendaciones: {
-    heading: "Recomendaciones",
-    subtitle: "Hacia dónde debería evolucionar este plan a futuro.",
+};
+
+export const recomendaciones = {
+    hero: {
+      tag: "Cierre del proyecto",
+      title: "Recomendaciones",
+      subtitle: "Hacia dónde debería evolucionar este proyecto a futuro.",
+    },
     general: [
       "Revisar este plan formalmente cada semestre, o antes si cambian los sistemas, proveedores o integrantes clave del área, para que se mantenga vigente conforme el proyecto crezca a futuro.",
     ],
@@ -2267,5 +2276,4 @@ export const planContingencia = {
     academica: [
       "Trabajar el plan de contingencia desde etapas más tempranas del curso, junto con los demás entregables (BPMN, IDEF0, presupuesto), para reutilizar directamente en el plan los riesgos y procesos ya documentados en lugar de reconstruirlos al final.",
     ],
-  },
 };

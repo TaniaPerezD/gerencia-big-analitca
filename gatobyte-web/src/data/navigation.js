@@ -30,6 +30,8 @@ export const navGroups = [
       { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
       { to: "/monitoreo-prometheus", label: "Monitoreo con Prometheus", icon: "server" },
       { to: "/plan-de-contingencia", label: "Plan de Contingencia", icon: "shield" },
+      { to: "/conclusiones", label: "Conclusiones", icon: "check" },
+      { to: "/recomendaciones", label: "Recomendaciones", icon: "compass" },
     ],
   },
   {

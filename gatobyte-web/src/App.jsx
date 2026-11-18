@@ -19,6 +19,8 @@ import Presupuesto from "./pages/Presupuesto";
 import Contactos from "./pages/Contactos";
 import AnalisisServicios from "./pages/AnalisisServicios";
 import PlanContingencia from "./pages/PlanContingencia";
+import Conclusiones from "./pages/Conclusiones";
+import Recomendaciones from "./pages/Recomendaciones";
 
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
             <Route path="/analisis-de-servicios" element={<AnalisisServicios />} />
             <Route path="/contactos" element={<Contactos />} />
             <Route path="/plan-de-contingencia" element={<PlanContingencia />} />
+            <Route path="/conclusiones" element={<Conclusiones />} />
+            <Route path="/recomendaciones" element={<Recomendaciones />} />
           </Routes>
         </main>
         <Footer />
