@@ -18,7 +18,6 @@ export const navGroups = [
       { to: "/descripcion-de-posiciones", label: "Descripción de Posiciones", icon: "file" },
       { to: "/mbti-del-equipo", label: "MBTI del Equipo", icon: "sparkles" },
       { to: "/scrum-del-equipo", label: "Scrum del Equipo", icon: "activity" },
-      { to: "/contactos", label: "Contactos", icon: "users" },
     ],
   },
   {
@@ -29,17 +28,16 @@ export const navGroups = [
       { to: "/datos-tableau", label: "Datos y Tableau", icon: "trending" },
       { to: "/patrones-weka", label: "Patrones con Weka", icon: "puzzle" },
       { to: "/monitoreo-prometheus", label: "Monitoreo con Prometheus", icon: "server" },
+      { to: "/presupuesto", label: "Presupuesto", icon: "landmark" },
+      { to: "/analisis-de-servicios", label: "Soporte externo", icon: "database" },
       { to: "/plan-de-contingencia", label: "Plan de Contingencia", icon: "shield" },
       { to: "/conclusiones", label: "Conclusiones", icon: "check" },
       { to: "/recomendaciones", label: "Recomendaciones", icon: "compass" },
     ],
   },
   {
-    label: "Finanzas",
-    links: [
-      { to: "/presupuesto", label: "Presupuesto", icon: "landmark" },
-      { to: "/analisis-de-servicios", label: "Análisis de servicios", icon: "database" },
-    ],
+    label: "Cierre",
+    links: [{ to: "/contactos", label: "Contactos", icon: "users" }],
   },
 ];
 
